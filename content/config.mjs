@@ -5,7 +5,7 @@ export default {
   showSidebar: false,
   showLinkPreviews: true,
   author: "NodeArt",
-  domain: "https://obs.nodeart.ap",
+  domain: "https://obs.nodeart.app",
   // Google analytics key e.g. G-XXXX
   analytics: "",
   // content source directory for markdown files
@@ -24,6 +24,6 @@ export default {
     // toggleIcon: "/_flowershow/theme-button.svg",
   // },
   navLinks: [
-    // { href: '/about', name: 'About' },
+    { href: 'https://nodeart.io', name: 'NodeArt' },
   ]
 };
