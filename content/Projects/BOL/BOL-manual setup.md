@@ -1,3 +1,4 @@
+# BOL перенос из докера в legacy mode
 На данный момент у нас есть hyper-v хост с 3 vm. Одна VM, одно окружение
 Задача: перейти от dockerized env к manual deployment. Организовать self-servise для управления бекапами.
 План:
