@@ -5,11 +5,13 @@
 В игру встраивается кнопка `Term & Conditions`, по нажатию на которую должен открываться webview с T&C в виде веб страницы.
 ## SDK которые необходимо интегрировать
 Необходимо интегрировать
-- appsflyer SDK
-- firebase cloud messaging sdk
-- IDFA плагин
+- [appsflyer SDK](https://pub.dev/packages/appsflyer_sdk)
+- [firebase cloud messaging sdk](https://pub.dev/packages/firebase_messaging)
+- [IDFA плагин](https://pub.dev/packages/app_tracking_transparency)
 
 При этом appsflyer должен обрабатывать deeplinks (корректно настроить перехват и permission для андроида)
+
+Настраивать интеграцию appsflyer и FCM (треккинг удаления приложения) необязательно.
 
 При этом для FCM необходимо исследовать возможность конфигурирования данных для подключения (если получится менять данные FCM на лету — мы добавим их в api endpoind, если нет — увы зафиксируем статичные)
 
