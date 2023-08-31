@@ -11,6 +11,8 @@
 > Блок спичек: 35224
 > Блк спчк: 35224
 
+[Пример классифицированных данных](https://mm.nodeart.app/files/uz7qficz4bfx5byt935jjr515w/public?h=pTeTbe49jtUf0lv6TaXJqxqla4Zjbu7PZJbh-7g-jxo)
+
 И у нас есть другой датасет, где есть названия, но нет кодов классификатора.
 
 > спички
@@ -78,9 +80,11 @@
 > Сiрники Cricket безпечнi (шт)
 > Сiрники госп. Плам 38 шт. 5Н И017 (Болгарiя)
 
+[Пример данных которые необходимо классифицировать](https://mm.nodeart.app/files/mecoz83trpgotcghec17y3ptec/public?h=ITEQiebXaYY9DOLuEIWm58bzPc7-lZMzDKAfEN-qNDI)
+
 Мы бы хотели сделать модель которая на основании названия выдает код классификатора, чтобы мы автоматически классифицировали товары из второго списка.
 
-[Все кода классификатора - 10730 штук](https://mm.nodeart.app/files/jun4pbobibft8xkhbhehttuk1r/public?h=j6mglL8ViRLhw5sJJJB6YAWY9w1q5vIfGW9-XJOzMtU)
+[Все кода классификатора - 10730 штук](https://mm.nodeart.app/files/jun4pbobibft8xkhbhehttuk1r/public?h=j6mglL8ViRLhw5sJJJB6YAWY9w1q5vIfGW9-XJOzMtU) В пример есть только два кода, но на самом деле к одному коду может относится много видов продукции.
 
 Размеченный датасет у нас есть где-то на 65гб (1месяц) но можем ещё затащить. 
 
