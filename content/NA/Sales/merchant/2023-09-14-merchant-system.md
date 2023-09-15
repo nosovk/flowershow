@@ -26,3 +26,9 @@ But I don't understand which services you want to provide to ISO.
 
 In case you work as a proxy to bank you don't need to build tokenizer, bank provides you with everything. You still have to acquire PCI DSS, but with a smaller scope.
 But you will have to build something to bring additional value to users. I need to clarify what exactly you want to provide on top of card processing, because your fee will be bigger than at a classical merchant provider (but you have no need to buy a licensee)
+
+## What we can build
+- we can build CRM
+- we can build payment Widget/API for customers ([example](https://g-24.pro/wid/)) 
+- we can build integration with bank API to process cards (but we need to get that API first, because we never worked within US bank API). And we will have to certify part of the system with PCI DSS (external audit and certification, at least half year on that process).
+- we can build backend/frontend to cover another user stories, but at first step we have to clarify and describe them.
