@@ -25,7 +25,7 @@ export default {
     // toggleIcon: "/_flowershow/theme-button.svg",
   // },
   navLinks: [
-    { href: 'https://nodeart.io', name: 'NodeArt' },
+    { href: 'https://nodeart.io', name: ' NodeArt' },
     { href: 'https://cal.com/nosovk', name: 'Book a call' },
   ],
   nextSeo: {
