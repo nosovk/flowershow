@@ -4,7 +4,7 @@ export default {
   showToc: true,
   showSidebar: false,
   showLinkPreviews: true,
-  author: " NodeArt",
+  author: ": NodeArt",
   authorLogo: "/_flowershow/main-logo.svg",
   domain: "https://obs.nodeart.app",
   // Google analytics key e.g. G-XXXX
@@ -25,7 +25,7 @@ export default {
     // toggleIcon: "/_flowershow/theme-button.svg",
   // },
   navLinks: [
-    { href: 'https://nodeart.io', name: ': NodeArt' },
+    { href: 'https://nodeart.io', name: 'NodeArt' },
     { href: 'https://cal.com/nosovk', name: 'Book a call' },
   ],
   nextSeo: {
