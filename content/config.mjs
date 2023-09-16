@@ -4,7 +4,7 @@ export default {
   showToc: true,
   showSidebar: false,
   showLinkPreviews: true,
-  author: ": NodeArt",
+  author: "NodeArt",
   authorLogo: "/_flowershow/main-logo.svg",
   domain: "https://obs.nodeart.app",
   // Google analytics key e.g. G-XXXX
