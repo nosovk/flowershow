@@ -25,5 +25,6 @@ export default {
   // },
   navLinks: [
     { href: 'https://nodeart.io', name: 'NodeArt' },
+    { href: 'https://cal.com/nosovk', name: 'book a call' },
   ]
 };
