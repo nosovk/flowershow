@@ -6,13 +6,15 @@ Flow:
 - we set up GIT
 - setup domain and stub site with BFF
 - setup App Store account and claim app Id (proxy)
+- setup appsflyer account (app Id required)
 - we set up app rails and commit them to GIT
 - setup binary deps that could require special treatment on IOS (OneSignal for example)
-- setup CI/CD env for app (generate new serials etc)
+- setup CI/CD env for app (generate new serials etc.)
 - setup build for each branch and publication to App Distribution
 - pass app distribution builds to QA
 - QA passes bugs to dev, repeat till all works as expected
 - build IPA
-- submit IPA to AppStore, send to review (proxy)
+- submit IPA to App Store, send to review (proxy)
 
 Danger: parts marked as (proxy) should be done with extra security measures to prevent problems with publication.
+Be aware that we can't test appsflyer attribution without app publication.
