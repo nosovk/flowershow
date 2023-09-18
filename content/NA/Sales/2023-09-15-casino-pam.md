@@ -7,5 +7,7 @@ We dig a bit into our CAS project, which is a fully operating PHP casino platfor
 
 We split it into two steps. First step – things crucial for launching casino. The second step is all that you mentioned as not urgent for launch (bonus system engine, for example)
 
+Also, please be aware that the proposed solution is not microservice based, but monolith with services. If you want to stick with microservices – it will take more time/people. We suggest to savoid microservices for faster results.
+
 For more precious estimation we have to clarify requirements – what is crucial, what is nice to have etc. We suggest to start with gathering business requirements and forming documentation. Based on it, we can do more exact estimations.
 
