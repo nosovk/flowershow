@@ -3,7 +3,7 @@ We discussed that you want to build Player Management System (CRM for players). 
 We got [that document](https://docs.google.com/document/d/1iDMjngB6uqM3Zheg8BT8aA__wjMl-M_bAjOkArTjnh8/edit) from you.
 According to it, you want to build full platform from scratch. It bit differs from building PMS only. That is why we have prepared the estimation for the whole platform and not only for PMS. We have prepared the estimation based on our experience in developing Igaming platforms.
 
-[RAW estimation table](https://docs.google.com/spreadsheets/d/15ca5u2l7CqabNHkjlapY6ir3-eVnWM9N50tmqLyG8-Q/edit?usp=sharing) 
+[RAW estimation table](https://docs.google.com/spreadsheets/d/1JkbF_t_ULXzwAeY_z4yHkFBLBHZDz83Wx1eourTXQ8Q/edit) 
 
 We split it into two steps. First step – things crucial for launching casino. The second step is all that you mentioned as not urgent for launch (bonus system engine, for example).
 
