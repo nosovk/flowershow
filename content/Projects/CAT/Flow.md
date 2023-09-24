@@ -38,18 +38,4 @@ Caveats:
 
 ## Landing deploy schema
 
-```meramaid
-flowchart TD
-    Git --> |CI CD deploy on commit| Pages1[CF Pages 1]
-    Pages1 --> |linked in CF admin panel or API| Domain1a[domain1.com]
-    Domain1a --> |Pages live inside bucket| Landing/Page1[domain.com/aaa]
-    Domain1a --> Landing/Page2[domain.com/bbb]
-    Domain1a --> Landing/Page3[domain.com/ccc]
-    Git --> Pages2[pages bucket 100 domains]
-    Pages2 --> Domain2a[domain2a.com]
-    Pages2 --> Domain2asub1[sub1.domain2a.com]
-    Pages2 --> Domain2asub2[sub2.domain2a.com]
-    Pages2 --> Domain2b[domain2b.com]
-    Domain2asub2 --> Landing2asub2/Page2[sub2.domain2a.com/bbb]
-    Domain2asub2 --> Landing2asub2/Page23[sub2.domain2a.com/ccc]
-```
+[![](https://mermaid.ink/img/pako:eNqNk01PwzAMhv-KlfNWloylHwcktAFCAgkJTqwc3CYbEW0ytSkwtv130oaNCtDEJXKcx6-dV8mG5EZIkpBFYd7yZ6wsPMxSndorZWE4PIPt9BqmMxByVZg1GA25KUtlt3CHS1nT-fTSR0Cf2jKf9ZWF0i9SgNLgIBSlC1aoZQGmgvO76y3MTIlKU5wLHwROu1PZH3gdr1-oV-m0aiUkZE3-It0MN6iF0ssWoF8ircYJIv7W6cGsD2dZdhQe9-E8z5_69nSzsfmqG9GPBXQ0Al9Sf3vCOtz3YPsbMzxc-Q-objI6b5fgnzRrafYfOtsPkP3w3Ov0LfAZ79ov-R_mHa0e_1He2kkGpJSVSwr3DDepBkiJfZalTEniQiEX2BQ2JaneORQba-7XOieJrRo5IM1KoJUzhcsKS5IssKhd1r0zkmzIO0noKJhEnEd8HJ1G8YQyPiBrl2ZhEHO3iyLO4lNOw92AfBjjJGgwCuMw5JSHEY8nPIz3XS6EsqY6NJHd9tb_n-4bdY0fO5V2ut0nWVYfrw?type=png)](https://mermaid.live/edit#pako:eNqNk01PwzAMhv-KlfNWloylHwcktAFCAgkJTqwc3CYbEW0ytSkwtv130oaNCtDEJXKcx6-dV8mG5EZIkpBFYd7yZ6wsPMxSndorZWE4PIPt9BqmMxByVZg1GA25KUtlt3CHS1nT-fTSR0Cf2jKf9ZWF0i9SgNLgIBSlC1aoZQGmgvO76y3MTIlKU5wLHwROu1PZH3gdr1-oV-m0aiUkZE3-It0MN6iF0ssWoF8ircYJIv7W6cGsD2dZdhQe9-E8z5_69nSzsfmqG9GPBXQ0Al9Sf3vCOtz3YPsbMzxc-Q-objI6b5fgnzRrafYfOtsPkP3w3Ov0LfAZ79ov-R_mHa0e_1He2kkGpJSVSwr3DDepBkiJfZalTEniQiEX2BQ2JaneORQba-7XOieJrRo5IM1KoJUzhcsKS5IssKhd1r0zkmzIO0noKJhEnEd8HJ1G8YQyPiBrl2ZhEHO3iyLO4lNOw92AfBjjJGgwCuMw5JSHEY8nPIz3XS6EsqY6NJHd9tb_n-4bdY0fO5V2ut0nWVYfrw)
