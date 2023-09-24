@@ -2,6 +2,7 @@
 For end user flow looks like that:
 ```mermaid
 sequenceDiagram
+autonumber
 
 actor user
 participant tracker
