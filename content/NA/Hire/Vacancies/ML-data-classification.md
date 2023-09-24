@@ -90,4 +90,4 @@
 
 Примеры подходв к реализации задачи: 
 - https://github.com/aniass/Product-Categorization-NLP
-- - https://towardsdatascience.com/multi-class-text-classification-model-comparison-and-selection-5eb066197568
+- https://towardsdatascience.com/multi-class-text-classification-model-comparison-and-selection-5eb066197568
