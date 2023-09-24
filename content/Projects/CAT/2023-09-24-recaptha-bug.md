@@ -36,6 +36,30 @@ POST методы имеют жесткий Rate Limit
 
 При достижении лимита запросов на `POST /profile` приходит код ответа `429`, но при этом отсутствует приведенный в документации заголовок `Retry-After`. Заголовки связанные с ReCapthca так же отсутствуют.
 
+#### Пример запроса/ответа
+```bash
+curl 'https://test-catcasino.egamings.com/api/v1/profiles' \
+  -H 'Accept: application/json' \
+  -H 'Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: text/plain;charset=UTF-8' \
+  -H 'Origin: https://cat-cas-lands.pages.dev' \
+  -H 'Pragma: no-cache' \
+  -H 'Referer: https://cat-cas-lands.pages.dev/de' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: cross-site' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  --data-raw $'{"email":"nosov+2023-09-24@nodeart.io","phoneCode":"355","phoneNumber":"80505535424","password":"NodeArt9\u0021","currency":"EUR","registrationPromoCode":"","countryCode":"ukr","agreedWithTermsAndConditions":true,"ageConfirmed":true,"passwordRepeat":"NodeArt9\u0021"}' \
+  --compressed
+```
+![[responce-429.png]]
+
+
 На иные API методы ограничения также не обнаружены.
 
 ## Что хотелось бы:
