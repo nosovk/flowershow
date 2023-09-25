@@ -12,6 +12,7 @@
 > Блк спчк: 35224
 
 [Пример классифицированных данных](https://mm.nodeart.app/files/uz7qficz4bfx5byt935jjr515w/public?h=pTeTbe49jtUf0lv6TaXJqxqla4Zjbu7PZJbh-7g-jxo)
+Размер датасета: `290,736,920` строк из них уникальных описаний товара: `13,839,662`.
 
 И у нас есть другой датасет, где есть названия, но нет кодов классификатора.
 
@@ -82,12 +83,15 @@
 
 [Пример данных которые необходимо классифицировать](https://mm.nodeart.app/files/mecoz83trpgotcghec17y3ptec/public?h=ITEQiebXaYY9DOLuEIWm58bzPc7-lZMzDKAfEN-qNDI)
 
+Размер датасета: `64,802,502` строк из них уникальных описаний товара: `5,718,749`. 
+Этот датасет может быть легко расширен по запросу.
+
 Мы бы хотели сделать модель которая на основании названия выдает код классификатора, чтобы мы автоматически классифицировали товары из второго списка.
 
 [Все кода классификатора - 10730 штук](https://mm.nodeart.app/files/jun4pbobibft8xkhbhehttuk1r/public?h=j6mglL8ViRLhw5sJJJB6YAWY9w1q5vIfGW9-XJOzMtU) В пример есть только два кода, но на самом деле к одному коду может относиться много видов продукции.
 
 Размеченный датасет у нас есть где-то на 65гб (1месяц) но можем ещё добавить данные в [BQ](https://console.cloud.google.com/bigquery). 
 
-Примеры подходв к реализации задачи: 
+Примеры подходов к реализации задачи: 
 - https://github.com/aniass/Product-Categorization-NLP
 - https://towardsdatascience.com/multi-class-text-classification-model-comparison-and-selection-5eb066197568
