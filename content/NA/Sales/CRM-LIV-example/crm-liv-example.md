@@ -1,5 +1,6 @@
 ## Product: CRM for dating product
-https://olopanel.space/
+[OLOPanel](https://olopanel.space/)
+
 CRM is a part of dating application to manage agencies, streamers, and users. The team should be able to work with profiles, statuses and uploaded content (photos, videos).
 
 ## Parts of CRM:
