@@ -1,25 +1,5 @@
 User flow for apps and tracker integration
-```mermaid
-sequenceDiagram
-
-actor user
-participant app
-participant bff
-participant tracker
-
-    user->>appstore: open an app page
-    appstore->> user: install app
-    appstore->> appsflyer: send attribution
-    note left of appsflyer: organic/ad source
-    user ->>+ app: installs app
-    app ->>+ appsflyer: ask for atribution data
-    appsflyer ->>- app: send atribution data
-    app ->>+ bff: send device data and atribution data
-    bff ->>+ tracker: send ip data, atribution data etc
-    tracker ->>- bff: ansver with decicion and ad url
-    bff ->>- app: send information about decicion and action to perform
-    app ->>- user: show iframe with AD
-```
+[![](https://mermaid.ink/img/pako:eNp1U7mO2zAQ_RWCbWRHliXrKBYIsClTpQvUjKmRTaxMKjx24xj-l3xLviwj6oBXwQIqqOG7OBzeuNAN8opb_OlRCXyWcDJwqVWtQDhtmLdoatWDcVLIHpRj0PfvC8e2fV9wBsTLQKvV3z-MvkFk8_RETEuaWDHdo2KgBi3Wwwln4IwgcCBVTCrroOtG1_9Bw7rtrgPSomoYOGfk0TupF3OlHbIOW8d0-4jX5gRKis_QMKu9EfiYlpH4pwG9JLCrCAti1gP7wlrqGCwJWAMOHlMH5EDcjNJT5I_wowW1d0I2-CoFBhQ170MmEUbmdA8TW_YBFa1pDJ2YqRNjjBiMQdlXKrxJdyZ_QVes1WjeMG-6lefjuaSiblwg-MBRe7fii7DjNOvRDMjVwTfTANizfmOypaHEMcWXZx7xC5K0bGhyb7VirObujBeseUXLBlvwnat5re4EBe_096sSvHLGY8R9T6eeB51XLXSWqjS4vLrxX7za5du4zJI83qX7okyzooj4lVdFuj3EeZ6kZVmm-0Oe3iP-W2tSiLdFkaTxPsuSbJ_sysPs8bWRNKeLBYbfb-ODC-8u2P4IIkO2-z90Fkcd?type=png)](https://mermaid.live/edit#pako:eNp1U7mO2zAQ_RWCbWRHliXrKBYIsClTpQvUjKmRTaxMKjx24xj-l3xLviwj6oBXwQIqqOG7OBzeuNAN8opb_OlRCXyWcDJwqVWtQDhtmLdoatWDcVLIHpRj0PfvC8e2fV9wBsTLQKvV3z-MvkFk8_RETEuaWDHdo2KgBi3Wwwln4IwgcCBVTCrroOtG1_9Bw7rtrgPSomoYOGfk0TupF3OlHbIOW8d0-4jX5gRKis_QMKu9EfiYlpH4pwG9JLCrCAti1gP7wlrqGCwJWAMOHlMH5EDcjNJT5I_wowW1d0I2-CoFBhQ170MmEUbmdA8TW_YBFa1pDJ2YqRNjjBiMQdlXKrxJdyZ_QVes1WjeMG-6lefjuaSiblwg-MBRe7fii7DjNOvRDMjVwTfTANizfmOypaHEMcWXZx7xC5K0bGhyb7VirObujBeseUXLBlvwnat5re4EBe_096sSvHLGY8R9T6eeB51XLXSWqjS4vLrxX7za5du4zJI83qX7okyzooj4lVdFuj3EeZ6kZVmm-0Oe3iP-W2tSiLdFkaTxPsuSbJ_sysPs8bWRNKeLBYbfb-ODC-8u2P4IIkO2-z90Fkcd)
 
 Where:
 - bff: is a light proxy on app domain, which can store logs and responsible to integration with tracker (at this point we can change implementation without making changes to app in store)
