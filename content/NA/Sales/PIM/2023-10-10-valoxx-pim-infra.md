@@ -99,12 +99,12 @@ On that step we have to
 This step usually takes near 1 working day to finish that step.
 
 ### Setup cluster and domain
-On this step we need to setup domain to access resources. We will ask you to setup CloudFlare account, pass domain for staging and production to it (two different domains). We will ask to share that account to `dev@nodeart.io`
-Then we will integrate it with proxies to automate wildcard certificate provisioning. Also on that step we can setup additional firewall and WAF protection and other things related to cloudflare,
+On this step, we need to setup domain to access resources. We will ask you to setup CloudFlare account, pass domain for staging and production to it (two different domains). We will ask to share that account to `dev@nodeart.io`
+Then we will integrate it with proxies to automate wildcard certificate provisioning. Also on that step we can setup additional firewall and WAF protection and other things related to CloudFlare,
 
 This step usually takes up to 1 working day (mostly depends on getting access to CF).
 ### Setup git and basic CI/CD
-We use our own bitbucket git and own bamboo runner and own Harbour Registry to store images. If you want to move those parts to yours infra – this is out of scope of current document.
+We use our own BitBucket Git and own Bamboo runner and own Harbor Registry to store images. If you want to move those parts to yours infra – this is out of scope of current document.
 On that step we push initial PIM skeleton to repo, setup access rules to repo and CI. Also on that step we create docker-app that also used for local development.
 
 This step usually takes up to 2 working day.
