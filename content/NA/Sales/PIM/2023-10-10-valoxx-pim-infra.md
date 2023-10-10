@@ -109,6 +109,11 @@ On that step we push initial PIM skeleton to repo, setup access rules to repo an
 
 This step usually takes up to 2 working day.
 
+## Setup backups
+We use some external tooling to create backups, on that step we need S3 compatible storage that we can use to store backups. We mostly use Google Cloud Storage, but we can use AWS or CloudFlare R2. We need to set up that tooling, add secrets, and check that backups are restorable.
+
+This step usually takes up to 1 working day.
+
 
 ## Questions to answer:
 - is it ok to go with OVH for you?
@@ -128,3 +133,4 @@ Order Server | 7-14d | 2h+ |
 Setup server |  | 1d+ |
 Setup cluster and domain |  | 1d+ |
 Setup git and basic CI/CD |  | 2d+ |
+Setup backups | | 1d |
