@@ -103,7 +103,7 @@
 ## Tech Decisions
 Предлагается использовать SvelteKit для быстрого разворачивания решения.
 
-Для хостинга статики и бекенда использовать CloudFlare Pages
+Для хостинга статики и бекенда использовать [CloudFlare Pages](https://pages.cloudflare.com/)
 
 Для авторизации использовать [Lucia-auth](https://lucia-auth.com/getting-started/sveltekit/) (не поддерживает авторизацию через телеграм)
 
