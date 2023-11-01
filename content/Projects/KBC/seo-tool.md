@@ -27,3 +27,6 @@ https://developers.google.com/search/apis/indexing-api/v3/quickstart?hl=ru
 добавить, удалить, посмотреть стаутс
 
 Возможные ванианты улушчения вместо одного инпута сделать многотекстовый инпут, который бы позволял ввести несколько урлов.
+
+### access
+email: kbc-seo@king-billy-casino.iam.gserviceaccount.com
