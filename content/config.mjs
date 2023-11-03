@@ -28,8 +28,8 @@ export default {
     { href: 'https://nodeart.io', name: 'NodeArt' },
     { href: 'https://cal.com/nosovk', name: 'Book a call' },
   ],
-  nextSeo: {
-    noindex: true,
-    nofollow: true,
+ nextSeo: {
+    dangerouslySetAllPagesToNoIndex: true,
+    dangerouslySetAllPagesToNoFollow: true,
   }
 };
