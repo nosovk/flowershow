@@ -52,10 +52,10 @@ sharing_filter поле в appsflyer app traking необходимо стави
 Пример url:
 от трекера нам приходит что-то вроде
 ```
-https://supperoffer.com/clickid=${ClientToken}&AppBundleID=${AppBundleID}&param1=offerx&param2=offerXdescription
+https://supperoffer.com/clickid={$ClientToken}&AppBundleID={$AppBundleID}&param1=offerx&param2=offerXdescription
 ```
-в примере выше ${ClientToken} должен быть подменен на ClientToken (фактически clickid), ${AppBundleID} на ид бандла, а offerx и offerxDesription должны быть сохранены для дальнейшего постбека о регистрации/покупке
-Итоговый урл который мы после интерполяции отдадим клиенту должен сохранится в 'renderedTrackerUrl'
+в примере выше `{$ClientToken}` должен быть подменен на ClientToken (фактически clickid), `{$AppBundleID}` на ид бандла, а offerx и offerxDesription должны быть сохранены для дальнейшего постбека о регистрации/покупке
+Итоговый урл который мы после интерполяции отдадим клиенту должен сохранится в `renderedTrackerUrl`
 ### s2s 
 ```
 https://bff.com/event&eventName=purchase&eventType=purchase&eventCurrecny=USD&eventAmmount=4&clickid=984394892349398439&param1={param1}
