@@ -28,3 +28,87 @@ SvelteKit — frontend framework, Cloudflare Pages — hosing and CDN, CloudFlar
 
 ### Sports Data Feed API
 We think that the best solution is to build abstraction at BFF level. In that case, we can change one API to another API. Or we can mix different APIs. Actually, API should be chosen based on completeness and coverage. 
+
+
+# Functional blocks
+## Front Site
+### Registration
+- Oauth (Google)
+- Email
+	- np authorization before confirmation
+	- send confirm email
+	- set password screen after confirm email
+	- reset password screen
+	- send reset password email
+	- set password screen after email
+### Profile 
+- public profile
+- private profile
+- edit profile
+#### Profile picture
+- upload to cdn
+- upload window
+- crop tool
+- remove from profile
+### Favorite
+- leagues (add, remove, list)
+- teams (add, remove, list)
+- players (add, remove, list)
+### Notifications
+- Email
+	- favourite team match todat
+	- favourite league match today
+- Cron jobs (no support at kit, separate worker)
+### I18N
+- routing interceptor
+- all pages have the same slug in all languages
+- all pages always have lang in URL (`/` redirects to → `/ua` )
+### SportAPI
+- custom fetch with cache support
+- different invalidation schemas for data
+- streamable promise support for not cached data
+### Routing
+- api based routing
+	- no ids should be exposed
+	- custom schema validation for path
+	- pre-chare list routins
+		- pagination support (try to avoid that)
+- strapi based routing
+	- support uri prefixes
+	- add caching for list operations
+		- pagination support (try to avoid that)
+## Search
+- no way to do it now?
+## Admin panel
+### user list
+- block users
+- send reset password link for emails
+- last login date
+- show profile info
+- delete profile image
+- #### impersonate as user
+### cache management
+- expose cache stats
+- prune by key (all)
+- run precache for options that require list
+## strapi instance
+- setup strapi
+- setup backups
+- check is restore from backups work
+- setup s3 (r2) integration for file upload
+- setup api access for modification
+- setup plugins
+	- i18n
+## n8n
+- setup n8n
+- setup backups
+- setup strapi node
+- setup chat gpt workflow
+- setup news api workflow
+- help building n8n workflows
+## Server
+- create and validate new OVH account
+- setup new server
+- setup control appliance
+- setup monitoring appliance
+- setup backups
