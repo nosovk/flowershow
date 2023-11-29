@@ -31,9 +31,9 @@ For example:
 
 | Name | Price for 1TB |
 |---- | ---- |
-| CloudFlare R2 | [<20 usd](https://developers.cloudflare.com/r2/pricing/) |
-| Google Cloud Bucket | [<25 usd](https://cloud.google.com/storage/pricing#europe) |
-| AWS S3 | [<25 usd](https://aws.amazon.com/ru/s3/pricing/) |
+| CloudFlare R2 | [\<20 usd](https://developers.cloudflare.com/r2/pricing/) |
+| Google Cloud Bucket | [\<25 usd](https://cloud.google.com/storage/pricing#europe) |
+| AWS S3 | [\<25 usd](https://aws.amazon.com/ru/s3/pricing/) |
 In common all S3 providers are pretty similar in terms of pricing.
 
 > Also, we recommend to back up assets separately, at least once in a month, into separate bucket. It could be costly, but if you remove asset from PIM it's removed from S3 storage also, that could cause data loss. We have incidents like that before, that's why we recommend to back up S3 storage to another S3 bucket.
