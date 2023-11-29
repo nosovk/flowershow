@@ -1,26 +1,26 @@
 # BRD servers
 ## Current Env
 ### production
-- **disk** - 128Gb (13Gb used) (fast SATA\SAS HDD or slow SATA SSD)
-- **cpu** - 8vcpu (Intel(R) Xeon(R) Gold 6134)
-- **ram** - 8Gb (3Gb used)
-- **net** - 0.5Gbps (Ukraine)
-- **OS** - CentOS Stream release 8
-- **docker** - 24.0.5
-- **uptime** - 116 days
-- **envs** - production
-- **node type** - worker
+- **disk** — 128Gb (13Gb used) (fast SATA\SAS HDD or slow SATA SSD)
+- **cpu** — 8vcpu (Intel(R) Xeon(R) Gold 6134)
+- **ram** — 8Gb (3Gb used)
+- **net** — 0.5Gbps (Ukraine)
+- **OS** — CentOS Stream release 8
+- **docker** — 24.0.5
+- **uptime** — 116 days
+- **envs** — production
+- **node type** — worker
 
 ### staging
-- **disk** - 128Gb (18Gb used) (fast SATA\SAS HDD or slow SATA SSD)
-- **cpu** - 10vcpu (Intel(R) Xeon(R) Gold 6134)
-- **ram** - 18Gb (8Gb used)
-- **net** - 0.5Gbps (Ukraine)
-- **OS** - CentOS Stream release 8 
-- **docker** - 24.0.5 
-- **uptime** - 116 days
-- **envs** - feature + staging
-- **node type** - manager
+- **disk** — 128Gb (18Gb used) (fast SATA\SAS HDD or slow SATA SSD)
+- **cpu** — 10vcpu (Intel(R) Xeon(R) Gold 6134)
+- **ram** — 18Gb (8Gb used)
+- **net** — 0.5Gbps (Ukraine)
+- **OS** — CentOS Stream release 8 
+- **docker** — 24.0.5 
+- **uptime** — 116 days
+- **envs** — feature + staging
+- **node type** — manager
 
 [cpu link](https://www.intel.com/content/www/us/en/products/sku/120493/intel-xeon-gold-6134-processor-24-75m-cache-3-20-ghz/specifications.html)
 
@@ -41,7 +41,7 @@ In common all S3 providers are pretty similar in terms of pricing.
 Current production ENV seems to pretty enough to handle workloads, except storage, that was mentioned above. The weak point of current server is a slow HDD, if you could - please better use fast enterprise SSD at new setup.
 
 Proposed configuration for Prod ENV:
-- **disk** - 128Gb (fast SSD)
-- **cpu** - 10-12vcpu
-- **ram** - 8-12Gb (3Gb used)
-- **net** - 1Gbps (Ukraine)
+- **disk** — 128Gb (fast SSD)
+- **cpu** — 10-12vcpu
+- **ram** — 8-12Gb (3Gb used)
+- **net** — 1Gbps (Ukraine)
