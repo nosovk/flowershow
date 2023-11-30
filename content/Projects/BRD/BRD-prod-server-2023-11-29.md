@@ -1,7 +1,11 @@
+
+
+
+
 # BRD servers
 ## Current Env
 ### production
-- **disk** — 128Gb (13Gb used) (fast SATA\SAS HDD or slow SATA SSD)
+- **disk** — 128Gb (13Gb used) (fast SATA/SAS HDD or slow SATA SSD)
 - **cpu** — 8vcpu (Intel(R) Xeon(R) Gold 6134)
 - **ram** — 8Gb (3Gb used)
 - **net** — 0.5Gbps (Ukraine)
@@ -46,6 +50,19 @@ Proposed configuration for Prod ENV:
 - **ram** — 8-12Gb (3Gb used)
 - **net** — 1Gbps (Ukraine)
 
-### Store assets at VM
-We highly recommend not to store assets within PIMCore instance, if amount of data is more than 500GB. If you want to store 1TB of data at EC2 as ECB at aws it will cost near 100usd
+### Store assets together with PIM at VM
+We highly recommend not to store assets within PIMCore instance, if amount of data is more than 500GB. Creating consistent backups with that big amount of data could cause partial system degradation during backup creation. If you want to store 1TB of data at EC2 as ECB at AWS it will cost near 100usd.
 > 1,024 GB x 1.00 instance months x 0.0952 USD = 97.48 USD (EBS Storage Cost)
+
+- **disk** — more than 1TB (fast SSD)
+- **cpu** — 10-12vcpu
+- **ram** — 8-12Gb (3Gb used)
+- **net** — 1Gbps (Ukraine)
+
+## Recommended server
+In both cases (store everything at one server, or split assets and PIM) you can try [ADV-3 Server](https://www.ovhcloud.com/en-ie/bare-metal/advance/adv-3/) at OVH.
+- CPU : AMD Ryzen 9 5900X — 12c/24t - 3.7 GHz/4.8 GHz
+- Memory : From 32 GB DDR4 ECC to 128 GB DDR4 ECC
+- Storage : SSD NVMe, HDD SATA
+- Public bandwidth : From 1 Gbps to 5 Gbps guaranteed
+You can equip it with `2× 3.84TB SSD NVMe Soft RAID` (+€93.60) to store all data in place. OVH provides enterprise grade SSDs, and they are pretty fast (much faster than that ones we observe at AWS).
