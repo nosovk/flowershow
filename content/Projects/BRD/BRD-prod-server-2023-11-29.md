@@ -45,3 +45,7 @@ Proposed configuration for Prod ENV:
 - **cpu** — 10-12vcpu
 - **ram** — 8-12Gb (3Gb used)
 - **net** — 1Gbps (Ukraine)
+
+### Store assets at VM
+We highly recommend not to store assets within PIMCore instance, if amount of data is more than 500GB. If you want to store 1TB of data at EC2 as ECB at aws it will cost near 100usd
+> 1,024 GB x 1.00 instance months x 0.0952 USD = 97.48 USD (EBS Storage Cost)
