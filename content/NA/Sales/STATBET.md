@@ -10,7 +10,8 @@ at first, and then others — MMA etc.
 - [STATBET-News](https://www.figma.com/file/PbQ5ymO1sFZ7Ro863U83hx/STATBET-News-(Team-Project))
 
 ## DataSources
-[doc](https://docs.google.com/spreadsheets/d/1NDs1EiALeOHKipPsd4jmjxchEMPbNhA45GRpcPTHCKI/edit)
+- [doc with comparsion](https://docs.google.com/spreadsheets/d/1NDs1EiALeOHKipPsd4jmjxchEMPbNhA45GRpcPTHCKI/edit)
+- [doc with creds](https://docs.google.com/spreadsheets/d/1N9Bi5XhYN0Hro4axaPUB9e41z_YGp_YYWuYhuk1rFQ8/edit#gid=0)
 
 ## Tech
 We suggest splitting project to 3 parts.
