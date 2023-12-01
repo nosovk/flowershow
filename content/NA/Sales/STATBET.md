@@ -6,8 +6,8 @@ Create Portal with actual info regarding sports
 at first, and then others — MMA etc.
 
 ## Figma
-[STATBET-Mobile](https://www.figma.com/file/zfNdn5xmvrk6MMx5KsWSXd/STATBET-Mobile-2.0-(Team-Copy))
-[STATBET-News](https://www.figma.com/file/PbQ5ymO1sFZ7Ro863U83hx/STATBET-News-(Team-Project))
+- [STATBET-Mobile](https://www.figma.com/file/zfNdn5xmvrk6MMx5KsWSXd/STATBET-Mobile-2.0-(Team-Copy))
+- [STATBET-News](https://www.figma.com/file/PbQ5ymO1sFZ7Ro863U83hx/STATBET-News-(Team-Project))
 
 ## Tech
 We suggest splitting project to 3 parts.
