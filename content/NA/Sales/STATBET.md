@@ -9,6 +9,9 @@ at first, and then others — MMA etc.
 - [STATBET-Mobile](https://www.figma.com/file/qfzdQledOZISrm2omHvRea/STATBET-Mobile-%26-Desktop-4.0-(Copy))
 - [STATBET-News](https://www.figma.com/file/PbQ5ymO1sFZ7Ro863U83hx/STATBET-News-(Team-Project))
 
+## DataSources
+[doc](https://docs.google.com/spreadsheets/d/1NDs1EiALeOHKipPsd4jmjxchEMPbNhA45GRpcPTHCKI/edit)
+
 ## Tech
 We suggest splitting project to 3 parts.
 - Front: this is a part for end users, it uses some API and have aggressive caching, but mostly it's all about our users and UI.
