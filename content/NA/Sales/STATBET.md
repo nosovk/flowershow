@@ -128,6 +128,6 @@ Strapi allowsextendingditss server with plugins, and mostly we will extend exist
 
 
 #### Notes
-https://www.youtube.com/watch?v=Gv3dAG8ktsI - strapi TS code gen
-https://forum.strapi.io/t/how-to-perform-external-api-call-when-a-content-type-item-is-published-and-send-data-to-external-api/30210/9  - integrate with external api
-https://docs-v3.strapi.io/developer-docs/latest/guides/external-data.html - integrate with external api
+- https://www.youtube.com/watch?v=Gv3dAG8ktsI - strapi TS code gen
+- https://forum.strapi.io/t/how-to-perform-external-api-call-when-a-content-type-item-is-published-and-send-data-to-external-api/30210/9  - integrate with external api
+- https://docs-v3.strapi.io/developer-docs/latest/guides/external-data.html - integrate with external api
