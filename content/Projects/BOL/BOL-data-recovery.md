@@ -56,9 +56,9 @@
     13. `export AWS_S3_FORCE_PATH_STYLE='true'`
     14. `export WALG_STREAM_RESTORE_COMMAND="mbstream -x -C /tmp/walg/mariadb"`
 15. Restore the file backups one by one [local environment]
-    1. `restic --repo <REPO> snapshots`
-    2. `restic --repo <REPO> stats --mode raw-data`
-    3. `restic -r <REPO> restore latest --target <RESTORE_DIR>`
+    1. `restic --repo %REPO% snapshots`
+    2. `restic --repo %REPO% stats --mode raw-data`
+    3. `restic -r %REPO% restore latest --target %RESTORE_DIR%`
     4. example
         1. classes
             1. `restic --repo ${RESTIC_REPOSITORY_CLASSES} snapshots`
