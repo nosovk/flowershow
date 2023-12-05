@@ -34,7 +34,7 @@
 11. Move the binaries to the directory, which included to the PATH [local environment]
     1. `sudo mv wal-g /usr/local/bin/wal-g`
     2. `sudo mv restic /usr/local/bin/restic`
-12. Bootstrap secrets to the shell [local environment] {it is necessary to the replace the <SECRET> with an actual value}
+12. Bootstrap secrets to the shell [local environment] (it is necessary to the replace the <SECRET> with an actual value)
     1. `export AWS_ACCESS_KEY_ID=<SECRET>`
     2. `export AWS_SECRET_ACCESS_KEY=<SECRET>`
     3. `export RESTIC_PASSWORD=<SECRET>`
