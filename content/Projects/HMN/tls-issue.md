@@ -1,6 +1,6 @@
 If you check working TLS connection, you may see some list of Extensions in the end:
 ![[normal-tls-connetcion.png]]
-Actually we are interested in "server_name" extension. This one also called SNI.
+Actually we are interested in "server_name" extension. This one also called [SNI](https://wikipedia.org/wiki/Server_Name_Indication).
 
 ![[normal-tls-sni.png]]
 Inside it, we can find hostname, that we want to connect.
