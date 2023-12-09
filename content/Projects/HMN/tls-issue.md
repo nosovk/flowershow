@@ -1,4 +1,4 @@
-If you check working TLS connection, you may see some list Extensions in the end:
+If you check working TLS connection, you may see some list of Extensions in the end:
 ![[normal-tls-connetcion.png]]
 Actually we are interested in "server_name" extension. This one also called SNI.
 
