@@ -24,7 +24,7 @@ poetry run python3 metabase_export.py --verbose all
 ## Running import:
 We will be running imports as individual commands to separate cards and
 dashboards into their individual collections for easier use. They must be run
-sequentially the order specified below.
+sequentially, in the order specified below.
 ```sh
 poetry run python3 metabase_import.py --verbose fields
 poetry run python3 metabase_import.py --verbose metrics
