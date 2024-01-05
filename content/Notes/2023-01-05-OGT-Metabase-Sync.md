@@ -32,7 +32,7 @@ poetry run python3 metabase_import.py --verbose cards ogt_cards
 poetry run python3 metabase_import.py --verbose dashboards ogt_dashboards
 ```
 
-Alternatively, to export cards & dashboards into a single collection:
+Alternatively, to import cards & dashboards into a single collection:
 ```sh
 poetry run python3 metabase_import.py --verbose all ogt_analytics
 ```
