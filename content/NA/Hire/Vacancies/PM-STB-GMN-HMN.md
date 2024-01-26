@@ -13,6 +13,7 @@
 - PHP, PimCore, SCSS, Svelte, Twig
 - Flutter
 - NodeJS, Svelte
+- GatsbyJS, React
 
 ## Требования к кандидатам:
 Опыт работы ПМом
