@@ -18,7 +18,7 @@ PHP, Symfony, MariaDB, Doctrine, Twig
 ## Инструменты: 
 git, jira, confluence, docker swarm, VanillaJS, scss, svelte
 
-На проекте используется 
+На проекте используется CI/CD на базе Docker Swarm + Portainer.
 ## Технические навыки: 
 Английский: intermediate +
 
