@@ -14,9 +14,9 @@
 PHP, Symfony, MariaDB, Doctrine, Twig
 
 ## Требования к кандидатам:
-Опыт работы: 3+ года коммерческогоо опыта разработки на PHP Symfony
+Опыт работы: 3+ года коммерческого опыта разработки на PHP Symfony
 ## Инструменты: 
-git, jira, confluence, docker swarm, vanillajs, scss, svelte
+git, jira, confluence, docker swarm, VanillaJS, scss, svelte
 
 На проекте используется 
 ## Технические навыки: 
