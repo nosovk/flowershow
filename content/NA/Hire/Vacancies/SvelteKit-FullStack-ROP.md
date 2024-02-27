@@ -13,7 +13,7 @@
 - Минимум внешних зависимостей в проекте (если что-то можно написать самому или завендорить из-за малого размера — так и делаем)
 
 #### Пример задачи:
-Для авторизированных пользователей ([lucia](https://lucia-auth.com/) + [D1](https://lucia-auth.com/database-adapters/pg/)) необходимо добавить метод загрузки ассетов в [CloudFlare R2](https://developers.cloudflare.com/r2/).
+Для авторизированных пользователей ([lucia](https://lucia-auth.com/) + [D1](https://lucia-auth.com/database-adapters/pg/)) необходимо добавить возможность запускать игры, по [api](https://realliveslots.com/docs/api).
 ## Тех стек: 
 [SvelteKit](https://learn.svelte.dev/tutorial/introducing-sveltekit), [Svelte](https://learn.svelte.dev/tutorial/welcome-to-svelte), [CloudFlare Pages](https://kit.svelte.dev/docs/adapter-cloudflare), [CloudFlare KV](https://developers.cloudflare.com/kv/api/), [Lucia Auth](https://www.youtube.com/watch?v=UMpKaZy0Rpc),[CloudFlare R2](https://developers.cloudflare.com/r2/get-started/), [CloudFlare D1](https://developers.cloudflare.com/d1/).
 
