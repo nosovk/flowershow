@@ -13,6 +13,7 @@
 | Cashier        | See user balance, add new transactions (deposit, withdrawal)                          |
 | ResetPasswords | Option to reset password for existing users                                           |
 | Audit          | Access to reports (all transactions, user profile updates, all cashiers transactions) |
+| admin          | Assign/detach roles to users                                                          |
 ### Feature Flags
 | Flag              | Feature                                        |
 | ----------------- | ---------------------------------------------- |
