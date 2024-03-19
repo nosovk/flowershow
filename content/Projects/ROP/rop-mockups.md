@@ -9,7 +9,7 @@
 ### Roles
 | Role Name      | What                                                                                  |
 | -------------- | ------------------------------------------------------------------------------------- |
-| KYC            | Add new users, Change user stats (new, approved, blocked), upload document screen     |
+| KYC            | Add new users, Change user status (new, approved, blocked), upload document screen    |
 | Cashier        | See user balance, add new transactions (deposit, withdrawal)                          |
 | ResetPasswords | Option to reset password for existing users                                           |
 | Audit          | Access to reports (all transactions, user profile updates, all cashiers transactions) |
