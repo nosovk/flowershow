@@ -4,5 +4,21 @@
 [figma](https://www.figma.com/file/CcOcWyLO4Gm1XnUQTa2i2c/RLS-ADMIN?type=design)
 
 [description](https://obs.nodeart.app/Notes/RLS-operator-platform%20(ROP))
+
+
+### Roles
+| Role Name      | What                                                                                  |
+| -------------- | ------------------------------------------------------------------------------------- |
+| KYC            | Add new users, Change user stats (new, approved, blocked), upload blocks              |
+| Cashier        | See user balance, add new transactions (deposit, withdrawal)                          |
+| ResetPasswords | Option to reset password for existing users                                           |
+| Audit          | Access to reports (all transactions, user profile updates, all cashiers transactions) |
+### Feature Flags
+| Flag              | Feature                                        |
+| ----------------- | ---------------------------------------------- |
+| allowRegistration | allow user self registration with 'New' status |
+| uploadDocuments   | allow documents upload                         |
+
+
 ## RLS API
 [link](https://realliveslots.com/docs/api)
