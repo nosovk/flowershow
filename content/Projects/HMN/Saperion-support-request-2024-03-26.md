@@ -11,15 +11,14 @@ You have provided example requests to it:
 > - use "SYSTIMESTAMP" to get all changes since the last run ("SYSTIMESTAMP" is UTC)
 > `GET /api/dms/stores/ProduktDoku_Edit/documents?select=XDOCUMENTID,XHDOC,SYSROWID&filter=SYSTIMESTAMP GE '2023-01-01 00:00:00' and SYSTIMESTAMP LT '2023-01-02 00:00:00'&orderby=SYSTIMESTAMP asc`
 > - fields you need in your result:
-> - XDOCUMENTID: ID you need to load the document and file content
+> - "XDOCUMENTID": ID you need to load the document and file content
 > 
-> SYSROWID: ROWID of the document, Remains the same across all versions of the document - You can use this ID to assign the document
-> XHDOC: Changes with each version - You can use this ID to determine if the document has changed
-> you can also add other fields to the result list
+> "SYSROWID": "ROWID" of the document, Remains the same across all versions of the document — You can use this ID to assign the document
+> "XHDOC": Changes with each version — You can use this ID to determine if the document has changed, you can also add other fields to the result list
 > 
 > # 2. Load the Document (for each item in the search result)
 > `GET /api/dms/stores/ProduktDoku_Edit/documents/{XDOCUMENTID}`
-> - you receive the document with the meta information of the files, here you can get the filename and the fileid
+> - you receive the document with the meta information of the files, here you can get the filename and the filed
 > - a document can contain 0-n files
 > 
 > # 3. Get the files content (for each file of the documents)
