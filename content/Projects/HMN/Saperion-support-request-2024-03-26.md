@@ -28,7 +28,7 @@ You have provided example requests to it:
 
 Now we use new API Url and make requests from outer network. And we encountered some problems with API.
 
-First of all swagger documentation is broken on our instance. You may check it over that link: https://hdmdmz1.human.de/DocGate/swagger/ui/index
+First of all swagger documentation is broken on our instance. You may check it over that link: https://hdmdmz1.human.de/DocGate/swagger/ui/index and https://hdmdmz1.human.de:8095/DocGate/swagger/ui/index#/ both are failing.
 
 Because of that we used another documentation that we found over those URLs:
 
