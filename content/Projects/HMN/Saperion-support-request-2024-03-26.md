@@ -13,7 +13,7 @@ You have provided example requests to it:
 > - fields you need in your result:
 > - XDOCUMENTID: ID you need to load the document and file content
 > 
-SYSROWID: ROWID of the document, Remains the same across all versions of the document - You can use this ID to assign the document
+> SYSROWID: ROWID of the document, Remains the same across all versions of the document - You can use this ID to assign the document
 > XHDOC: Changes with each version - You can use this ID to determine if the document has changed
 > you can also add other fields to the result list
 > 
