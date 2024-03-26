@@ -28,15 +28,17 @@ You have provided example requests to it:
 
 Now we use new API Url and make requests from outer network. And we encountered some problems with API.
 
-First of all swagger documentation is broken on our instance. You may check it over that link: https://hdmdmz1.human.de/DocGate/swagger/ui/index and https://hdmdmz1.human.de:8095/DocGate/swagger/ui/index#/ both are failing.
+~~First of all swagger documentation is broken on our instance. You may check it over that link: https://hdmdmz1.human.de/DocGate/swagger/ui/index and https://hdmdmz1.human.de:8095/DocGate/swagger/ui/index#/ both are failing.~~
 
-Because of that we used another documentation that we found over those URLs:
+~~Because of that we used another documentation that we found over those URLs:~~
 
-[https://docs.hyland.com/Saperion/javadocs/8.0/SP1/RESTAPI/ui/index.html#/](https://docs.hyland.com/Saperion/javadocs/8.0/SP1/RESTAPI/ui/index.html#/) and [https://docs.hyland.com/Saperion/javadocs/Foundation/EP1/RESTAPI/resource_DocumentResourceImpl.html](https://docs.hyland.com/Saperion/javadocs/Foundation/EP1/RESTAPI/resource_DocumentResourceImpl.html)
+~~[https://docs.hyland.com/Saperion/javadocs/8.0/SP1/RESTAPI/ui/index.html#/](https://docs.hyland.com/Saperion/javadocs/8.0/SP1/RESTAPI/ui/index.html#/) and [https://docs.hyland.com/Saperion/javadocs/Foundation/EP1/RESTAPI/resource_DocumentResourceImpl.html](https://docs.hyland.com/Saperion/javadocs/Foundation/EP1/RESTAPI/resource_DocumentResourceImpl.html)~~
+
+We were able to get current swagger specification from url https://hdmdmz1.human.de:8095/DocGate/swagger/docs/v1 and extracted it to temporal web-ui (because UI from saperion fails to load specification) that works: https://liv-cdn.pages.dev/saperion-api 
 
 Second issue is about making request to get a list of the documents inside the Saperion System.
 
-Previously we used a method  `GET API_URL/api/dms/stores/ProduktDoku_Edit/documents`, that is missing in documentation that we found now.
+Previously we used a method  `GET API_URL/api/dms/stores/ProduktDoku_Edit/documents`, ~~that is missing in documentation that we found now.~~
 
 Requests that were working before are failing now, for example:
 ```bash
