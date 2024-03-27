@@ -1,6 +1,6 @@
 # Описание вакансии: DevOps engineer
 ## Project: 
-Support of existing infrastructure.
+Support of existing infrastructure. Adding CI/CD to new projects. Adding additional validation to existing projects. Building reusable bricks to use across company projects.
 ## Tasks: 
 - Project tasks
 	- adding new infra components to new or existing projects
