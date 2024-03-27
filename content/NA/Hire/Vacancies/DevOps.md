@@ -11,7 +11,7 @@ Support of existing infrastructure.
 ## Requirements:
 Work experience: 2 or more years of work on similar position
 ## Tooling: 
-git, docker, swarm, portainer, bitbucket, grafana, loki, bamboo, jira, k8s (but still we mostly use swarm).
+git, docker, swarm, portainer, bitbucket, grafana, loki, bamboo, jira, k8s (but still we mostly use swarm), bash
 
 
 ## Additional skills: 
