@@ -9,6 +9,7 @@ Support of existing infrastructure. Adding CI/CD to new projects. Adding additio
 	- deploy Node.js project, with Redis and Postgres, add few environments, add commands to launch migrations etc.
 - Support tasks
 	- maintain existing infrastructure (mostly dedicates servers, mostly docker swarm)
+	- debug issues with service disruptions, cleanup junk and other leftovers.
 ## Requirements:
 Work experience: 2 or more years of work on similar position
 ## Tooling: 
