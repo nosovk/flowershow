@@ -6,6 +6,7 @@
 - gtin: integer, uniq
 - image: asset
 - date: date
+
 где gtin это уникальный идентификатор продукта (не может быть двух продуктов с одинаковым gtin), а image это связь с asset внутри pimcore.
 
 2. Создать cli команду, которая бы принимала URL с JSON внутри, формат json:
