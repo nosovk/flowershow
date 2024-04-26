@@ -10,7 +10,7 @@
 - создать пустой проект [sveltekit](https://kit.svelte.dev/docs/creating-a-project)
 - изменить тип адаптера на [cloudflare-pages](https://kit.svelte.dev/docs/adapter-cloudflare)
 - подвязать [cloudflare pages к репозиторию в github](https://developers.cloudflare.com/pages/get-started/git-integration/) и активировать ci/cd
-- создать ветку с названием task, дальнейшая работа будет вестись в этой ветке. С нее должен быть сделать PR на мастер, в котром будет вестись ревью. ВАЖНО: активированный ci/cd на прошлом этапе позволит собирать превью ветку для просмотра результата работы.
+- создать ветку с названием task, дальнейшая работа будет вестись в этой ветке. С нее должен быть сделать PR на мастер, в котором будет вестись ревью. ВАЖНО: активированный ci/cd на прошлом этапе позволит собирать превью ветку для просмотра результата работы.
 - создать [layout](https://kit.svelte.dev/docs/routing#layout) для оформления страниц шапкой, футером. Чтобы не возится с оформлением рекомендую подключить [picocss](https://picocss.com/docs)
 - создать форму ввода для url и shortUrl с кнопкой submit. Форма должна релизовывать:
 	- необходимо использовать [form enhancement](https://kit.svelte.dev/docs/form-actions#progressive-enhancement) для создание качественного ux формы.
