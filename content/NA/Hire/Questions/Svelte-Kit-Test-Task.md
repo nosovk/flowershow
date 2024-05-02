@@ -19,7 +19,7 @@
 	- в случае успеха — показать ссылку на `/shortUrl/stats` вместо кнопки success
 	- в случае ошибки — показать текст ошибки. Пример кейса для проверки ошибки - такой `shortUrl` уже есть.
 - подключить [cloudflare kv](https://developers.cloudflare.com/kv/) к проекту
-- подключить miniflare для локальной разработки. [Инструкция](https://community.cloudflare.com/t/how-do-you-properly-access-cloudflare-resources-from-within-a-sveltekit-app/518591/9)
+- для запуска эмуляции kv в dev режиме не забудьте положить "toml" файл в корень проекта, и добавьте `platformProxy: {persist: './your-custom-path'}` из этого [pr](https://github.com/sveltejs/kit/pull/12011/files)
 - необходимо создать [+server.ts](https://kit.svelte.dev/docs/routing#server) роут для обработки `/[shortUrl]`. При переходе по урл:
 	- необходимо отдавать 302 редирект на `url` связанный с этим `shortUrl`
 	- сохранять в kv время перехода
