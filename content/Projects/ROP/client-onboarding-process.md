@@ -26,7 +26,7 @@
 ![[rls-theme-4.png]]
 
 ## Design
-- we need product logo in *vector* format.
+- we need product Logo in *vector* format.
 - if you have some branding docs, show them to us
 - or you can just draw some design from scratch, respecting url structure that exists in example.
 
@@ -34,4 +34,4 @@
 - we ask for text, for T&C page, and Privacy page
 	- please provide docs in [markdown](https://commonmark.org/) format (you can use https://hackmd.io/ to edit them online like Google Docs)
 ### Translations
-- If you want to have some language that differs from English, we will ask you to upload translations. We use [weblate](https://weblate.org/) to manage translations
+- If you want to have some language that differs from English, we will ask you to upload translations. We use [weblate](https://weblate.org/) to manage translations. Weblate is a UI to manage translations, that allows you to manage translations on preferred language (we maintain only English localization)
