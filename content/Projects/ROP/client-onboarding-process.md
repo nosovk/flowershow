@@ -31,6 +31,6 @@ For example: my-real-casino.com and my-secret-admin.com
 
 ## Docs
 - we ask for text, for T&C page, and Privacy page
-	- plese provide docs in [markdown](https://commonmark.org/) format (you can use https://hackmd.io/ to edit them online like Google Docs)
+	- please provide docs in [markdown](https://commonmark.org/) format (you can use https://hackmd.io/ to edit them online like Google Docs)
 ### Translations
 - If you want to have some language that differs from English, we will ask you to upload translations. We use [weblate](https://weblate.org/) to manage translations
