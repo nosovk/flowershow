@@ -1,9 +1,9 @@
 ## Env Setup
 - We ask to buy 2 domains. One domain used for client side, second domain used for API and Admin Panel. We insist on splitting admin and client side.
 	- You can by domains at [namecheap.com](https://namecheap.com) or any other domain registrar service (but please avoid GoDaddy)
-For example: my-real-casino.com and my-secret-admin.com
+	- For example: my-real-casino.com and my-secret-admin.com
 - After providing domain names, we will provide NS servers that you should use for those domains.
-	- for example: 
+	- for example, there will be something like that: 
 
 | na  | value                  |
 | --- | ---------------------- |
