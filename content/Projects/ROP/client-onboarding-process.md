@@ -28,7 +28,7 @@
 ## Design
 - We need product Logo in *vector* format (svg).
 - If you have some branding docs, show them to us
-- Or you can just draw some design from scratch, respecting url structure that exists in example.
+- Or you can just draw some design from scratch, in that case contact us regarding design brief.
 
 ## Docs
 - We ask for text, for T&C page, and Privacy page
