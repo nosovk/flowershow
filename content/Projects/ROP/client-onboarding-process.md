@@ -34,4 +34,4 @@
 - We ask for text, for T&C page, and Privacy page
 	- please provide docs in [markdown](https://commonmark.org/) format (you can use https://hackmd.io/ to edit them online like Google Docs)
 ### Translations
-- If you want to have some language that differs from English, we will ask you to upload translations. We use [weblate](https://weblate.org/) to manage translations. Weblate is a UI to manage translations,  Ask for credentials to get into it. It will allow you to manage translations on preferred language (we maintain only English localization)
+- If you want to have some language that differs from English, we will ask you to upload translations. We use [weblate](https://weblate.org/) to manage translations. Weblate is a UI to manage translations,  Ask for credentials to get into it. It allows you to manage translations on preferred language (we maintain only English localization).
