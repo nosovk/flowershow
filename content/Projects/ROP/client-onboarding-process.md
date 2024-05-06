@@ -14,7 +14,7 @@
 	- for example at NameCheap panel:
 ![[namecheap-ns-setup.png]]
 - Google Cloud Setup: we have to store audit logs of all bets and client profile modification, and we should store that data in yours account. Please register account, add project, and share ownership rope over that project to dev@nodeart.io
-	- registration link: https://cloud.google.com/ 
+	- Registration link: https://cloud.google.com/ 
 	- Press “Start Free” and follow instructions, if you will stuck on that step, feel free to ask for support.
 	- 
 ## RLS Colors
@@ -26,12 +26,12 @@
 ![[rls-theme-4.png]]
 
 ## Design
-- we need product Logo in *vector* format.
-- if you have some branding docs, show them to us
-- or you can just draw some design from scratch, respecting url structure that exists in example.
+- We need product Logo in *vector* format (svg).
+- If you have some branding docs, show them to us
+- Or you can just draw some design from scratch, respecting url structure that exists in example.
 
 ## Docs
-- we ask for text, for T&C page, and Privacy page
+- We ask for text, for T&C page, and Privacy page
 	- please provide docs in [markdown](https://commonmark.org/) format (you can use https://hackmd.io/ to edit them online like Google Docs)
 ### Translations
 - If you want to have some language that differs from English, we will ask you to upload translations. We use [weblate](https://weblate.org/) to manage translations. Weblate is a UI to manage translations, that allows you to manage translations on preferred language (we maintain only English localization)
