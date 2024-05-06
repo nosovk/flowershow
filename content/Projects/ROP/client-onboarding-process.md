@@ -14,7 +14,8 @@
 	- for example at NameCheap panel:
 ![[namecheap-ns-setup.png]]
 - Google Cloud Setup: we have to store audit logs of all bets and client profile modification, and we should store that data in yours account. Please register account, add project, and share ownership rope over that project to dev@nodeart.io
-	- registration link: https://cloud.google.com/
+	- registration link: https://cloud.google.com/ 
+	- Press “Start Free” and follow instructions, if you will stuck on that step, feel free to ask for support.
 	- 
 ## RLS Colors
 - You can choose one of existing RLS themes, or you can [build your own (video guide)](https://youtu.be/QCfXKaZYKYc).
