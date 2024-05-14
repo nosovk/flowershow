@@ -86,6 +86,6 @@ window.Intercom("boot", {
 });
 ```
 
-Fields that we woul like to have, but they are missing:
+Fields that we would like to have, but they are missing:
  created_at: user.createdAt
 
