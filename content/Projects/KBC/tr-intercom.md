@@ -87,9 +87,11 @@ window.Intercom("boot", {
 ```
 
 ## Additional fields
-### Created at
-Fields that we would like to have, but they are missing:
 
+Fields that we would like to have, but they are missing:
+### Created at
+
+"Created_at" in Unix timestamp format (like 1350466020)
 ```js
 created_at: user.createdAt
 ```
