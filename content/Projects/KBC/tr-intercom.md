@@ -50,7 +50,7 @@ Example user data from Easy-Rocket
     "login": "nosov_nodeart.io", //skip
     "name": "Konstantin", // 'name' field
     "phone": {
-        "code": "49", // 'Phone' field, code+number
+        "code": "49", // 'Phone' field, "+"+code+number
         "confirmationStatus": 0,
         "number": "505535424",
         "numberAvailableInput": 3,
@@ -80,7 +80,7 @@ window.Intercom("boot", {
   country: profile.country,
   language: profile.language,
   level: profile.level,
-  phone: profile.code+profile.phone,
+  phone: "+"+profile.code+profile.phone,
   points: profile.points,
   geneder: profile.sex 
 });
