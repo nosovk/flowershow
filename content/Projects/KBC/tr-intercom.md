@@ -86,10 +86,14 @@ window.Intercom("boot", {
 });
 ```
 
+## Additional fields
+### Created at
 Fields that we would like to have, but they are missing:
+
  created_at: user.createdAt
 
-### Tags
+We would like to observe registration date in intercom user profile.
+### add Tags
 In admin panel we can assign tags:
 ![[tr-tags.jpg]]
 For example we have tags: “test_deu”, “test_cio_int08_02”, “overall”.
@@ -98,4 +102,4 @@ We would like to transfers to intercom, but we are aware, that not all tags are 
 
 We suggest adding tags with prefix “public_” to user profile.
 
-For example: “public_test_deu”, “overall”. First tag should be passed to profile, and then added to intercom. Second tag should stay on backend.
+For example: “public_test_deu”, “overall”. First tag should be passed to profile, and then added to intercom. The second tag should stay on backend.
