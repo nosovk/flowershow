@@ -90,10 +90,11 @@ window.Intercom("boot", {
 ### Created at
 Fields that we would like to have, but they are missing:
 
- created_at: user.createdAt
-
+```js
+created_at: user.createdAt
+```
 We would like to observe registration date in intercom user profile.
-### add Tags
+### Add Tags to FrontEnd
 In admin panel we can assign tags:
 ![[tr-tags.jpg]]
 For example we have tags: “test_deu”, “test_cio_int08_02”, “overall”.
