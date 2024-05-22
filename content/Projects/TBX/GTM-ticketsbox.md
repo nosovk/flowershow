@@ -65,3 +65,21 @@ window.dataLayer.push({
 'event-point': 'cdc2edvf' // это event point id, который человек захотел купить
 });
 ```
+
+
+## Login Success
+событие при успешном логине
+```javascript
+window.dataLayer.push({
+'event' : 'login-success',
+'user_id': 'cdc2edvf'
+});
+```
+
+## Login Fail
+событие при неуспешном логине
+```javascript
+window.dataLayer.push({
+'event' : 'login-fail',
+});
+```
