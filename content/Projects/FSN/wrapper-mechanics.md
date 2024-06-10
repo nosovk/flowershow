@@ -127,3 +127,35 @@ POST `/sendAttribution`
 
 ## flow
 [![](https://mermaid.ink/img/pako:eNp9UsGOmzAU_BXrnbNREgcSOFRC2h572p6a5ODYJqAaGxlb2y3w733GoaWJWiSQPZ55M-_hHrgREnIolXnnFbOOfH09a4JP0bYnxbzm1YW8vHwa3qQWpHDODuRalj2-YyR2_nqzrK1IZEeQBFLQkaFuSWm8FsOdUIgucrBgXCyp2riZfmONPHWVeZ9Wl8iN3wBECWdKXRn_Towlrm6k8W4gDGOeuFFKcjdt6qt3tdGXh8SLozl2gKbKGCp02_NKYvUFc3xOX0yi9RplDz3-fRhiPw3Nydl70VeAiz-e_Q3HErD_BXnQ3D2HztVK4VwJE8RbNSxS_Esxz_zpl8EKGmkbVgu8M33AzuAqifUgx6WQJfPKneGsR6Qy78zbh-aQO-vlCnwr0PC1Zth6A3nJVIdoyzTkPfyAPN2sD3uaJmm2PdJdkmUr-IB8u07obkP39IhH9HDc7MYV_DQGKyCfJinNUro97I_bLEtmk8-idsb-9pDT9ku869OVn3y_TVViOGv8rboLxl_m-wE9?type=png)](https://mermaid.live/edit#pako:eNp9UsGOmzAU_BXrnbNREgcSOFRC2h572p6a5ODYJqAaGxlb2y3w733GoaWJWiSQPZ55M-_hHrgREnIolXnnFbOOfH09a4JP0bYnxbzm1YW8vHwa3qQWpHDODuRalj2-YyR2_nqzrK1IZEeQBFLQkaFuSWm8FsOdUIgucrBgXCyp2riZfmONPHWVeZ9Wl8iN3wBECWdKXRn_Towlrm6k8W4gDGOeuFFKcjdt6qt3tdGXh8SLozl2gKbKGCp02_NKYvUFc3xOX0yi9RplDz3-fRhiPw3Nydl70VeAiz-e_Q3HErD_BXnQ3D2HztVK4VwJE8RbNSxS_Esxz_zpl8EKGmkbVgu8M33AzuAqifUgx6WQJfPKneGsR6Qy78zbh-aQO-vlCnwr0PC1Zth6A3nJVIdoyzTkPfyAPN2sD3uaJmm2PdJdkmUr-IB8u07obkP39IhH9HDc7MYV_DQGKyCfJinNUro97I_bLEtmk8-idsb-9pDT9ku869OVn3y_TVViOGv8rboLxl_m-wE9)
+
+## Cases
+### first launch
+-  "ads_url": "",
+- "action": "launch",
+- "last_url": ""
+- "firstLaunch": true
+### first launch, attribution
+- "ads_url": "", // will hav url, if we got ads on first launch
+- "action": "attribution",
+- "last_url": ""
+- "firstLaunch": true
+### second launch, not activated
+-  "ads_url": "",
+- "action": "launch",
+- "last_url": ""
+- "firstLaunch": false
+### second launch, attribution, not activated
+- "ads_url": "",
+-  "action": "attribution",
+- "last_url": ""
+- "firstLaunch": false
+### second launch, activated
+- "ads_url": "https://offer.com", // url which was used for activation
+-  "action": "launch", 
+-  "last_url": "https://offer.com/deposit" // url where user closed an app
+- "firstLaunch": false
+### second launch, attribution, activated
+- "ads_url": "https://offer.com", // url which was used for activation
+- "action": "attribution",
+- "last_url": "https://offer.com/deposit" // url where user closed an app
+- "firstLaunch": false
