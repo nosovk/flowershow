@@ -8,7 +8,7 @@ fix: go 1.22
 
 
 
-docker fork with fix of trap https://github.com/warhorse/docker-evilginx2/compare/master...almart:docker-evilginx2:master (автор мудак, и в github вставляет заголовки которые 100% отрезаются всеми как малвара, в платном скрипте установки для PRO он их удалят. И постоянно меняет что еще он подсунет, [см доклад](https://owasp.org/www-chapter-sacramento/assets/slides/2023-May.pptx))
+Docker fork with fix of trap https://github.com/warhorse/docker-evilginx2/compare/master...almart:docker-evilginx2:master (автор мудак, и в github вставляет заголовки которые 100% отрезаются всеми как малвара, в платном скрипте установки для PRO он их удалят. И постоянно меняет что еще он подсунет, [см доклад](https://owasp.org/www-chapter-sacramento/assets/slides/2023-May.pptx))
 
 https://help.evilginx.com/docs/phishlet-format
 
