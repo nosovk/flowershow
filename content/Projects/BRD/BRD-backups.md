@@ -41,3 +41,101 @@
 Эти бекапы вы сейчас осуществляете, если мне не изменяет память раз в день. Глубина их хранения мне не известна. Основной плюс таких бекапов — возможность восстановить за пару минут. Основной минус — они занимают много места.
 
 Эти бекапы нужно настроить с вашей стороны, в приемлемой форме.
+
+
+
+-----------------------
+
+
+Ситуація по application aware бекапам наступна:  
+  
+
+- [production.pim.brocard.ua](http://production.pim.brocard.ua/) (10.10.125.30) — old cluster  
+	- brd-application-production-green (old production, no CI) 
+		- no backups
+	- brd-brd-portainer-production-green (portainer bundle, no CI) 
+		- no backups
+- [staging.pim.brocard.ua](http://staging.pim.brocard.ua/) (10.10.125.31) - old cluster  
+	- brd-application-feature-green (feature env, with CI)  
+		- no backups (credentials requested - TODO)
+	- brd-application-staging-green (staging env, with CI)  
+		- no backups (credentials requested - TODO)
+	- brd-brd-traefik-production-green  (traefik bundle, no CI)  
+		- no backups
+- [pimcore.brocard.ua](http://pimcore.brocard.ua/) (10.12.125.30) - new cluster  
+	- brd-brd-pc-pr-gr (new production env, with CI)  
+		- database backups to aws s3 bucket - walg
+		    - on startup - full backup
+		    - every 5 minutes or 100mb binlog writes - delta backup (binlog)
+		    - every hour - full backup
+		    - every day at 02:00 - old backup pruning (keep 30 last full backups)
+		- file backups to aws s3 bucket - restic
+		    - every 2 hours - incremental backup + old backup pruning (keep last 35 snapshots and keep 7 daily snapshots and keep 8 weekly snapshots and keep 12 monthly snapshots and keep 2 yearly snapshots)
+		    - every week on saturday at 02:00 - backup verification  
+	- brd-brd-gf-pr-gr (grafana bundle, with CI)  
+		- database backups to aws s3 bucket - walg
+			- on startup - full backup
+			- every 5 minutes or 16mb wal writes - delta backup (wal)
+			- every day at 01:00 -  full backup
+			- every week on saturday at 02:00 - full backup + pruning (keep last 20 full backups)  
+			- 03:00 on the first day of the month -  full backup + pruning (keep last 10 full backups)  
+		- file backups to aws s3 bucket - restic 
+			- every 30 minutes - incremental backup + old backup pruning (keep last 35 snapshots and keep 7 daily snapshots and keep 8 weekly snapshots and keep 12 monthly snapshots and keep 2 yearly snapshots)
+			- every week on saturday at 02:00 - backup verification
+
+	- brd-brd-lk-pr-gr (loki bundle, with CI)  
+		- no backups
+	- brd-brd-pr-pr-gr (prometheus bundle, with CI)  
+		- no backups
+	- brd-brd-pt-pr-gr (portainer bundle, with CI)  
+		- no backups
+	- brd-brd-tr-pr-gr (traefik bundle, with CI)  
+	    - no backups
+
+Для налаштування бекапу для баз даних та файлового бекапу для feature та staging оточень я, раніше, просив по пошті бакет та креди для доступу, проте мені їх не дали, тож, якщо будуть - то зможу доналаштувати. Інструменти для бекапу баз даних та файлового бекапу підтримують бекап у віддалене сховище по s3 проколу, підтримують архівацію, дедуплікацію та шифрування (усе це ввімкнено). По інфраструктурі - бекапи є у grafana, а інші сервіси не мають бекапів. Поточні бекапи розраховані на відновлення на випадок повної втрати VM. Якщо буде треба - то можна налаштувати бекап і для інших інфраструктурних сервісів.  
+  
+Базова, верхньорівнева процедура відновлення на випадок втрати VM:
+
+  
+1) автоматизоване налаштування нової VM після отримання доступу
+2) ручне відновлення секретів
+3) автоматичний деплой сервісів на CI
+4) автоматизоване відновлення останнього бекапу бази данних та останнього файлового снапшоту
+5) перевірка корректності роботи після відновлення
+
+
+Плюси поточної реалізації application aware backup:
+
+- Бекап бази данних відбувається максимально корректно, за допомогою стабільного протоколу, який використовується для master-slave реплікації
+- Для бази доступне point-in-time-recovery
+- За рахунок дедуплікації, архівації, та дельта бекапів - займається мало місця на мережевому диску
+- Усі дані на мережевому диску зашифровані
+- Інструменти мають підтримку prometheus exporters, за допомогою яких можна відслідковувати стан бекапів, та надсилати сповіщення у випадку блокування віддаленого сховища, чи затримці останнього бекапу (зараз не зроблено, можна доналаштувати)
+- Інструменти мають підтримку різних протоколів для доступу до віддаленого сходища, як то sftp \ rest \ s3 \ swift \ rclone
+	- [https://rclone.org/overview](https://rclone.org/overview)
+	- https://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html](https://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html)
+	- [https://github.com/wal-g/wal-g/blob/master/docs/STORAGES.md](https://github.com/wal-g/wal-g/blob/master/docs/STORAGES.md)
+
+- За рахунок дельта бекапів і їх малого розміру, ми можемо збільшити частоту бекапів до раз на 5 хвилин
+- Використання віддаленого сховища у стороннього вендора (s3), яке не має vendor lock, тож можемо мігрувати між провайдерами
+- Можливість майже безкоштовного бекапу через free tier у сторонніх вендорів
+- Можливість on-demand відновлення із бекапу конкретного оточення на комп'ютері розробника
+- Можливість налаштування fallback backup storage для бекапу у резервне сховище, якщо основне недоступне (walg)
+- Можливість верифікувати коректність даних шляхом вичитування по розкладу вмісту усіх файлів, що попадають у snapshot (restic)
+- Малий розмір бінарних файлів ~ 20mb, та підтримка amd64 та arm64, бінарні файли доступі на github
+- Використовувані інструменти мають відкритий вихідний код
+
+Мінуси поточної реалізації application aware backup:
+
+- Бекап тільки даних, тож якщо VM втрачено, ми вимушені її переналаштовувати, використовуючи автоматизовані рішення (ansible)
+- Бекап секретів для swarm cluster відсутній, тож вони бекапуються та відновлюються вручну
+- Процедура відновлення автоматизована, проте не автоматична (що можна додатково покращити)
+- Бекап включений тільки для частини оточень
+- ВІдсутнє погодження на проведення випробувань відновлення із бекапів
+
+
+Також, додам що наявність зовнішніх бекапів на рівні гіпервізору дає можливість пришвидшити відновлення, тобто можна буде відкотити VM на останній бекап у гіпервізорі, і далі, відновити дані із бекапу бази та файлового бекапу.
+
+По поточним політикам зберігання та автоматичного видалення старих бекапів - можно зручно через репозиторій вносити зміни. Якщо немає якихось суттєвих обмежень по розміру бекапів - то можна буде запусти їх створення частіше.
+
+Інструменти для автоматичного application aware бекапу інтегровані для оточень як окремі swarm services, що дає можливість їх швидко активувати для нових оточень. Скрипти та розклад запуску - знаходяться у репозиторії, бінарні файли запаковані у образи контейнерів, і можуть автоматично оновлюватися на CI, при збірці коду для pimcore. Для прискорення та спрощення процесу відновлення із бекапів були підготовлення окремі swarm services, де вже є потрібні бінарні файли, конфігураційні файли та секрети.
