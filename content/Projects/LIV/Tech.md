@@ -74,7 +74,7 @@ Example: for calls from User to Streamer in Roulette there are separate tariff, 
 Existing mechanism is super flexible in providing custom scenarios. The main goal from the start was to allow building different motivation schemas for different kinds of users that participate in a call.
 
 ### blocklist
-Time to time users want to blacklist some other usres. There could be different reasons. If user blocks somebody we immediately remove blocked user from calls, gallery etc.  And also we store the reason, for additional analysis. For example, we can issue penalty to streamer for Nudity, or, if there is lots of harassment blocks we can block user.
+Time to time users want to blacklist some other users. There could be different reasons. If a user blocks somebody we immediately remove the blocked user from calls, gallery etc. And also we store the reason, for additional analysis. For example, we can issue penalty to streamer for Nudity, or, if there are lots of harassment blocks, we can block a user.
 ![[OLO-user-blocklist.png]]
 
 ### chat
@@ -116,8 +116,6 @@ Global app settings, like minimum allowed version for mobile apps.
 
 ### timetable
 This is not a domain, but plugin to store and launch cron tasks in our application.
-
-
 ### user
 Here we manage user sessions, user online/offline status, registration tokens, login attempts etc.
 
