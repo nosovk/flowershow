@@ -8,6 +8,7 @@ In our settings inside redirector for AU region, there are currently 3 mirrors:
 - kingbillywin9.com
 - kingbillywin10.com
 - kingbillywin11.com
+
 It means, that depending on internet connection, when user will click the link in a mail, he could be redirected to any of that domains.
 
 For example: https://www.kingbillywin11.com/users/confirmation?confirmation_token=XSAJWhLRPJUnjxYZSix2&locale=en-CA
