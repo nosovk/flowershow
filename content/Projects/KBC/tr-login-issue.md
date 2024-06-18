@@ -11,8 +11,9 @@ From api responce I think that there should be domain https://yam.ninlil.world/ 
 https://yam.ninlil.world/action?data=M923RnqDGFx8f%2FCLIexuh5UrJCO9KkXM3V5XUl8xiypAYuJ3r0Q%2BJvvNrpyrZ%2F3XWgnfWbD%2B3OwehqP%2F2lW7eX2%2F7NqBheI%2BMUY1DvO3KFtmG7XOSOynMNy4kXK%2BG1XwQOJbxkN%2BwAP1C8zxp85gzuHuF4YB2g6gpw%3D%3D
 
 ### Authorization
-Actually I expect that after visiting link with token at first, user will be authorized on a product.
-Currently, if I fix link from email end point it on a working mirror, I will see responce like that:
+Actually I expect that after first visit of the link with token, user will be authorized on a product.
+
+Currently, if I fix link from email end point it on a working mirror, I will see response like that:
 https://yam.ninlil.world/api/profile/send-action?language=en&data=dFsQGhneIYiT%2FhvyyqCYjMu22qkaa8xvkYOIgYwqmzS91W2%2B9Zykg1MnX7LWCxpF%2Bv8n3CNj1AMv8pHNko2fziZiYJ0kgtOPMuJkJa7lIn%2FYUVMpCEJ7Oe5opbMU3SBNY14Aoev8m%2FpVgBtZOfgYJMv%2BCQVgj0xU
 
 that will lead to error:
@@ -24,4 +25,6 @@ that will lead to error:
 }
 ```
 
-It means, that now there is now way to login into product using confirmation link.
+It means, that now there is no way to login into the product using confirmation link.
+
+We expect — that user can use confirmation token on an nay active mirror.
