@@ -82,7 +82,6 @@
 		- file backups to aws s3 bucket - restic 
 			- every 30 minutes - incremental backup + old backup pruning (keep last 35 snapshots and keep 7 daily snapshots and keep 8 weekly snapshots and keep 12 monthly snapshots and keep 2 yearly snapshots)
 			- every week on saturday at 02:00 - backup verification
-
 	- brd-brd-lk-pr-gr (loki bundle, with CI)  
 		- no backups
 	- brd-brd-pr-pr-gr (prometheus bundle, with CI)  
