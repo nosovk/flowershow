@@ -2,8 +2,8 @@
 ## Modules
 ### Mobile
 Mobile part: build with flutter.
-Integrated SDKs:
 
+Integrated SDKs:
 - Firebase Auth
 Push
 - OneSignal
@@ -19,13 +19,13 @@ Video:
 - Twilio
 
 ### Backend
-As a core and API gateway we use [hasura](https://hasura.io/) as a solution to make WebSocket subcriptions and provide [GraphQL](https://graphql.org/) API to Client.
+As a core and API gateway we use [hasura](https://hasura.io/) as a solution to make WebSocket subscriptions and provide [GraphQL](https://graphql.org/) API to Client.
 For methods that require logic that exceeds fetching data we use [Hasura Actions](https://hasura.io/docs/latest/actions/overview/) implemented in NodeJS with [Fastify](https://fastify.dev/).
 ### Streamer portal
 Web panel, which is used to show information that is not related to usual user activity, like streamer balance, rules for streamers etc. It's build within [SvelteKit](https://kit.svelte.dev/).
 
 ### Admin Panel
-Web panel, where moderator can manage user balances, manage streamers and users. Also KYC and photo moderation made here.
+Web panel, where moderator can manage user balances, manage streamers and users. Also, KYC and photo moderation made here.
 ![[OLO-panel-userlist.png]]
 ![[OLO-panel-moderation.png]]
 ![[OLO-panel-user-profile.png]]
