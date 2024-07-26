@@ -1,26 +1,43 @@
 # Goal:
-We want to make a test of bad agent behavior detection on a one of current product.
+To evaluate the effectiveness of the bot mitigation system in detecting malicious agent behavior within our current product suite.
 
-### What is bad agent?
-- Users that use some automation tools, like Cypress or Selenium
-- Users that abuse our payment systems (starting lots of deposit requests, that are not fullfiled. Each request have to reserve card form pool, which leads to some kind of DDoS for good customers)
-### Userbase
-We mostly target Russian market, which causes problem with IP reputation based checks. Most of our users use VPN or TOR or some proxy to get to our products, which leads to problems in detection of suspicious traffic. 
+## What is a Malicious Agent?
+Malicious agents are users exhibiting behaviors that can harm our services. These include:
+- Users leveraging automation tools, such as Cypress or Selenium.
+- Users exploiting our payment systems (e.g., initiating multiple unfulfilled deposit requests, causing resource exhaustion and potential service denial to legitimate customers).
+## Userbase
+Our primary market is Russia. Therefore:
+- IP reputation-based checks are challenging due to prevalent VPN, TOR, and proxy usage among our users.
+- Accurate detection of suspicious traffic is complex but essential.
 ## Methodology
-We are waiting to get some score or response about validation at casino frontend. Then we attach that response to Google Analytics session and to Microsoft Clarity session.
-Then we build a report in BI, that shows as two metrics:
-- how much of our paying users were marked as bad agents (and what is their value, we have data about their value and can easily calculate how much of our income will be affected)
-- how much of actual bad agents were marked as bad agents.
 
-Based on those two metrics we have to make a decision, like are we going to implement it in our backend or not.
+1. **Detection Mechanism**: Integrate the validation score or response from the casino frontend.
+2. **Data Attachment**: Link the response to sessions in Google Analytics and Microsoft Clarity.
+3. **Reporting**: Develop a BI report illustrating two key metrics:
+	- The percentage of paying users identified as malicious agents and their corresponding financial impact.
+    - The accuracy of the system in identifying actual malicious agents.
 
-### Test integration schemas
+The decision to implement the bot mitigation system in our backend will be based on these metrics.
 
-### GTM
-We obtain some script from solution provider, install it into Google Tag Manager container. We launch that Tag on page load or registrations attempt (ask solution provider), as a result of launching the tag we expect to get some result, that we can attach to google Analytics.
-### GTM Fields that we can send to script
-- user email
-- user id
+## Test Integration Schemas
+### Google Tag Manager (GTM) Integration
+1. **Script Installation**: Obtain the detection script from the solution provider and add it to our GTM container.
+2. **Tag Execution**: Activate this tag on page load or during registration attempts (as per the solution provider's recommendation).
+3. **Data Capture**: Capture and send relevant information to Google Analytics.
+#### GTM Fields to Send:
+- User email
+- User ID
+#### Expected Outcome:
+- Transfer GA data to BigQuery (BQ) for merging with backend data to evaluate the mitigation system’s effectiveness.
+- Generate a comprehensive UserID-based report.
+### CSV Data Exchange.
 
-### CSV exchange
-We can 
+1. **Data Export**: Prepare dataset customer data in a form of CSV file containing:
+    - User ID
+    - Email
+    - Registration IP address
+    - Phone number (if available)
+2. **Data Submission**: Provide this CSV to the solution provider for analysis.
+3. **Blind Testing**: Conduct blind tests by comparing the solution provider’s results with actual user behavior based on the User ID.
+#### Expected Outcome:
+- Generate a comprehensive UserID-based report.
