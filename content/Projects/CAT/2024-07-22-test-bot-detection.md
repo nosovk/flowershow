@@ -20,7 +20,7 @@ Our primary market is Russia. Therefore:
 The decision to implement the bot mitigation system in our backend will be based on these metrics.
 
 ## Test Integration Schemas
-### Google Tag Manager (GTM) Integration
+### I. Google Tag Manager (GTM) Integration
 1. **Script Installation**: Obtain the detection script from the solution provider and add it to our GTM container.
 2. **Tag Execution**: Activate this tag on page load or during registration attempts (as per the solution provider's recommendation).
 3. **Data Capture**: Capture and send relevant information to Google Analytics or Microsoft Clarity
@@ -30,7 +30,7 @@ The decision to implement the bot mitigation system in our backend will be based
 #### Expected Outcome:
 - Transfer GA data to BigQuery (BQ) for merging with backend data to evaluate the solution provider system’s effectiveness.
 - Generate a comprehensive UserID-based report.
-### CSV Data Exchange.
+### II. CSV Data Exchange.
 
 1. **Data Export**: Prepare dataset customer data in a form of CSV file containing:
     - User ID
@@ -42,7 +42,7 @@ The decision to implement the bot mitigation system in our backend will be based
 #### Expected Outcome:
 - Generate a comprehensive UserID-based report for part of existing codebase
 
-### Workers integration
+### III. Workers integration
 1. **Installation:** create custom CloudFlare Workers script, that can process request data.
 2. all next steps the same, as for GTM integration
 This method requires much more efforts from our side and should be avoided.
