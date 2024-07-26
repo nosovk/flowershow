@@ -1,3 +1,4 @@
+[TOC]
 # Goal:
 To evaluate the effectiveness of the bot mitigation system in detecting malicious agent behavior within our current product suite.
 
