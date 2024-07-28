@@ -11,11 +11,11 @@
 
 ![[CAT-performance-dynamic.png]]
 
-### Layout Shift
+### improve Layout Shift metric
 ![[Pasted image 20240729001016.png]]
 Установка высоты блока со слайдером вместо 100% в фиксированное значение - 400px улучшит метрику layout shift - экран не будет прыгать при догрузке банера.
 
-### CORS
+### improve CORS 
 SVG и прочие картинки загружаются с CORS, проставление ```
 crossorigin="anonymous" могло бы улучшить ситуацию
 [doc](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/crossorigin)
