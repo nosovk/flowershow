@@ -12,7 +12,7 @@
 ![[CAT-performance-dynamic.png]]
 
 ### improve Layout Shift metric
-![[Pasted image 20240729001016.png]]
+![[CAT-layout-shift.png]]
 Установка высоты блока со слайдером вместо 100% в фиксированное значение - 400px улучшит метрику layout shift - экран не будет прыгать при догрузке банера.
 
 ### improve CORS 
