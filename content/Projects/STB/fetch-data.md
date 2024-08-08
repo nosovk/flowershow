@@ -2,6 +2,16 @@
 Все статьи и все сущности доступны в автогенериуремом API. Документация на контракт API:
 https://docs.strapi.io/dev-docs/api/rest/
 
+### Авторизация
+Для доступа к апи вам понадобиться получить токен. Используется обычный Auth Bearer Token, передавайте его в Authorization Header
+```json
+headers: {
+        Authorization:
+          'Bearer xxxxTokenxxxx',
+      },
+}     
+```
+
 ## Примеры
 
 Запрос статей с категорией TBX
@@ -9,7 +19,6 @@ https://docs.strapi.io/dev-docs/api/rest/
 curl --request GET \
   --url 'https://statbet.pp.ua/api/articles?filters%5Bsubcategory%5D%5Bstb_id%5D%5B%24eq%5D=tbx&publicationState=preview&filters%5BpublishedAt%5D%5B%24null%5D=true&pagination%5BpageSize%5D=10&pagination%5Bpage%5D=1&sort=createdAt%3Adesc&locale=uk'
 ```
-
 
 > Важно: в запросе выше стоит фильтр по статусу статьи - получать только неопубликованные статьи. Он необходим, чтобы статьи не попадали на сайт statbet. Если мы хотим добавлять какие-то статьи которые будут для внешних потребителей - не нужно устанавливать им статус опубликовано
 
