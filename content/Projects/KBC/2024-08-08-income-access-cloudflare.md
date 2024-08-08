@@ -17,6 +17,6 @@ We finished with that conclusion:
 >
 > It's crucial, because `x-forwarded-for` is a standard header. If I proxy access to IA using traefik or similar proxy for adding SSL on top of http provided by you we will have a similar issue. Problem is that any proxy will add the original ip in `x-forwarded-for` header. Because it's a standart, it's not invented by Cloudlflare. [https://developer.mozilla.org/en-US/docs/Web/HTTP/headers/X-Forwarded-For](https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsgndr.online%2Fclick%3Fredirect%3Dhttps%253A%252F%252Fdeveloper.mozilla.org%252Fen-US%252Fdocs%252FWeb%252FHTTP%252Fheaders%252FX-Forwarded-For%26dID%3D1597188361844%26linkName%3Dhttps%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FHTTP%2Fheaders%2FX-Forwarded-For&data=01%7C01%7CAleksandra.Santova%40paysafe.com%7Cd5272126cf324e03f4da08d83e4df717%7C07018c2ae7d84bf19456092ad6aecf0f%7C0&sdata=ApPLAvHki%2B6iSckgeOdh7%2BTX72s9YpwupQF34JpZpLk%3D&reserved=0)
 >
-> In common it means that any solution that I can provide to handle SSL will break GEO ip restrictions in IA. You need to fix detecting original user IP before we can add any SSL proxy on top of yours server.
+> In common, it means that any solution that I can provide to handle SSL will break GEO ip restrictions in IA. You need to fix detecting original user IP before we can add any SSL proxy on top of yours server.
 
 Actually after that we got response that IA will someday implement that, but no ETA was given, and we have continued our live without GEO filtering/split/report.
