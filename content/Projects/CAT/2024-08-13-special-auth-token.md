@@ -67,7 +67,7 @@ headers.append("Access-Control-Allow-Credentials", "true");
 {
 	"jwtToken": "3cxdfcxsxsxfc",
 	"refreshToken": "dxsxdsxsdx",
-	userData: {
+	"userInfo": {
 		"balance": 0,
 	    "loyalty": {
 	        "IDUser": "3045047524",
@@ -173,7 +173,7 @@ headers.append("Access-Control-Allow-Credentials", "true");
 }
 ```
 
-В этом случае мы могли бы принять решение о показе некоего дополнительного промо, а так же создать ссылки ведущие на продукт сразу с токенами для авто логина.
+В этом случае мы могли бы принять решение о показе некоего дополнительного промо на основании информации о пользователе, а так же создать ссылки ведущие на продукт сразу с токенами для авто логина.
 
 
 ## Conclusion
