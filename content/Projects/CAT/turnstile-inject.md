@@ -1,4 +1,4 @@
-# insert turnsilt
+# Insert turnstile
 ```javascript
 class ElementHandler {
   element(element, env) {
@@ -49,35 +49,20 @@ class ElementHandler {
   }
 }
 
-  
-
 async function handleRequest(req, env) {
-
   const res = await fetch(req)
-
     if (!['api'].some(v => res.url.includes(v))) {
-
     return new HTMLRewriter().on("body", new ElementHandler()).transform(res, env)
-
   }  
-
   return res;
-
 }
 
   
-
 addEventListener("fetch", (event, env) => {
-
   event.respondWith(
-
     handleRequest(event.request, env).catch(
-
       (err) => new Response(err.stack, { status: 500 })
-
     )
-
   );
-
 });
 ```
