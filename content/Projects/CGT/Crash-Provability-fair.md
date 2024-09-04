@@ -4,7 +4,7 @@ After the round ends we show `salt` and `now` fields.
 
 After user can call some verify screen, where Calculation could be done in browser.
 ## Calculation
-sha256(seed + prev + now) = hash
+`sha256(seed + prev + now) = hash`
 
 | salt | prev | now | hash                                                             |
 | ---- | ---- | --- | ---------------------------------------------------------------- |
