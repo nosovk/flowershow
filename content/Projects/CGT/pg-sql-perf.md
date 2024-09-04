@@ -3,7 +3,7 @@ We need `pg_stat_statements` extension first.
 CREATE EXTENSION IF NOT EXISTS pg_stat_statements;
 ```
 
-Stats will start collection just after its been enabled.
+Stats will start collection just after it has been enabled.
 
 If you want to reset stats use:
 ```sql
