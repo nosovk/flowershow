@@ -5,11 +5,15 @@ There should be an affiliate site, where users can compare which betting provide
 
 To get thing working we have to somehow obtain data from different betting providers.
 [example feed](./feed.xml). We got example feed, which is part of BetRadar export, but in that feed there were no odds from different providers (only one provider).
+
 We need to clarify:
 - how we can get access to feed?
 - how often data updated in a feed?
 - how frequently we can query feed update?
 - how big that feed? (in Mbs)
+
+If there is some XSDs or other description of data in a feed it would be great to obtain it.
+This is crucial to plan which instruments and how we use them depending on input data that we have.
 
 ## Functional blocks
 ### Main page and widget
@@ -27,11 +31,13 @@ Add option to subscribe on high coefficients (to clarify)
 - Site should support i18n, like it and en languages.
 - site should be loading fast
 - there should be an admin panel to control which betting providers we show
-## Next steps
+## Next steps 
+### discovery phase
 - get info about feed
 - draw mocks
 - draw design
-- code
+### development
+- coding
 - launch stage
 - find bugs
 - launch prod
