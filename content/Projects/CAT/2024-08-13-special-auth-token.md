@@ -66,6 +66,7 @@ headers.append("Access-Control-Allow-Credentials", "true");
 	"refreshToken": "dxsxdsxsdx",
 	"userInfo": {
 		"balance": 0,
+		"tags": ["someTags","someTags"],
 	    "loyalty": {
 	        "IDUser": "3045047524",
 	   },
