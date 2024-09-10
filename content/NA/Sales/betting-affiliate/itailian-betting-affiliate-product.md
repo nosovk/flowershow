@@ -4,7 +4,7 @@ Reference: https://bromber.it/schedina-social/99a8c5ddc76c36b224ee8fa7a048ecf7?m
 There should be an affiliate site, where users can compare which betting provider givers better lines for each match.
 
 To get thing working we have to somehow obtain data from different betting providers.
-[example feed](./feed.json). We got example feed, which is part of BetRadar export, but in that feed there were no odds from different providers (only one provider).
+[example feed](./feed.xml). We got example feed, which is part of BetRadar export, but in that feed there were no odds from different providers (only one provider).
 We need to clarify:
 - how we can get access to feed?
 - how often data updated in a feed?
