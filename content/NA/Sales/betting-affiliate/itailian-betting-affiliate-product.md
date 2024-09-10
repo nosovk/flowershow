@@ -1,6 +1,8 @@
 # Goal: describe what we want to get.
 Reference: https://bromber.it/schedina-social/99a8c5ddc76c36b224ee8fa7a048ecf7?mod=generate
 
+[initial meeting](https://tldv.io/app/meetings/66df06640cd093001294acff)
+
 There should be an affiliate site, where users can compare which betting provider givers better lines for each match.
 
 To get thing working we have to somehow obtain data from different betting providers.
