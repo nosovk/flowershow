@@ -1,4 +1,4 @@
-Goal: describe what we want to get.
+# Goal: describe what we want to get.
 Reference: https://bromber.it/schedina-social/99a8c5ddc76c36b224ee8fa7a048ecf7?mod=generate
 
 There should be an affiliate site, where users can compare which betting provider givers better lines for each match.
@@ -10,7 +10,7 @@ We need to clarify:
 - how we can get access to feed?
 - how often data updated in a feed?
 - how frequently we can query feed update?
-- how big that feed? (in Mbs)
+- how big that feed? (in Mb's)
 
 If there is some XSDs or other description of data in a feed it would be great to obtain it.
 This is crucial to plan which instruments and how we use them depending on input data that we have.
