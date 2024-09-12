@@ -30,7 +30,7 @@ Add users option to register/login (also to recover password, send confirmation 
 Add option to subscribe on high coefficients (to clarify)
 
 ## Additional requirements
-- Site should support i18n, like it and en languages.
+- Site should support i18n, like it, pt and en languages.
 - site should be loading fast
 - there should be an admin panel to control which betting providers we show
 ## Next steps 
