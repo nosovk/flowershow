@@ -38,6 +38,8 @@
 
 
 ### API 
+[Консоль для тестирования graphql запросов](https://cp-st.hmn-dev.de/pimcore-datahub-webservices/explorer/app-asset?apikey=da82e19edd0a951a7762f9ef529dc9f6)
+
 Для проверки логина мы используем следующий запрос:
 get login:
 ```graphql
