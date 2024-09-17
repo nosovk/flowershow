@@ -40,7 +40,7 @@
 ### API 
 Для проверки логина мы используем следующий запрос:
 get login:
-```
+```graphql
 query GetMobileLoginListing($filter: String!) {
   getMobileLoginListing(
     filter: $filter
