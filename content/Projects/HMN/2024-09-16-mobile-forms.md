@@ -139,3 +139,29 @@ Response example:
 Каждый элемент массива edges это наш элемент в списке форм для показа.
 - name - это имя формы в списке
 - url - это урл который необходимо открыть в вебвью.
+
+
+
+----
+Запрос на получение ассетов, сейчас нам не нужен, но чтобы не потерялся
+```graphql
+query GetUpdatedAssets($filter: String) {
+    getAssetListing(filter: $filter, sortBy: "modificationDate", published: true) {
+    totalCount # Total count of items
+    edges {
+      node {
+        ... on asset {
+          # fragment used to get valid list of fields (e.g. id, fullpath)
+          id # Pimcore asset ID
+          filename
+          fullpath # relative URL path to file (e.g. for fullpath="/APP/file.pdf" and feature env, url should be https://cp-ft.hmn-dev.de/APP/file.pdf)
+          type
+          modificationDate
+        }
+      }
+    }
+  }
+}
+
+{"filter": "{\"type\": \"document\", \"modificationDate\": {\"$gt\": \"1704844800\"}}"}
+```
