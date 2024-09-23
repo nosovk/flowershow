@@ -1,11 +1,11 @@
 
 #### App Flow Diagram
 ```mermaid
-flowchart
-  User -->|loads game| Frontend
+flowchart TD
+  User --> |loads game| Frontend
   Frontend --> |initiates game| API
   API --> |ask for video session| GameMachine 
-  API --> |Provide connection data| User
+  API --> |provide connection data| User
   User -.-> |TURN is optional| TURN
   TURN --.--> GameMachine
 ```
