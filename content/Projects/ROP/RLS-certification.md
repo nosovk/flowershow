@@ -23,7 +23,7 @@ If user is behind NAT, and have no exposed IP, then we setup intermediate connec
 
 #### Fault Tolerance. Reservation of system components.
 
-For API Server we have no reservation. If it goes down, then no users will be able to play.
+For API Server we use reservation with containers, if API container goes down we spinup new one in another cluster. It allows us to work with minimal downtime. Because all components are in container we are really fast in starting new instances.
 
 For FrontEnd we use Firebase Hosting, which has SLA. It means that in most cases we don't have to worry about frontend part of an app.
 
@@ -49,8 +49,7 @@ Our server location:
 - for FrontEnd part we use Firebase Google, which is distributed CDN
 - for TURN servers we use different zones across DigitalOcean network 
 
-- описание бекофиса (картинки метабейса)
-Backoffice description:
+#### Backoffice description:
 We use MetaBase to provide reporting for both — internal team and external agents.
 You may take a look at reports by visiting:
 URL: https://realliveslot.com/dashboard
@@ -66,10 +65,9 @@ Session Info:
 ![[RLS-session-info.png]]
 Clicking on snapshot will open stored video of winning screen.
 
-
-- дать тестовый доступ к бекофису стейджа (аппараты в офисе)
+## todo:
 - обговорить аудит penetration testing
-- хеш суммы контейнеров (критические компоненты)
+- хеш суммы контейнеров (критические компоненты) (tags)
 29.01.2024 заявка, версия 1.8.24, имя RealLiveSlot, CMS (casino management streaming)
 
 #### How we handle bugs and other errors
