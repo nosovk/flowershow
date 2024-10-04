@@ -19,7 +19,7 @@ Video:
 - Twilio
 
 ### Backend
-As a core and API gateway we use [hasura](https://hasura.io/) as a solution to make WebSocket subscriptions and provide [GraphQL](https://graphql.org/) API to Client.
+As a core and API gateway we use [hasura](https://hasura.io/) as a solution to make WebSocket subscriptions and provide [GraphQL](https://graphql.org/) API to Client. As an DB we use PostgreSQL.
 For methods that require logic that exceeds fetching data we use [Hasura Actions](https://hasura.io/docs/latest/actions/overview/) implemented in NodeJS with [Fastify](https://fastify.dev/).
 ### Streamer portal
 Web panel, which is used to show information that is not related to usual user activity, like streamer balance, rules for streamers etc. It's build within [SvelteKit](https://kit.svelte.dev/).
