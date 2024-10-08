@@ -34,7 +34,7 @@
 
 ### Test Task:
 
-- 1 .На базі датасета google analytics sample, який знаходиться public datasets скласти запит:
+- 1 .На базі датасета [google analytics sample](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_analytics_sample&page=dataset), який знаходиться public datasets скласти запит:
 - 1.1. Схожий на звіт Top Conversion Paths в Universal Analytics, результатом якого був би ланцюжок джерел каналів, кількість сесій та кількість транзакцій для кожного з ланцюгів.
 - 1.2. Схожий на вкладку Shopping Behavior звіту Product Performance, де були б дані щодо назви товару, кількості дій, сесій та користувачів, які зробили quick view, product click, add to cart та purchase
 
