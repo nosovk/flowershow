@@ -23,7 +23,8 @@ sequenceDiagram
 ```
 
 Со стороны TBX необходимо создать два ендпоинта:
-tbx.ua/api/seo/list?key=xxxx
+
+`tbx.ua/api/seo/list?key=xxxx`
 ```json
 {
   artistis: [
@@ -47,7 +48,7 @@ tbx.ua/api/seo/list?key=xxxx
 Если какая-то из языковых версий у нас уже присутвует, то мы не выводим ключ заданного языка в массиве name.
 
 
-tbx.ua/api/seo/artist?key=xxxx
+`tbx.ua/api/seo/artist?key=xxxx`
 ```json
 {
   artistis: [
