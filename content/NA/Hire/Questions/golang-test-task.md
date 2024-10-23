@@ -14,7 +14,7 @@ You are tasked with creating a simple REST API that mimics the core functionalit
 - Registration: Allow a user to register using their email and password.
 - Login: Provide authentication with token-based authorization (e.g., JWT).
 - Get User Profile: Return basic user info and credit balance.
-## 2. Wallet Management
+### 2. Wallet Management
 
 - Deposit Credits: Add credits to a user's balance.
 - Withdraw Credits: Subtract credits from a user’s balance.
@@ -50,7 +50,7 @@ You are tasked with creating a simple REST API that mimics the core functionalit
 - POST /api/slot/spin: Spin the slot machine, place a bet, and get the result (authorization required).
 ### 4. Game History
 
-GET /api/slot/history: Retrieve a list of the user's past spins (authorization required).
+- GET /api/slot/history: Retrieve a list of the user's past spins (authorization required).
 ## Technical Requirements:
 - Use Go for the backend development.
 - Implement RESTful APIs.
