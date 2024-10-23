@@ -26,24 +26,31 @@ sequenceDiagram
 tbx.ua/api/seo/list?key=xxxx
 ```json
 {
-artistis: [
+  artistis: [
   {
     id: "234", 
     name: [
       {key: "en": name: "назва артиста англійською"},
       {key: "ua", name: "назва артиста українською"}
     ]
+  },
+  {
+    id: "333", 
+    name: [
+      {key: "en": name: "назва артиста англійською"},
+      {key: "ua", name: "назва артиста українською"}
+    ]
   }
-]
+  ]
 }
 ```
 
 tbx.ua/api/seo/artist?key=xxxx
 ```json
 {
-artistis: [
+  artistis: [
 	{id: "234", lang: "ua", "seoText": "тут будет сеошный текст"}
-]
+  ]
 }
 ```
 
