@@ -1,4 +1,4 @@
-Test Task: REST API for Slot Games
+# Test Task: REST API for Slot Games
 ## Task Overview:
 You are tasked with creating a simple REST API that mimics the core functionalities of a slot game system. The API should allow users to:
 
