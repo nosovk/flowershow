@@ -61,7 +61,6 @@ You are tasked with creating a simple REST API that mimics the core functionalit
 #### Bonus Points:
 - Dockerize the application for easy setup.
 - Add rate-limiting to prevent abuse (e.g., excessive API calls for spinning).
-- Implement a retry mechanism for the spin function in case of failure.
 ## Deliverables:
 - Codebase (with instructions on how to run it).
 - Postman collection or Swagger documentation for API testing.
