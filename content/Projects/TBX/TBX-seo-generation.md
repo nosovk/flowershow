@@ -1,0 +1,48 @@
+Цель: генерировать сеошные тексты для страницы артиста на сайте, к примеру https://antytila.ticketsbox.com/
+Для этого мы хотим добавить текстовый блок снизу сайта.
+
+Для генерации этого блока мы хотим использовать pipelines из STB.
+
+Предполагаемый сценарий работы.
+```mermaid
+sequenceDiagram
+
+    autonumber
+
+    PArticipant TBX
+
+    STB->>+TBX: Give me list of artists
+
+    TBX->>+STB: Pass json with names
+
+    STB-->Wiki: Get Article about artist
+
+    STB-->ChatGPT: pass article, ask to generate seo text with prompt
+
+    STB->>-TBX: Send SEO text to api
+```
+
+Со стороны TBX необходимо создать два ендпоинта:
+tbx.ua/api/seo/list?key=xxxx
+```json
+{
+artistis: [
+  {
+    id: "234", 
+    name: [
+      {key: "en": name: "назва артиста англійською"},
+      {key: "ua", name: "назва артиста українською"}
+    ]
+  }
+]
+}
+```
+
+tbx.ua/api/seo/artist?key=xxxx
+```json
+{
+artistis: [
+	{id: "234", lang: "ua", "seoText": "тут будет сеошный текст"}
+]
+}
+```
