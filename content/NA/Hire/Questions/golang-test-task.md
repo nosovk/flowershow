@@ -36,7 +36,7 @@ You are tasked with creating a simple REST API that mimics the core functionalit
 
 - List Game History: Show a list of all spins, including the result, bet, and any winnings for the user.
 ## Endpoints Overview:
-### 1. User Management
+### 1. User Management.
 
 - POST /api/register: Register a new user.
 - POST /api/login: Log in and receive an authentication token.
