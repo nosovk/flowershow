@@ -20,7 +20,7 @@ You are tasked with creating a simple REST API that mimics the core functionalit
 - Withdraw Credits: Subtract credits from a user’s balance.
 ### 3. Game Logic: Slot Machine Spin
 
-- Spin: A user can spin the slot machine by betting a specific amount of credits. If they win, they should be awarded credits based on a simple algorithm. 3 symbols, which are a random numbers from 1 to 9. For example:[1,2,3], [7,7,7], [3,5,9]. In those combinations each number is a random value.
+- Spin: A user can spin the slot machine by betting a specific amount of credits. If they win, they should be awarded credits based on a simple algorithm. 3 symbols, which are a random numbers from 1 to 9. For example: [1,2,3], [7,7,7], [3,5,9]. In those combinations each number is a random value.
 
 	- Inputs:
 		- Bet amount (must be within the user’s available balance).
