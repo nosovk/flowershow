@@ -16,8 +16,8 @@ You are tasked with creating a simple REST API that mimics the core functionalit
 - Get User Profile: Return basic user info and credit balance.
 ### 2. Wallet Management
 
-- Deposit Credits: Add credits to a user's balance.
-- Withdraw Credits: Subtract credits from a user’s balance.
+- Deposit Credits: Add credits to a user's balance. Outputs: resulting balance.
+- Withdraw Credits: Subtract credits from a user’s balance. Outputs: resulting balance.
 ### 3. Game Logic: Slot Machine Spin
 
 - Spin: A user can spin the slot machine by betting a specific amount of credits. If they win, they should be awarded credits based on a simple algorithm. 3 symbols, which are a random numbers from 1 to 9. For example: [1,2,3], [7,7,7], [3,5,9]. In those combinations each number is a random value.
