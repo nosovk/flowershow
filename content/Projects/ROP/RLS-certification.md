@@ -67,7 +67,7 @@ Clicking on snapshot will open stored video of winning screen.
 
 ## todo:
 - обговорить аудит penetration testing
-- хеш суммы контейнеров (критические компоненты) (tags)
+- хеш суммы контейнеров (критические компоненты) (git tags)
 29.01.2024 заявка, версия 1.8.24, имя RealLiveSlot, CMS (casino management streaming)
 
 #### How we handle bugs and other errors
