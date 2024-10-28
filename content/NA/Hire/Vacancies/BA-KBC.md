@@ -37,10 +37,10 @@
 
 - 1. На базі датасета [google analytics sample](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_analytics_sample&page=dataset), який знаходиться [public datasets](https://cloud.google.com/bigquery/docs/quickstarts/query-public-dataset-console#open_a_public_dataset) скласти запит:
 - 1.1. Схожий на звіт Top Conversion Paths в Universal Analytics, результатом якого був би ланцюжок джерел каналів, кількість сесій та кількість транзакцій для кожного з ланцюгів.
-- 1.2. Схожий на вкладку Shopping Behavior звіту Product Performance, де були б дані щодо назви товару, кількості дій, сесій та користувачів, які зробили quick view, product click, add to cart та purchase
+- 1.2. Схожий на вкладку Shopping Behavior звіту Product Performance, де були б дані щодо назви товару, кількості дій, сесій та користувачів, які зробили quick view, product click, add to cart та purchase.
 
 Завдання з зірочкою:
 
-- 1.3. Подібний до Time Lag, де б розраховувалась різниця в  кількості днів між першим зафіксованим у датасеті заходом користувача та першою покупкою.
+- 1.3. Подібний до Time Lag, де б розраховувалась різниця в кількості днів між першим зафіксованим у датасеті заходом користувача та першою покупкою.
 
 До кожного з пунктів Написати невелику аналітичну записку з бізнес висновками.
