@@ -24,7 +24,7 @@ sequenceDiagram
 
 Со стороны TBX необходимо создать два ендпоинта:
 
-`tbx.ua/api/seo/list?key=xxxx`
+`tbx.ua/api/seo/list`
 ```json
 {
   artistis: [
@@ -48,7 +48,7 @@ sequenceDiagram
 Если какая-то из языковых версий у нас уже присутвует, то мы не выводим ключ заданного языка в массиве name.
 
 
-`tbx.ua/api/seo/artist?key=xxxx`
+`tbx.ua/api/seo/artist`
 ```json
 {
   artistis: [
@@ -102,7 +102,10 @@ curl --request GET \
   --url 'https://ticketsbox.com/?route=api%2Fseo_artist%2Flist' \ 
   --header 'x-apikey: 8a58375c-3086-4424-b17e-7cb4570b73a1'
 ```
-отсутствие ключа для уже заполненных данных работает
+Отсутствие ключа для уже заполненных данных работает.
+
+Пример запроса на обновление:
+![[TBX-seo-update-query.png]]
 
 Со стороны STB:
 
