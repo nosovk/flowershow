@@ -47,3 +47,19 @@ The decision to implement the bot mitigation system in our backend will be based
 1. **Installation:** create custom CloudFlare Workers script, that can process request data.
 2. all next steps the same, as for GTM integration
 This method requires much more efforts from our side and should be avoided.
+
+
+### IV. Measure success.
+We will attach some value to each bad agent that passed our mitigation system, for example 100usd. As an example, if we have 50 bad agents, and 30 of them will be blocked the outcome will be like that:
+
+> 30 bad agents * 100 usd = 3000 usd
+
+This is our gaining from block bad agents.
+
+Also, we have a value for each customer, that we mark as bad agent. We can multiply amount of false positive cases on revenue that we gain from that users. Like:
+
+> 20 false positive users * 80 usd = 1600 usd
+
+This is our loses from blocking bad agents.
+
+If we gain more than lose — the MVP is successful.
