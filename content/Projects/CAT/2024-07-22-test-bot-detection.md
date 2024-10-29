@@ -54,7 +54,7 @@ We will attach some value to each bad agent that passed our mitigation system, f
 
 > 30 bad agents * 100 usd = 3000 usd
 
-This is our gaining from block bad agents.
+This is our gaining from blocking bad agents.
 
 Also, we have a value for each customer, that we mark as bad agent. We can multiply amount of false positive cases on revenue that we gain from that users. Like:
 
@@ -63,3 +63,5 @@ Also, we have a value for each customer, that we mark as bad agent. We can multi
 This is our loses from blocking bad agents.
 
 If we gain more than lose — the MVP is successful.
+
+The actual cost of bad agent is differing on different products. It's less for Turkey oriented product, but more for Russian market oriented product.
