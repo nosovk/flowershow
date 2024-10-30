@@ -1,11 +1,12 @@
-Goal: we build new service to serve games, which will handle both game provider api and api to launch 3rd party games (casino api). We want to build new Atlas integration within that serveci.
+# CasinoGate Atlas integraiont (2024-10-30)
+Goal: we build new service to serve games, which will handle both game provider api and api to launch 3rd party games (casino api). We want to build new Atlas integration within that service.
 
 ## Glossary
 - game provider — company that provides games. In our case CasinoGate is a game provider for Atlas. 
-- game provider api - api that used to launch game from aggregation service.
-- aggregation service - in our case its Atlas
-- casino - company that uses api to launch games from aggregation service
-- casino api - api to launch game from aggregation service
+- game provider api — api that used to launch game from aggregation service.
+- aggregation service — in our case its Atlas
+- casino — company that uses api to launch games from aggregation service
+- casino api — api to launch game from aggregation service
 
 ### Flow
 Test flow that we want to cover:
