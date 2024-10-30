@@ -19,6 +19,8 @@ Test flow that we want to cover:
 ### stage env
 key: xxx
 
-atlassian callback url: https://integration.pl-test.play-platform.com/integration-callback/gs/hive/v2/{provider_id}
+Atlassian callback url: https://integration.pl-test.play-platform.com/integration-callback/gs/hive/v2/{provider_id}
 
-casino gate callbackurl: https://dev.casinogate.dev/api/agg/atlas
+casino gate callback url for casino api: https://dev.casinogate.dev/api/agg/providers/atlas
+
+casino gate callback url for game provider api: https://dev.casinogate.dev/api/agg/games/atlas
