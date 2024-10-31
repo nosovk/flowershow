@@ -28,12 +28,12 @@ We want to upgrade existing services from `nour.net.sa` (provider), we want to w
 > Wathiq Integration
 > Verify Commercial Registration (CR) information via Wathiq for companies registering domains.
 > Payment Gateway Integration with Hyper Pay and Digital Cash (Sadad)
-Integrate with MADA, Visa, MasterCard, and Sadad to offer multiple secure payment options.
+> Integrate with MADA, Visa, MasterCard, and Sadad to offer multiple secure payment options.
 > #### Unifonic SMS Gateway Integration
-Enable two-factor authentication (2FA) through SMS verification using the Unifonic gateway for enhanced security.
+> Enable two-factor authentication (2FA) through SMS verification using the Unifonic gateway for enhanced security.
 > Ensure that users receive verification codes during domain registration and critical account transactions.
 > #### Email Gateway Integration
-Integration with an email gateway to send secure verification codes for transactions and user authentication.
+> Integration with an email gateway to send secure verification codes for transactions and user authentication.
 > #### Cloud Service Integration & Promotion
 > The new portal will integrate with NourNet’s cloud platform to promote complementary services such as DNS Hosting, Web Hosting, Email as a Service, VPS, etc.
 > Ensure seamless bundling of services during domain registration to maximize customer engagement.
@@ -41,14 +41,14 @@ Integration with an email gateway to send secure verification codes for transact
 > Ensure full compliance with Saudi NIC and local regulations governing domain name registrations.
 > All relevant documents and standards from Saudi NIC will be used to guide development.
 > #### Competitor Analysis
-The following competitors provide benchmarks for design, functionality, and user experience in reselling Saudi domains, with Dnet and Hawsabah noted as top performers:
+> The following competitors provide benchmarks for design, functionality, and user experience in reselling Saudi domains, with Dnet and Hawsabah noted as top performers:
 >
-> [Dnet](https://dnet.sa/)
-> [Hawsabah Cloud](https://cloud.hawsabah.sa/index.php/login)
-> [T2](https://t2.sa/)
-> [Sahara](https://sahara.com/)
-> [STC Cloud](https://cloud.stc.com.sa/)
-
+> - [Dnet](https://dnet.sa/)
+> - [Hawsabah Cloud](https://cloud.hawsabah.sa/index.php/login)
+> - [T2](https://t2.sa/)
+> - [Sahara](https://sahara.com/)
+> - [STC Cloud](https://cloud.stc.com.sa/)
+>
 > #### Support & Maintenance
 >
 > Ongoing technical support post-launch, including security updates, feature improvements, and performance monitoring.
@@ -61,5 +61,10 @@ The following competitors provide benchmarks for design, functionality, and user
 	- does SA zone registrar provides some test or stage environment to test [EPP](https://datatracker.ietf.org/doc/html/rfc5731.html) integration with them?
 - Could we obtain access to existing admin panel?
 	- We need to understand how you want to work with prices
-	- Also we need to understand, is your current solution based on [WHMCS](https://www.whmcs.com/) or [hostbillapp](hostbillapp.com), or you have some requirements that could not be covered by them and build all from scratch?
-	- 
+	- Also we need to understand, is your current billing solution based on [WHMCS](https://www.whmcs.com/) or something similar, or you have some requirements that could not be covered by them, and we have to build all from scratch? From what we see, there is a very strict KYC reqirements plus custom payment solution
+- Do we need to support recurrent payments? [HyperPay](https://www.hyperpay.com/) supports it, but [Sadad](sadad.com) — seems to be missing that feature.
+- In requirements we see: “Ensure seamless bundling of services during domain registration”. Does that means that we should have some interop with other service portals to sell them together? How it should behave, would be great to have better explanation
+- we will need help to integrate with Nafath. [Nafath](https://www.iam.sa/sso/) is a government based SSO in SA, that allows to identify any citizen. Like E-passport. We will need some accounts to testing it, because we are not citizens of country.
+- providing NS services is also part of our portal, what existing solution used to manage NS server settings?
+- What should we do with existing customers? Should we migrate existing accounts? Should we migrate purchase history, existing products, etc? If yes — then we would need some documentation on existing system. Have you any?
+- 
