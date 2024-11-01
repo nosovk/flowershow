@@ -67,4 +67,5 @@ We want to upgrade existing services from `nour.net.sa` (provider), we want to w
 - we will need help to integrate with Nafath. [Nafath](https://www.iam.sa/sso/) is a government based SSO in SA, that allows to identify any citizen. Like E-passport. We will need some accounts to testing it, because we are not citizens of country.
 - providing NS services is also part of our portal, what existing solution used to manage NS server settings?
 - What should we do with existing customers? Should we migrate existing accounts? Should we migrate purchase history, existing products, etc? If yes — then we would need some documentation on existing system. Have you any?
-- 
+- Have you any docs on existing system? It would be nice to get some product and tech docs, if they are exist
+- Is providing email services also part of the portal? Should we manage dkim, dmarc etc from our side?
