@@ -104,15 +104,15 @@ There are two options:
 - Implement recommendation systems and pop-ups to promote related services. Define a flexible integration system to accommodate future partnerships and offerings.
 
 Estimations:
-Registration: SSO, up to one month.
-Registration: without SSO, up to two weeks
-KYC process (client side): near one month
-KYC process (admin side): few weeks
-Shop functionality: up to month
-Payment system integration: up to month
-EPP integration: up to two month
-CRM integration: few weeks
-Up sale functionality: month or two
+- Registration: SSO, up to one month.
+- Registration: without SSO, up to two weeks
+- KYC process (client side): near one month
+- KYC process (admin side): few weeks
+- Shop functionality: up to month
+- Payment system integration: up to month
+- EPP integration: up to two month
+- CRM integration: few weeks
+- Up sale functionality: month or two
 
 Estimation, $ 
 
