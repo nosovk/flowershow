@@ -57,15 +57,26 @@ We want to upgrade existing services from `nour.net.sa` (provider), we want to w
 ### Questions:
 - could we obtain access to existing customer panel? We were not able to break throw SMS verification limited to Saudi phone number.
 	- Should Provider work only with Saudi citizens, or it should be international service? 
+	> Provider oriented on local citizens and primary goal is to sell local country specific domains.
 - the main service that we should provide is domain registration?
 	- does SA zone registrar provides some test or stage environment to test [EPP](https://datatracker.ietf.org/doc/html/rfc5731.html) integration with them?
+> It will be clarified by customer
 - Could we obtain access to existing admin panel?
 	- We need to understand how you want to work with prices
-	- Also we need to understand, is your current billing solution based on [WHMCS](https://www.whmcs.com/) or something similar, or you have some requirements that could not be covered by them, and we have to build all from scratch? From what we see, there is a very strict KYC reqirements plus custom payment solution
-- Do we need to support recurrent payments? [HyperPay](https://www.hyperpay.com/) supports it, but [Sadad](sadad.com) — seems to be missing that feature.
+	- Also we need to understand, is your current billing solution based on [WHMCS](https://www.whmcs.com/) or something similar, or you have some requirements that could not be covered by them, and we have to build all from scratch? From what we see, there is a very strict KYC requirements plus custom payment solution
+> current solution build from scratch, without any kickstart solution in a base. The pricing model is pretty simple — discounts on forepay and promo codes
+- Do we need to support recurrent payments? [HyperPay](https://www.hyperpay.com/) supports it, but [Sadad](sadad.com) — seems to be missing that feature. https://dg-cash.com/contact/
+> We need both systems. HyperPay for local cards, and Sadad for invoicing. They have a bit different flows (one is Push, another is Pull), that's why we will not cover them by one umbrella.
 - In requirements we see: “Ensure seamless bundling of services during domain registration”. Does that means that we should have some interop with other service portals to sell them together? How it should behave, would be great to have better explanation
+> At current step there is no request for direct integration. If users wants additional services from as we will put him on a track in a different product manually. All we need from technical site is to notify about intent to buy a new product.
 - we will need help to integrate with Nafath. [Nafath](https://www.iam.sa/sso/) is a government based SSO in SA, that allows to identify any citizen. Like E-passport. We will need some accounts to testing it, because we are not citizens of country.
+> Accounts will be provided by client
 - providing NS services is also part of our portal, what existing solution used to manage NS server settings?
+> Currently NS servers are not part of the product. We can keep them out from scope from now.
 - What should we do with existing customers? Should we migrate existing accounts? Should we migrate purchase history, existing products, etc? If yes — then we would need some documentation on existing system. Have you any?
+> could be elaborated after getting access to current system
 - Have you any docs on existing system? It would be nice to get some product and tech docs, if they are exist
+> no docs
 - Is providing email services also part of the portal? Should we manage dkim, dmarc etc from our side?
+> no, currently some solution based on MS services used to provide email services as a separate service.
+
