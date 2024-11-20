@@ -99,7 +99,7 @@ There are two options:
 #### EPP Integration
 - Conduct thorough testing with the Saudi NIC EPP (Extensible Provisioning Protocol) system. Be prepared to adapt to any inconsistencies or deviations in protocol standards through close interaction with testing environments. If now testing environment present — it could cause big delays in implementation.
 #### CRM Integration
-- Export customer data to a CRM solution for holistic customer management and analytics. If no preferred CRM exists, consider starting with Hubspot : https://www.hubspot.com/ for its user-friendly features and integration capabilities. CRM will be a master data storage that collects customer data from all yours products. 
+- Export customer data to a CRM solution for holistic customer management and analytics. If no preferred CRM exists, consider starting with [Hubspot](https://www.hubspot.com/) for its user-friendly features and integration capabilities. CRM will be a master data storage that collects customer data from all yours products. 
 #### Upselling and Cross-Selling Features
 - Implement recommendation systems and pop-ups to promote related services. Define a flexible integration system to accommodate future partnerships and offerings.
 
