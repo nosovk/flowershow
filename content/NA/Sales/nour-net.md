@@ -80,3 +80,26 @@ We want to upgrade existing services from `nour.net.sa` (provider), we want to w
 - Is providing email services also part of the portal? Should we manage dkim, dmarc etc from our side?
 > no, currently some solution based on MS services used to provide email services as a separate service.
 
+
+
+## PreEstimation
+
+In common, solution could be divided in a following blocks:
+- registration
+	- built-in
+	- SSO for all products [keycloak](https://github.com/keycloak/keycloak)
+- KYC process (client side)
+	- physical person
+	- organization
+- KYC process (admin side)
+- Shop functionality
+	- check free domain
+	- add domain to cart
+	- buy
+- EPP integration
+- Payment system integration
+	- card
+	- invoices
+- Up sale functionality
+- 
+
