@@ -84,22 +84,51 @@ We want to upgrade existing services from `nour.net.sa` (provider), we want to w
 
 ## PreEstimation
 
-In common, solution could be divided in a following blocks:
-- registration
-	- built-in
-	- SSO for all products [keycloak](https://github.com/keycloak/keycloak)
-- KYC process (client side)
-	- physical person
-	- organization
-- KYC process (admin side)
-- Shop functionality
-	- check free domain
-	- add domain to cart
-	- buy
-- EPP integration
-- Payment system integration
-	- card
-	- invoices
-- Up sale functionality
-- 
+The solution architecture for the revamp of the NourNet eServices portal can be divided into the following key components:
+#### User Registration and Authentication
+There are two options:
+- Implement integrated Single Sign-On (SSO) across all products using tools like [Keycloak](https://www.keycloak.org/) or [AuthKit](https://www.authkit.com/) for robust security and scalability. Keycloak is widely supported and can cater to extended integration needs. 
+- Alternatively, for solutions focusing solely on the portal, consider lightweight authentication platforms like [Better Auth](https://www.better-auth.com)
+#### KYC Process Management
+- **Client-Side:** Handle user verification procedures partially with existing third party providers. Collaborate closely with providers to document and manage the KYC data, including handling NIC (Network Information Center) data.
+- **Admin-Side:** Develop a secure admin panel for KYC status monitoring and document exchange. This ensures compliance and efficiency, allowing the management of multiple NIC handles under a single user account. From regulatory side we have to make KYC for every new handle, not only for initial registration.
+#### Domain Shop Functionality
+- Develop a streamlined process where users can search for domain availability, select additional services, and complete purchases with ease.
+#### Payment System Integration
+- Implement both real-time credit card processing and delayed invoice-based payment models. It includers integration with local services like Hyper Pay and Sadad to ensure comprehensive coverage.
+#### EPP Integration
+- Conduct thorough testing with the Saudi NIC EPP (Extensible Provisioning Protocol) system. Be prepared to adapt to any inconsistencies or deviations in protocol standards through close interaction with testing environments. If now testing environment present — it could cause big delays in implementation.
+#### CRM Integration
+- Export customer data to a CRM solution for holistic customer management and analytics. If no preferred CRM exists, consider starting with Hubspot : https://www.hubspot.com/ for its user-friendly features and integration capabilities. CRM will be a master data storage that collects customer data from all yours products. 
+#### Upselling and Cross-Selling Features
+- Implement recommendation systems and pop-ups to promote related services. Define a flexible integration system to accommodate future partnerships and offerings.
+
+Estimations:
+Registration: SSO, up to one month.
+Registration: without SSO, up to two weeks
+KYC process (client side): near one month
+KYC process (admin side): few weeks
+Shop functionality: up to month
+Payment system integration: up to month
+EPP integration: up to two month
+CRM integration: few weeks
+Up sale functionality: month or two
+
+Estimation, $ 
+
+
+| Developer        | Hourly rate  | Hours per Month  | Costs        |
+|------------------|--------------|------------------|--------------|
+| BE               | 50           | 160              |  8,000.00    |
+| BE               | 50           | 160              |  8,000.00    |
+| FS               | 40           | 160              |  6,400.00    |
+| FS               | 40           | 160              |  6,400.00    |
+| DevOPS           | 68           | 40               |  2,720.00    |
+| TechLead         | 75           | 40               |  3,000.00    |
+| PM               | 25           | 160              |  4,000.00    |
+| Tester           | 18           | 40               |  720.00      |
+| Costs per month  |              |                  |  39,240.00   |
+|                  |              | 4m               |  156,960.00  |
+|                  |              | 8m               |  313,920.00  |
+
 
