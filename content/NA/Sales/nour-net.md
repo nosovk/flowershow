@@ -132,3 +132,9 @@ Estimation, $
 |                  |              | 8m               |  313,920.00  |
 
 
+#### Cover letter
+The KYC process should be discussed with the registrar. According to the documentation, they require full KYC for each NIC handle. However, there may be instances where this requirement can be bypassed. This has a significant impact on the user flow, and it needs to be clarified before coding begins, during the BA phase.
+
+Additionally, if there is no test environment or test mode for the EPP provided by the registrar, we might need to allocate extra resources to purchase or transfer some real domains for development purposes and also an extra time.
+
+Regarding DNSSEC, it is supported by the registrar. However, we will exclude it from the current estimation because we need to complete the EPP integration first. Implementing DNSSEC will be a subsequent step for product improvement.
