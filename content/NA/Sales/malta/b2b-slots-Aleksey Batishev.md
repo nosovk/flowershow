@@ -2,7 +2,7 @@ site: https://betinhell.games/, https://b2bslots.com/en/
 people:
 	Aleksey Batishev
 		tg: @B2bcasino
-		https://i.imgur.com/BhN0H8T.png
+		![](https://i.imgur.com/BhN0H8T.png)
 
 Важно: Леша казах, не русский. Леша дружит с Русом. Вообще он максимально позитивный парень.
 
