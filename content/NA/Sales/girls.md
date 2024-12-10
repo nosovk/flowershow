@@ -26,8 +26,21 @@ We suggest logging all user events to [bigquery](https://cloud.google.com/bigque
 
 ## Admin Panel 
 Also it's a good idea to move admin to some hidden technical domain, admin panel should be used for managing user statuses and payments (strapi is about content, but not about accounting).
-Admin panel should support 2FA as a basic security mechanizm.
+Admin panel should support 2FA as a basic security mechanism.
 ## Payments
 I think that there will be some problems within Strapi, because according to their due diligence process it could be impossible to sell escort services using their merchant. We can help to process cards and crypto if needed.
 
 
+### Estimation
+This is a draft, this is not commitment, but some kind of range, that should be clarrified after having mocks and designs
+
+| position | 1     | 2     | 3     |
+| -------- | ----- | ----- | ----- |
+| TeamLead | 2000  | 2000  | 2000  |
+| MarkUp   | 2500  | 2500  | 2500  |
+| PM       | 4000  | 4000  | 4000  |
+| FS       | 6720  | 6720  | 6720  |
+| DevOps   | 4000  | 2000  | 2000  |
+| Tester   |       | 2000  | 2000  |
+| Totals   | 19220 | 19220 | 19220 |
+|          |       |       | 57660 |
