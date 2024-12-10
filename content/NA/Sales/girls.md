@@ -30,17 +30,17 @@ Admin panel should support 2FA as a basic security mechanism.
 ## Payments
 I think that there will be some problems within Strapi, because according to their due diligence process it could be impossible to sell escort services using their merchant. 
 
-
 ## Estimation
 This is a draft, this is not commitment, but some kind of range, that should be clarified after having mocks and designs
 
-| position | 1     | 2     | 3     |
-| -------- | ----- | ----- | ----- |
-| TeamLead | 2000  | 2000  | 2000  |
-| MarkUp   | 2500  | 2500  | 2500  |
-| PM       | 4000  | 4000  | 4000  |
-| FS       | 6720  | 6720  | 6720  |
-| DevOps   | 4000  | 2000  | 2000  |
-| Tester   |       | 2000  | 2000  |
-| Totals   | 19220 | 19220 | 19220 |
-|          |       |       | 57660 |
+| position | 1     | 2           | 3     |
+| -------- | ----- | ----------- | ----- |
+| TeamLead | 2000  | 2000        | 2000  |
+| MarkUp   | 2500  | 2500        | 2500  |
+| PM       | 4000  | 4000        | 4000  |
+| FS       | 6720  | 6720        | 6720  |
+| DevOps   | 4000  | 2000        | 2000  |
+| Tester   |       | 2000        | 2000  |
+| Totals   | 19220 | 19220       | 19220 |
+|          |       |             | 57660 |
+|          |       | Domain Fee: | 86490 |
