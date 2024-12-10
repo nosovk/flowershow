@@ -37,16 +37,16 @@ I think that there will be some problems within Strapi, because according to the
 ## Estimation
 This is a draft, this is not commitment, but some kind of range, that should be clarified after having mocks and designs
 
-| position | 1m: price (hours) | 2m         | 3m         | total       |
-| -------- | ----------------- | ---------- | ---------- | ----------- |
-| BA       | 2560 (168)        | 0          | 0          | 2560 (168)  |
-| TeamLead | 2600 (40)         | 2600 (40)  | 2600 (40)  | 7800 (120)  |
-| MarkUp   | 3192 (168)        | 3192 (168) | 3192 (168) | 9576 (504)  |
-| PM       | 5040 (168)        | 5040 (168) | 5040 (168) | 15120 (504) |
-| FS       | 8736 (168)        | 8736 (168) | 8736 (168) | 26208 (504) |
-| DevOps   | 5200 (80)         | 2600 (40)  | 2600 (40)  | 10400 (160) |
-| Tester   | 0                 | 0          | 2520 (168) | 2520 (168)  |
-| Totals   |                   |            |            | 74184       |
+| position | 1m: price (hours) | 2m  | 3m  | total h | Rate/hour | total |
+| -------- | ----------------- | --- | --- | ------- | --------- | ----- |
+| BA       | 80                | 0   | 0   | 80      | 36        | 2880  |
+| TeamLead | 40                | 40  | 40  | 120     | 72        | 8640  |
+| MarkUp   | 168               | 168 | 168 | 504     | 22        | 11088 |
+| PM       | 168               | 168 | 168 | 504     | 34        | 17136 |
+| FS       | 168               | 168 | 168 | 504     | 57        | 28728 |
+| DevOps   | 80                | 40  | 40  | 160     | 72        | 11520 |
+| Tester   |                   |     | 168 | 168     | 17        | 2856  |
+| Totals   |                   |     |     |         |           | 82848 |
 
 ### Gant
 ```mermaid
