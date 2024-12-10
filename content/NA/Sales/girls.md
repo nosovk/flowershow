@@ -54,6 +54,8 @@ This is a draft, this is not commitment, but some kind of range, that should be 
 gantt
     title A Gantt Diagram
     dateFormat YYYY-MM-DD
+    tickInterval 1week
+    weekday monday
     section BA
         Gather Requirements :ba1, 2025-01-01, 7d
         Create Mocks        :ba2, after ba1, 5d
@@ -72,6 +74,8 @@ gantt
 		Integrate payments: dev6, after dev5, 4d 
 		Provide Docs: dev7, after dev6, 2d
 		Fixup Bugs: dev8, after dev6, 25d
+	section Markup
+		Markup: m1, after dev2, 55d
 	section Testing
 	    search bugs: qa1, after dev6, 14d
 	    Check Prod: qa2, after i3, 5d
