@@ -30,6 +30,10 @@ Admin panel should support 2FA as a basic security mechanism.
 ## Payments
 I think that there will be some problems within Strapi, because according to their due diligence process it could be impossible to sell escort services using their merchant. 
 
+## Questions
+- Do we need support of different languages?
+- Do we need to support right to left language?
+
 ## Estimation
 This is a draft, this is not commitment, but some kind of range, that should be clarified after having mocks and designs
 
