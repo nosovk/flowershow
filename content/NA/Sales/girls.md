@@ -22,7 +22,7 @@ To structure communication we propose installing [chatwoot](https://www.chatwoot
 To build robust search we propose to use [Meilisearch](https://www.meilisearch.com/), which has built in [integration](https://www.meilisearch.com/blog/strapi-v4-plugin-meilisearch) with strapi. It allows making typo tolerant, facet search. Like: blond [x], height > 170 cm, age < 30, description contains: RHCP etc. Comparing to typical solutions. Its more typo tolerant.
 
 ## Analytics
-We suggest logging all user events to [bigquery](https://cloud.google.com/bigquery) for further analysys. Its a long term, uncapped storage, where we can store all events that are produced by our users. And we can build dashboards or reports using BI tools. We recommend to stick to [Metabase](https://www.metabase.com/), because its easy to use for non-technical staff, and also It's easy to embed reports.
+We suggest logging all user events to [bigquery](https://cloud.google.com/bigquery) for further analysys. Its a long term, uncapped storage, where we can store all events that are produced by our users. And we can build dashboards or reports using BI tools. We recommend to stick to [Metabase](https://www.metabase.com/), because it's easy to use for non-technical staff, and also It's easy to embed reports.
 
 ## Admin Panel 
 Also it's a good idea to move admin to some hidden technical domain, admin panel should be used for managing user statuses and payments (strapi is about content, but not about accounting).
@@ -37,23 +37,23 @@ I think that there will be some problems within Strapi, because according to the
 ## Estimation
 This is a draft, this is not commitment, but some kind of range, that should be clarified after having mocks and designs
 
-| position | 1     | 2           | 3     |
-| -------- | ----- | ----------- | ----- |
-| TeamLead | 2000  | 2000        | 2000  |
-| MarkUp   | 2500  | 2500        | 2500  |
-| PM       | 4000  | 4000        | 4000  |
-| FS       | 6720  | 6720        | 6720  |
-| DevOps   | 4000  | 2000        | 2000  |
-| Tester   |       | 2000        | 2000  |
-| Totals   | 19220 | 19220       | 19220 |
-|          |       |             | 57660 |
-|          |       | Domain Fee: | 86490 |
+| position | 1     | 2                      | 3     |
+| -------- | ----- | ---------------------- | ----- |
+| TeamLead | 2000  | 2000                   | 2000  |
+| MarkUp   | 2500  | 2500                   | 2500  |
+| PM       | 4000  | 4000                   | 4000  |
+| FS       | 6720  | 6720                   | 6720  |
+| DevOps   | 4000  | 2000                   | 2000  |
+| Tester   |       | 2000                   | 2000  |
+| Totals   | 19220 | 19220                  | 19220 |
+|          |       |                        | 57660 |
+|          |       | With Domain Fee (50%): | 86490 |
 
 ### Gant
 ```mermaid
 gantt
-    title A Gantt Diagram
-    dateFormat YYYY-MM-DD
+    title girls gant
+    dateFormat MM-DD
     tickInterval 1week
     weekday monday
     section BA
