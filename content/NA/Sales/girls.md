@@ -47,7 +47,6 @@ This is a draft, this is not commitment, but some kind of range, that should be 
 | DevOps   | 5200 (80)  | 2600 (40)  | 2600 (40)  | 10400 (160) |
 | Tester   | 0          | 0          | 2520 (168) | 2520 (168)  |
 | Totals   |            |            |            | 74184       |
-|          |            |            |            |             |
 
 ### Gant
 ```mermaid
