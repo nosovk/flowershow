@@ -54,11 +54,19 @@ This is a draft, this is not commitment, but some kind of range, that should be 
 gantt
     title A Gantt Diagram
     dateFormat YYYY-MM-DD
-    section Section
-        A task          :a1, 2014-01-01, 30d
-        Another task    :after a1, 20d
-    section Another
-        Task in Another :2014-01-12, 12d
-        another task    :24d
-
+    section BA
+        Gather Requirements :ba1, 2025-01-01, 7d
+        Create Mocks        :ba2, after ba1, 5d
+    section Design
+		Create Figma Designs :d1, after ba2, 14d 
+	section InfraStrucutre
+		Setup server, domains, etc: i1, after ba2, 7d
+		Spinup Chatwoot: i2, after dev4, 4d
+	section Development
+		Create application rails: dev1, after ba2, 7d
+		Create Blog: dev2, after dev1, 7d
+		Create Gallery: dev3, after dev2, 12d
+		Create admin panel: dev4, after dev3, 10d
+		Integrate analitics: dev5, after dev4, 4d
+		Integrate payments: dev6, after dev5, 4d 
 ```
