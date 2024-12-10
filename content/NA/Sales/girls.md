@@ -37,17 +37,17 @@ I think that there will be some problems within Strapi, because according to the
 ## Estimation
 This is a draft, this is not commitment, but some kind of range, that should be clarified after having mocks and designs
 
-| position | 1     | 2                      | 3     |
-| -------- | ----- | ---------------------- | ----- |
-| TeamLead | 2000  | 2000                   | 2000  |
-| MarkUp   | 2500  | 2500                   | 2500  |
-| PM       | 4000  | 4000                   | 4000  |
-| FS       | 6720  | 6720                   | 6720  |
-| DevOps   | 4000  | 2000                   | 2000  |
-| Tester   |       | 2000                   | 2000  |
-| Totals   | 19220 | 19220                  | 19220 |
-|          |       |                        | 57660 |
-|          |       | With Domain Fee (50%): | 86490 |
+| position | 1    | 2    | 3    | total |
+| -------- | ---- | ---- | ---- | ----- |
+| BA       | 2600 | 0    | 0    | 2600  |
+| TeamLead | 2600 | 2600 | 2600 | 7800  |
+| MarkUp   | 3250 | 3250 | 3250 | 9750  |
+| PM       | 5200 | 5200 | 5200 | 15600 |
+| FS       | 8736 | 8736 | 8736 | 26208 |
+| DevOps   | 5200 | 2600 | 2600 | 10400 |
+| Tester   | 0    | 0    | 2600 | 2600  |
+| Totals   |      |      |      | 74958 |
+|          |      |      |      |       |
 
 ### Gant
 ```mermaid
