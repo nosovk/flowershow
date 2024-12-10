@@ -24,3 +24,10 @@ To build robust search we propose to use [Meilisearch](https://www.meilisearch.c
 ## Analytics
 We suggest logging all user events to [bigquery](https://cloud.google.com/bigquery) for further analysys. Its a long term, uncapped storage, where we can store all events that are produced by our users. And we can build dashboards or reports using BI tools. We recommend to stick to [Metabase](https://www.metabase.com/), because its easy to use for non-technical staff and also It's easy to embed reports.
 
+## Admin Panel 
+Also it's a good idea to move admin to some hidden technical domain, admin panel should be used for managing user statuses and payments (strapi is about content, but not about accounting).
+Admin panel should support 2FA as a basic security mechanizm.
+## Payments
+I think that there will be some problems within Strapi, because according to their due diligence process it could be impossible to sell escort services using their merchant. We can help to process cards and crypto if needed.
+
+
