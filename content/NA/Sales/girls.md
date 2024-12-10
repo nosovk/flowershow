@@ -48,3 +48,17 @@ This is a draft, this is not commitment, but some kind of range, that should be 
 | Totals   | 19220 | 19220       | 19220 |
 |          |       |             | 57660 |
 |          |       | Domain Fee: | 86490 |
+
+### Gant
+```mermaid
+gantt
+    title A Gantt Diagram
+    dateFormat YYYY-MM-DD
+    section Section
+        A task          :a1, 2014-01-01, 30d
+        Another task    :after a1, 20d
+    section Another
+        Task in Another :2014-01-12, 12d
+        another task    :24d
+
+```
