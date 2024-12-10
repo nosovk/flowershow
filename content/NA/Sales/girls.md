@@ -62,6 +62,7 @@ gantt
 	section InfraStrucutre
 		Setup server, domains, etc: i1, after ba2, 7d
 		Spinup Chatwoot: i2, after dev4, 4d
+		Deploy prod: i3, after qa1, 4d
 	section Development
 		Create application rails: dev1, after ba2, 7d
 		Create Blog: dev2, after dev1, 7d
@@ -69,4 +70,10 @@ gantt
 		Create admin panel: dev4, after dev3, 10d
 		Integrate analitics: dev5, after dev4, 4d
 		Integrate payments: dev6, after dev5, 4d 
+		Provide Docs: dev7, after dev6, 2d
+		Fixup Bugs: dev8, after dev6, 25d
+	section Testing
+	    search bugs: qa1, after dev6, 14d
+	    Check Prod: qa2, after i3, 5d
+		
 ```
