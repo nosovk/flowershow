@@ -1,16 +1,26 @@
 [RFP](./girls-RFP.pdf)
 Goals: make a draft estimation.
 ### CMS
-As a CMS we propose to use [Strapi](https://strapi.io/), which is a ready to go CMS, where we can create entities and generate admin panel for administrators.
+As a CMS we propose to use [Strapi](https://strapi.io/), which is a ready to go CMS, where we can create entities and generate admin panel for administrators. Also Strapi provides an interface to work with media assets (media library)[https://strapi.io/features/media-library], which also has built in support of image conversion to different web formats, like avif and png.
 
+Example of strapi data item: ![data:people](https://i.imgur.com/ENUiFbL.png)
 ### SEO
-For SEO we have to generate content. According to RFP most content is only for authorized users (gallery, profiles). We suggest to create blog, and promote it using SEO.
-Like:
+For SEO we have to generate content. According to RFP most content is only for authorized users (gallery, profiles). We suggest creating blog, and promote it using SEO.
+Required seo features:
 - json+ld
 - sitemap
+- rss feed for news
 - meta tilte — description
 
 Wasn't able to understand how hotel related content can help us in acquiring new client. Need some further clarification.
 
 ### Communication with clients
-To structrue communtication we suggest to install [chatwoot](https://www.chatwoot.com/), which supports both [whatsapp](https://www.chatwoot.com/hc/user-guide/articles/1677832735-how-to-setup-a-whats_app-channel) and [telegram](https://www.chatwoot.com/hc/user-guide/en/categories/other-channels)
+To structure communication we propose installing [chatwoot](https://www.chatwoot.com/), which supports both [whatsapp](https://www.chatwoot.com/hc/user-guide/articles/1677832735-how-to-setup-a-whats_app-channel) and [telegram](https://www.chatwoot.com/hc/user-guide/articles/1677838569-how-to-setup-a-telegram-channel). It also supports web version of chat, which supports passing info about the client after authorization. In common, it could be used as CRM for communication with different clients. Also this can help to scale, by building customer success flow with more operators being involved and better quality control. Besides, it's a self-hosted solution, it means that all data is private and stored on yours server.
+
+
+### Search
+To build robust search we propose to use [Meilisearch](https://www.meilisearch.com/), which has built in [integration](https://www.meilisearch.com/blog/strapi-v4-plugin-meilisearch) with strapi. It allows making typo tolerant, facet search. Like: blond [x], height > 170 cm, age < 30, description contains: RHCP etc. Comparing to typical solutions. its more typotolerant.
+
+## Analytics
+We suggest logging all user events to [bigquery](https://cloud.google.com/bigquery) for further analysys. Its a long term, uncapped storage, where we can store all events that are produced by our users. And we can build dashboards or reports using BI tools. We recommend to stick to [Metabase](https://www.metabase.com/), because its easy to use for non-technical staff and also It's easy to embed reports.
+
