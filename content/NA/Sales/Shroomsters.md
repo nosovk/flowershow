@@ -43,7 +43,7 @@ gantt
     section Markup
         Markup: m1, after dev1, until dev5
     section Testing
-        search bugs: qa1, after dev4, 14d
+        search bugs: qa1, after dev3-1, 14d
         Check Prod: qa2, after i3, 5d
 ```
 ### Milestones
