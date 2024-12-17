@@ -29,7 +29,6 @@ gantt
     tickInterval 1week
     excludes weekends
     todayMarker off
-    weekday monday
     Start : milestone, s1, 2025-01-11,0min
     section InfraStrucutre
         Setup server, domains, etc: i1, after s1, 7d
@@ -48,8 +47,9 @@ gantt
         search bugs: qa1, after dev4, 14d
         Check Prod: qa2, after i3, 5d
 ```
-
-
+### Milestones
+- Deliver a ready prototype/MVP of the application 3-4 weeks
+- Post-MVP Phase: Testing and bug fixing
 ### Estimation:
 
 
