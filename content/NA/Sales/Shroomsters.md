@@ -28,29 +28,45 @@ Because all historical data stored in BQ, you can easily make reports\dashboards
 WebApp deployed to CloudFlare pages. Assets from Strapi deployed to CloudFlare R2. You will have to pay for CloudFlare services.
 Server and CMS deployed to dedicated server in a docker swarm cluster. We have to rent a server for that. In common we usually stick to [OVH.ie](https://fastify.dev/), if its ok - you will have to pass KYC there and we will be able to deploy there.
 Stage-Prod: there will be 2 environments (stage and prod). Be aware that they will not sync automaticaly.
+
+### Team Composition:
+1.  Project Manager:
+        -   Responsible for overseeing the project and ensuring milestones are met.    
+2.  Lead Developer:
+        -   Oversees the development team and ensures the technical direction aligns with project goals.
+3.  Backend Developer with Blockchain specialization:
+      -   Specializes in server-side logic, databases, and integration of application infrastructure.
+    -   Oversees the integration and implementation of blockchain technologies, including NFTs and wallet authentication.
+ 4.  **Frontend Developer:
+        -   Focuses on user interface development and ensuring a seamless user experience.  
+5.  QA Engineer:
+        -   Conducts testing to identify and fix bugs, ensuring the product meets quality standards.
+6.  DevOps Engineer:
+        -   Manages deployment processes and maintains the infrastructure.
 ### Gant
 ```mermaid
 gantt
-    title Shroomster
-    dateFormat MM-DD
-    tickInterval 1week
-    weekday monday
-	section InfraStrucutre
-	    start: s1, 2025-01-11, 0d
-		Setup server, domains, etc: i1, after s1, 7d
-		Deploy prod: i3, after qa1, 4d
-	section Development
-		Create application rails: dev1, after s1, 7d
-		Build Admin panel: dev2-1, after s1, 7d
-		Generate NFT: dev2-2, after dev1, 2d
-		Build App: dev3-1, after dev2-1, 17d
-		Integrate wallet auth: dev3-2, after dev2-2, 4d 
-		Provide Docs: dev4, after dev3-1, 2d
-		Fixup Bugs: dev5, after dev4, 25d
-	section Markup
-		Markup: m1, after dev1, 40d
-	section Testing
-	    search bugs: qa1, after dev4, 14d
-	    Check Prod: qa2, after i3, 5d
-
+    title Shroomster
+    dateFormat MM-DD
+    tickInterval 1week
+    excludes weekends
+    todayMarker off
+    weekday monday
+    Start : milestone, s1, 2025-01-11,0min
+    section InfraStrucutre
+        Setup server, domains, etc: i1, after s1, 7d
+        Deploy prod: i3, after qa1, 4d
+    section Development
+        Create application rails: dev1, after s1, 7d
+        Build Admin panel: dev2-1, after s1, 7d
+        Generate NFT: dev2-2, after dev1, 2d
+        Build App: dev3-1, after dev2-1, 17d
+        Integrate wallet auth: dev3-2, after dev2-2, 4d
+        Provide Docs: dev4, after dev3-1, 2d
+        Fixup Bugs: dev5, after dev4, 25d
+    section Markup
+        Markup: m1, after dev1, until dev5
+    section Testing
+        search bugs: qa1, after dev4, 14d
+        Check Prod: qa2, after i3, 5d
 ```
