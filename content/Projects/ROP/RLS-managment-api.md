@@ -8,7 +8,7 @@
 ```json
 
 {
-  command: "reboot" // restart, payout, disable, enable, menu-open, menu-close
+  command: "reboot" // restart, payout, machine-disable, machine-enable, menu-open, menu-close
 }
 ```
 аппарат должен выполнять целевое действие
