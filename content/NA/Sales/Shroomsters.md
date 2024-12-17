@@ -35,8 +35,8 @@ gantt
     dateFormat MM-DD
     tickInterval 1week
     weekday monday
-    start: s1, 2025-01-11, 0d
 	section InfraStrucutre
+	    start: s1, 2025-01-11, 0d
 		Setup server, domains, etc: i1, after s1, 7d
 		Deploy prod: i3, after qa1, 4d
 	section Development
