@@ -48,10 +48,9 @@ gantt
         Check Prod: qa2, after i3, 5d
 ```
 ### Milestones
-- Deliver a ready prototype/MVP of the application 3-4 weeks
+- Deliver a ready prototype/MVP of the application 3–4 weeks
 - Post-MVP Phase: Testing and bug fixing
 ### Estimation:
-
 
 | Role                        | 1 month | 2 month | Total | Rate | Total |
 | --------------------------- | ------- | ------- | ----- | ---- | ----- |
