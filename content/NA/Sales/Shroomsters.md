@@ -26,8 +26,7 @@ Stage-Prod: there will be 2 environments (stage and prod). Be aware that they wi
 gantt
     title Shroomster
     dateFormat MM-DD
-    tickInterval 1week
-    excludes weekends
+    tickInterval 1month
     todayMarker off
     Start : milestone, s1, 2025-01-11,0min
     section InfraStrucutre
