@@ -4,16 +4,8 @@ Input:
 Goal:
 	Draw estimation if Shroomsters project
 
-| Role   | 1 month | 2 month | Total | Rate | Total |
-| ------ | ------- | ------- | ----- | ---- | ----- |
-| Project Manager   | 80      | 80      | 160   | 21   | 3360  |
-| FullStack Developer     | 168     | 80      | 248   | 35   | 8680  |
-|Frontend Developer (MarkUp) |100      | 80      | 180   | 18   | 3240  |
-| DevOps | 40      | 10      | 50    | 55   | 2750  |
-| QA     |     |  60       | 60    | 20   | 1200  |
-|        |         |         |       |      | 19230 |
-### App structure
 App contains 3 modules: web app, server, strapi.
+### App structure
 
 #### WebApp
 It's a web application with TG context integration. We use [SvelteKit](https://svelte.dev/docs/kit/introduction) to build fast and robust app. Also, it's much smaller than typical SPA.
@@ -31,18 +23,18 @@ Stage-Prod: there will be 2 environments (stage and prod). Be aware that they wi
 
 ### Team Composition:
 1.  Project Manager:
-        -   Responsible for overseeing the project and ensuring milestones are met.    
-2.  Lead Developer:
-        -   Oversees the development team and ensures the technical direction aligns with project goals.
-3.  Backend Developer with Blockchain specialization:
-      -   Specializes in server-side logic, databases, and integration of application infrastructure.
-    -   Oversees the integration and implementation of blockchain technologies, including NFTs and wallet authentication.
- 4.  **Frontend Developer:
-        -   Focuses on user interface development and ensuring a seamless user experience.  
-5.  QA Engineer:
-        -   Conducts testing to identify and fix bugs, ensuring the product meets quality standards.
-6.  DevOps Engineer:
-        -   Manages deployment processes and maintains the infrastructure.
+	- Responsible for overseeing the project and ensuring milestones are met.    
+1.  Lead Developer:
+	- Oversees the development team and ensures the technical direction aligns with project goals.
+2.  Backend Developer with Blockchain specialization:
+	-   Specializes in server-side logic, databases, and integration of application infrastructure.
+	-   Oversees the integration and implementation of blockchain technologies, including NFTs and wallet authentication.
+3. Frontend Developer:
+	 - Focuses on user interface development and ensuring a seamless user experience. 
+ 4. QA Engineer: 
+	 - Conducts testing to identify and fix bugs, ensuring the product meets quality standards.
+5. DevOps Engineer:
+	- Manages deployment processes and maintains the infrastructure.
 ### Gant
 ```mermaid
 gantt
@@ -70,3 +62,16 @@ gantt
         search bugs: qa1, after dev4, 14d
         Check Prod: qa2, after i3, 5d
 ```
+
+
+
+
+
+| Role                        | 1 month | 2 month | Total | Rate | Total |
+| --------------------------- | ------- | ------- | ----- | ---- | ----- |
+| Project Manager             | 80      | 80      | 160   | 21   | 3360  |
+| FullStack Developer         | 168     | 80      | 248   | 35   | 8680  |
+| Frontend Developer (MarkUp) | 100     | 80      | 180   | 18   | 3240  |
+| DevOps                      | 40      | 10      | 50    | 55   | 2750  |
+| QA                          |         | 60      | 60    | 20   | 1200  |
+|                             |         |         |       |      | 19230 |
