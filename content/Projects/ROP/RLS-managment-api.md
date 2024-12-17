@@ -8,10 +8,17 @@
 ```json
 
 {
-  command: "reboot" // restart, payout, disable, enable
+  command: "reboot" // restart, payout, disable, enable, menu-open, menu-close
 }
 ```
 аппарат должен выполнять целевое действие
+
+- `reboot` - перезагрузить ос нашего устройства
+- `payout` - выплатить баланс
+- `disable` - сделать аппарат не доступным
+- `enable` - сделать аппарат доступным
+- `menu-open` - инженерное меню
+- `menu-close` - закрыть инженерное меню
 
 ::: krk :::
 
