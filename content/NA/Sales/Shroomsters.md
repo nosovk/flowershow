@@ -26,9 +26,9 @@ Stage-Prod: there will be 2 environments (stage and prod). Be aware that they wi
 gantt
     title Shroomster
     dateFormat MM-DD
-    tickInterval 1month
+    tickInterval off
     todayMarker off
-    Start : milestone, s1, 2025-01-11,0min
+    Start : milestone, s1, 2024-12-18,0min
     section InfraStrucutre
         Setup server, domains, etc: i1, after s1, 7d
         Deploy prod: i3, after qa1, 4d
@@ -39,7 +39,7 @@ gantt
         Build App: dev3-1, after dev2-1, 17d
         Integrate wallet auth: dev3-2, after dev2-2, 4d
         Provide Docs: dev4, after dev3-1, 2d
-        Fixup Bugs: dev5, after dev4, 25d
+        Fixup Bugs: dev5, after dev3-1, 25d
     section Markup
         Markup: m1, after dev1, until dev5
     section Testing
