@@ -21,6 +21,20 @@ WebApp deployed to CloudFlare pages. Assets from Strapi deployed to CloudFlare R
 Server and CMS deployed to dedicated server in a docker swarm cluster. We have to rent a server for that. In common, we usually stick to [OVH.ie](https://fastify.dev/), if it's ok — you will have to pass KYC there, and we will be able to deploy there.
 Stage-Prod: there will be 2 environments (stage and prod). Be aware that they will not sync automatically.
 
+### Team Composition:
+1.  Project Manager:
+	- Responsible for overseeing the project and ensuring milestones are met.    
+1.  Lead Developer:
+    - Oversees the development team and ensures the technical direction aligns with project goals.
+2.  Backend Developer with Blockchain specialization:
+	-   Specializes in server-side logic, databases, and integration of application infrastructure.
+	-   Oversees the integration and implementation of blockchain technologies, including NFTs and wallet authentication.
+ 1.  **Frontend Developer:
+    -   Focuses on user interface development and ensuring a seamless user experience.  
+3.  QA Engineer:
+    - Conducts testing to identify and fix bugs, ensuring the product meets quality standards.
+4.  DevOps Engineer:
+	- Manages deployment processes and maintains the infrastructure.
 ### Gant
 ```mermaid
 gantt
