@@ -55,9 +55,10 @@ gantt
 
 | Role                        | 1 month | 2 month | Total | Rate | Total |
 | --------------------------- | ------- | ------- | ----- | ---- | ----- |
-| Project Manager             | 80      | 80      | 160   | 21   | 3360  |
+| Project Manager             | 80      | 80      | 160   | 20   | 3200  |
+| Lead Developer              | 20      | 10      | 30    | 45   | 1350  |
 | FullStack Developer         | 168     | 80      | 248   | 35   | 8680  |
 | Frontend Developer (MarkUp) | 100     | 80      | 180   | 18   | 3240  |
-| DevOps                      | 40      | 10      | 50    | 55   | 2750  |
-| QA                          |         | 60      | 60    | 20   | 1200  |
-|                             |         |         |       |      | 19230 |
+| DevOps                      | 30      | 10      | 40    | 50   | 2000  |
+| QA                          |         | 60      | 60    | 18   | 1080  |
+|                             |         |         |       |      | 19550 |
