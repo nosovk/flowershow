@@ -1,4 +1,4 @@
-Goal: мы хотим подключить telestore к нескольким своим проектам, для этого мы хотим реализовать апи генерации ссылок на оплату, которое мы бы уже подключали к своим продуктам.
+Goal: we want to use Tele.Store as merchant to process our payments. Mostly we want to process web-clients. We need to clarify the userflow. 
 
 Input:
 - [miniApp concept Doc](https://docs.google.com/document/d/1bfWTEDWDp0RoYd4mArW8SwnJ7SWfsn2tAGdZpAsOM1c/edit?tab=t.0)
