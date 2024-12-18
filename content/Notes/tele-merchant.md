@@ -55,7 +55,7 @@ Tele init (CreateInvoice):
 ```json
 {
 	"amount": 100, // amount of transaction
-	"currency": "USD", // three-letter ISO currency code
+	"currency": "TUSD", // we always invoke transasctions in teleusd (with some conversion rate)
 	"appId": "<YOUR_APP_ID>",
 	"partnerInfo": {
 		"id": "ourintrenalid", // transaction id, used to identify posback, if no id - no postback
