@@ -112,7 +112,7 @@ Metabase dashboards, embedded into app to show stats and filters for customer.
 
 
 ## Questions
-- It would be nice move to webhooks instead of [subscriptions](https://github.com/telestore-rep/SDK/blob/main/JavaScript/src/index.ts#L92) at SDK. We would like to use cloudlfare pages, which has limitations on long running tasks (but it good in handling http requests).
+- It would be nice move to webhooks instead of [subscriptions](https://github.com/telestore-rep/SDK/blob/main/JavaScript/src/index.ts#L92) at SDK. We would like to use cloudlfare pages, which has limitations on long-running tasks (but it good at handling http requests).
 - it would be pleasant to get access to swagger.
 - it would be nice to use named constants in [sdk](https://github.com/telestore-rep/SDK/blob/main/JavaScript/src/index.ts#L121) to make it easier to understand.
 - if user wants to make a payment in TG, how we should integrate it within site? There is no redirect upon success.
