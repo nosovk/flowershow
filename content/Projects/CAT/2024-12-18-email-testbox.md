@@ -33,3 +33,6 @@ mailbox.com/ - страничка с описанием как работает 
 
 - mailbox/api/email/[mailId]/text - json encoded тхт с текстом письма
 
+
+## deliverables
+Код складываем на github cat, в монорепу. Воркер складываем в отдельную папку, он не иммет CI/CD. Для Pages используем готовый CI/CD встронный в гитхаб
