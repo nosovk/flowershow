@@ -41,7 +41,7 @@ flowchart LR
 | Role       | rate | hours | total |
 | ---------- | ---- | ----- | ----- |
 | TeamLead   | 65   | 30    | 1950  |
-| Full Stack | 36   | 80    | 2880  |
+| Full Stack | 36   | 95    | 3420  |
 | DevOps     | 55   | 15    | 825   |
-| QA         | 18   | 10    | 180   |
-| Total      |      |       | 5835  |
+| QA         | 18   | 15    | 270   |
+| Total      |      |       | 6465  |
