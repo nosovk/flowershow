@@ -51,9 +51,9 @@ We didn't want to build custom admin panel for content managment. We have to pro
 
 The main goal of using a system like Strapi is to avoid building an admin panel ourselves. In it, we can create data scheme with point and click, and then use it as data source.
 
-Danger: i18n realization in strapi v4 is done by plugin, which leads to problems with querying data and performance issues. Strapi already released v5, where those issues solved, but we postponed update for now.
+Danger: i18n realization in Strapi v4 is done by plugin, which leads to problems with querying data and performance issues. Strapi already released v5, where those issues solved, but we postponed update for now.
 
-For asset storage we integrated [CloudFlare R2](https://developers.cloudflare.com/r2/). It's a flexible and pretty cheap solution to store lots of images. The egress traffic for R2 is free, thats why we use it instead of GoogleCloud or other S3 like storage.
+For asset storage we integrated [CloudFlare R2](https://developers.cloudflare.com/r2/). It's a flexible and pretty cheap solution to store lots of images. The egress traffic for R2 is free, that's why we use it instead of GoogleCloud or other S3 like storage.
 
 Also, we use strapi to pre-process images, like generate AVIF versions and provide different sized versions. AVIF outperforms other formats for big images.
 
@@ -88,6 +88,7 @@ List of API integrations:
 - RSS.app
 - YouTube API
 - Bing Image API
+- Wikipedia
 - Google Translate "free" api
 - OpenAI ChatGTP
 - Google Gemini
