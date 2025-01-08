@@ -95,7 +95,7 @@ The resulting data stored in `PostgreSQL`, we have our own data matching index b
 - Google Gemini
 - Anthropic Claude
 
-### Infrastructure components
+## Infrastructure components
 We have a CI, that supports preview branches for each development branch (based on CloudFlare Pages). Most of the frontend parts lives on the CloudFlare Edge. 
 
 For Data Gateway Service we use Bare-metal server with Docker Swarm on it. As ingress controller we use [Traefik](https://traefik.io/). All services, like Strapi, Fastify, Temporal, PostgreSQL, Redis etc. stores their logs in [Loki](https://grafana.com/oss/loki/). We use [Grafana](https://grafana.com/grafana/) to observe logs and metrics stored in it. Also we make use of [AlertManager](https://prometheus.io/docs/alerting/latest/alertmanager/) to send alerts to Mattermost/Telegram.
