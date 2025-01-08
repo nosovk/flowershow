@@ -20,6 +20,7 @@ Future expansion will include other sports like MMA and more
 - [Fastify](https://fastify.dev/) —  performant http server for [NodeJS](https://nodejs.org/)
 - [Redis](https://redis.io/) — Cache layer for Fastify\Strapi
 - **ChatGPT**/**Claude**/**Gemini** — language models used for data processing
+- [PostgreSQL](https://www.postgresql.org/) - SQL Database
 - **[OVH.ie](https://www.ovhcloud.com/en-ie/)** — Server hosting for Strapi/Temporal
 - **[BigQuery](https://cloud.google.com/bigquery)** — Long-term storage
 - **[MetaBase](https://www.metabase.com/)** — Dashboards and data linking  
@@ -43,7 +44,7 @@ Also, we use [KV](https://developers.cloudflare.com/kv/) to cache API responses 
 
 For auth handling, we use [Lucia](https://lucia-auth.com/getting-started/sveltekit/), which stores auth data inside KV directly.
 
-For integration with strapi we have to build additional TypeScript models, which could not be avoided.
+For integration with Strapi we have to build additional TypeScript models, which could not be avoided.
 ## Admin panel
 
 We didn't want to build custom admin panel for content managment. We have to provide some interface to manage users, their verifications etc., and we stick to [Strapi](strapi.io) within those tasks. Strapi is not designed for handling lots of requests, because of that we have caching layer at BFF layer (which is super performant). Strapi supports i18n for content types. We have to host Strapi as normal app in docker container, without CF Pages or other edge solutions.
@@ -52,7 +53,7 @@ The main goal of using a system like Strapi is to avoid building an admin panel 
 
 Danger: i18n realization in strapi v4 is done by plugin, which leads to problems with querying data and performance issues. Strapi already released v5, where those issues solved, but we postponed update for now.
 
-For asset storage we integrated [CloudFlare R2](https://developers.cloudflare.com/r2/). It's a flexible and pretty cheap solution to store lots of images. The egress trafik for R2 is free, thats why we use it instead of GoogleCloud or other S3 like storage.
+For asset storage we integrated [CloudFlare R2](https://developers.cloudflare.com/r2/). It's a flexible and pretty cheap solution to store lots of images. The egress traffic for R2 is free, thats why we use it instead of GoogleCloud or other S3 like storage.
 
 Also, we use strapi to pre-process images, like generate AVIF versions and provide different sized versions. AVIF outperforms other formats for big images.
 
@@ -77,7 +78,17 @@ Main workflows that we have:
 Most of the workflows could be controlled by settings in strapi, like storing prompts, choosing which GPT model to use (OpenAI, Gemini, Clause) etc.
 
 In most cases we automatically match data from different source, but in case of failure, we have a linking dashboard in Metabase, where admin can search for unmatched items and link them manually.
-## Settings  
-  
-- [strapi-config](strapi-config.md)  
-- [prompts](prompts.md)  
+
+The resulting data stored in `PostgreSQL`, we have our own data matching index based on `stb-internal-id`, that we use to consolidate data from different sources, allowing us to easily remap entities between different providers.
+
+List of API integrations:
+- [DSG](https://datasportsgroup.com/)
+- [SportMonks](sportmonks.com)
+- [worldnewsapi](https://worldnewsapi.com/)
+- RSS.app
+- YouTube API
+- Bing Image API
+- Google Translate "free" api
+- OpenAI ChatGTP
+- Google Gemini
+- Anthropic Claude
