@@ -1,5 +1,5 @@
-# StatBet  
-  
+# # StatBet: A Comprehensive Sports Data Portal  
+
 ## Goal  
   
 Create Portal with actual info regarding sports  
@@ -7,49 +7,62 @@ Create Portal with actual info regarding sports
 - Soccer  
 - NBA  
 - Tennis  
-  at first, and then others — MMA etc.    
+Future expansion will include other sports like MMA and more 
 ## Design  
 - [STATBET-Mobile](<https://www.figma.com/file/qfzdQledOZISrm2omHvRea/STATBET-Mobile-%26-Desktop-4.0-(Copy)>)
 - [STATBET-News](<https://www.figma.com/file/PbQ5ymO1sFZ7Ro863U83hx/STATBET-News-(Team-Project)>)
-## Tech Stack  
+## Technology Stack  
+- **[SvelteKit](https://svelte.dev/docs/kit/introduction)** — Frontend framework
+- **[Cloudflare Pages](https://pages.cloudflare.com/)** — Hosting and CDN
+- **[Cloudflare KV](https://developers.cloudflare.com/kv/)** — Cache layer for BFF
+- **[Strapi](https://strapi.io/)** — Admin panel and API for content
+- **[Temporal](https://temporal.io/)** — Workflow management
+- [Fastify](https://fastify.dev/) —  performant http server for [NodeJS](https://nodejs.org/)
+- [Redis](https://redis.io/) — Cache layer for Fastify\Strapi
+- **ChatGPT**/**Claude**/**Gemini** — language models used for data processing
+- **[OVH.ie](https://www.ovhcloud.com/en-ie/)** — Server hosting for Strapi/Temporal
+- **[BigQuery](https://cloud.google.com/bigquery)** — Long-term storage
+- **[MetaBase](https://www.metabase.com/)** — Dashboards and data linking  
+## Project Structure
   
-SvelteKit — frontend framework, Cloudflare Pages — hosing and CDN, CloudFlare KV — cache layer DB, Strapi — admin panel and API for content, Temporal.io - managing workflows, ChatGPT — language model used for data processing, OVH.ie — server hosting for Strapi/Temporal, BigQuery - long term storage, MetaBase - dashboards and data linking.
-  
-## Tech  
-  
-Project split to 4 parts.  
+Project split to 3 parts.  
   
 - Front: this is a part for end-users, it uses some API and have aggressive caching, but mostly it's all about our users and UI.  
-- Admin panel: here we can work with content, tags etc.  
-- Data Gateway Service: this is a separate service that allows us to fetch data and make some preparation, validation steps, then put that data to DB.   
+- Admin panel: here we can work with content, tags etc. 
+- Data Gateway Service: this is a separate service that allows us to fetch data and make some preparation, validation steps, then put that data to DB.
 ## Schema  
   
-[![](https://mermaid.ink/img/pako:eNp1U9-P2jAM_leiPIEEiAKFo5omjTFO034I1NMeBjxkjWmjtU2VpGOs5X-fk_boid380Dj2Z_uz3VQ0khxoQE-pPEcJU4Y8rQ85QXmfCshNb9-cxz4ZDt-SjZK5gZw3EF3-iBUrEsTKkm9SpqBxWHmGurjVZtN58GKNdcSiBAhnhpGTkhlhhajJp28N8FakRZP6EQxBgiJKgUQut6lDg_XFvtec_eMrIVPFSYFxlzao5rG-o79GClsFRUfx5kLw3jIcxszAmV2GGtQvEcGxw1oxkBVSsdSVLeJ9r5DaxBDuPvfvkCemjThdHBCRnfPWsBUsiwjbQmikAlIoGYHWwO867yKaO3njgqyWCc5TpKygJiGSBnU32FuPbUv6n_K4I-3K2wnUq92-txLxrgR1edlVBz6BiZJmoQpiprjIY6JxMEbXdsYbAP5u-7GqQmdzcyfWSNB6vb7Wfts4yeGsyVkY_NcSZh63T3V7VlWr_D9HjH9BiuvTxqWpv-LHVq0qqzUEHBWXgbwYEx3QDFTGBMcnUlnHgZoEMjjQAFXO1M8DPeRXxLHSyPCSRzQwqoQBVbKMExqcWKrxVhY4FVgLhhPPbtaC5TSo6G8aDOejhT_2Fr43XYz9hwd_MqAXGixGs_ls6Y0nY8_zFxN_ch3QP1JihvFo6U-W_mwxX3rTmT_xfJfuu3M2DIALXN6X5n27Z_7M44PztDSufwFr9kIe?type=png)](https://mermaid.live/edit#pako:eNp1U9-P2jAM_leiPIEEiAKFo5omjTFO034I1NMeBjxkjWmjtU2VpGOs5X-fk_boid380Dj2Z_uz3VQ0khxoQE-pPEcJU4Y8rQ85QXmfCshNb9-cxz4ZDt-SjZK5gZw3EF3-iBUrEsTKkm9SpqBxWHmGurjVZtN58GKNdcSiBAhnhpGTkhlhhajJp28N8FakRZP6EQxBgiJKgUQut6lDg_XFvtec_eMrIVPFSYFxlzao5rG-o79GClsFRUfx5kLw3jIcxszAmV2GGtQvEcGxw1oxkBVSsdSVLeJ9r5DaxBDuPvfvkCemjThdHBCRnfPWsBUsiwjbQmikAlIoGYHWwO867yKaO3njgqyWCc5TpKygJiGSBnU32FuPbUv6n_K4I-3K2wnUq92-txLxrgR1edlVBz6BiZJmoQpiprjIY6JxMEbXdsYbAP5u-7GqQmdzcyfWSNB6vb7Wfts4yeGsyVkY_NcSZh63T3V7VlWr_D9HjH9BiuvTxqWpv-LHVq0qqzUEHBWXgbwYEx3QDFTGBMcnUlnHgZoEMjjQAFXO1M8DPeRXxLHSyPCSRzQwqoQBVbKMExqcWKrxVhY4FVgLhhPPbtaC5TSo6G8aDOejhT_2Fr43XYz9hwd_MqAXGixGs_ls6Y0nY8_zFxN_ch3QP1JihvFo6U-W_mwxX3rTmT_xfJfuu3M2DIALXN6X5n27Z_7M44PztDSufwFr9kIe)n1Bh0THAtWlEA404yclKwJa8VIvv1wie8kczYZH0ETFCiKCkhhsfWYaeQXz3fuvH-50bVH7KOC9sp9iA-IZuAyLRWQVskCug74DDkjXgucTx5sjbFqwXkFF-x1JBmoP6BuBLugYcEeT6CL0vWo4MwUF82ZdK1UuhuNuhSAfzx-HYbMxqxiYoIEo9PkEI3oh6WTPQsmDVw6chEaH79k-vH4NM7nMMzGLYKrP-MrVkxDpy3EeMDN8A2DsRy1FWGrCV3QGlTNBMchGQxYTnUJNeQ0QZMz9TuneTNhHuu1zF6bgiZa9bCgfYttw14w_IuaJidWdRhtWUOTgf6lySZebdZeGIf-Noj9YO0v6CtN_MhbebsoiGMv8gPfD4NpQf9JiQjeahPu1sE2jIJdsI0CL3oj-cIF_uY7B1j3u5tsO-CW96dFMeKm__618P4)  
-  
-
+[![](https://mermaid.ink/img/pako:eNp1U9-P2jAM_leiPIEEiAKFo5omjTFO034I1NMeBjxkjWmjtU2VpGOs5X-fk_boid380Dj2Z_uz3VQ0khxoQE-pPEcJU4Y8rQ85QXmfCshNb9-cxz4ZDt-SjZK5gZw3EF3-iBUrEsTKkm9SpqBxWHmGurjVZtN58GKNdcSiBAhnhpGTkhlhhajJp28N8FakRZP6EQxBgiJKgUQut6lDg_XFvtec_eMrIVPFSYFxlzao5rG-o79GClsFRUfx5kLw3jIcxszAmV2GGtQvEcGxw1oxkBVSsdSVLeJ9r5DaxBDuPvfvkCemjThdHBCRnfPWsBUsiwjbQmikAlIoGYHWwO867yKaO3njgqyWCc5TpKygJiGSBnU32FuPbUv6n_K4I-3K2wnUq92-txLxrgR1edlVBz6BiZJmoQpiprjIY6JxMEbXdsYbAP5u-7GqQmdzcyfWSNB6vb7Wfts4yeGsyVkY_NcSZh63T3V7VlWr_D9HjH9BiuvTxqWpv-LHVq0qqzUEHBWXgbwYEx3QDFTGBMcnUlnHgZoEMjjQAFXO1M8DPeRXxLHSyPCSRzQwqoQBVbKMExqcWKrxVhY4FVgLhhPPbtaC5TSo6G8aDOejhT_2Fr43XYz9hwd_MqAXGixGs_ls6Y0nY8_zFxN_ch3QP1JihvFo6U-W_mwxX3rTmT_xfJfuu3M2DIALXN6X5n27Z_7M44PztDSufwFr9kIe?type=png)](https://mermaid.live/edit#pako:eNp1U9-P2jAM_leiPIEEiAKFo5omjTFO034I1NMeBjxkjWmjtU2VpGOs5X-fk_boid380Dj2Z_uz3VQ0khxoQE-pPEcJU4Y8rQ85QXmfCshNb9-cxz4ZDt-SjZK5gZw3EF3-iBUrEsTKkm9SpqBxWHmGurjVZtN58GKNdcSiBAhnhpGTkhlhhajJp28N8FakRZP6EQxBgiJKgUQut6lDg_XFvtec_eMrIVPFSYFxlzao5rG-o79GClsFRUfx5kLw3jIcxszAmV2GGtQvEcGxw1oxkBVSsdSVLeJ9r5DaxBDuPvfvkCemjThdHBCRnfPWsBUsiwjbQmikAlIoGYHWwO867yKaO3njgqyWCc5TpKygJiGSBnU32FuPbUv6n_K4I-3K2wnUq92-txLxrgR1edlVBz6BiZJmoQpiprjIY6JxMEbXdsYbAP5u-7GqQmdzcyfWSNB6vb7Wfts4yeGsyVkY_NcSZh63T3V7VlWr_D9HjH9BiuvTxqWpv-LHVq0qqzUEHBWXgbwYEx3QDFTGBMcnUlnHgZoEMjjQAFXO1M8DPeRXxLHSyPCSRzQwqoQBVbKMExqcWKrxVhY4FVgLhhPPbtaC5TSo6G8aDOejhT_2Fr43XYz9hwd_MqAXGixGs_ls6Y0nY8_zFxN_ch3QP1JihvFo6U-W_mwxX3rTmT_xfJfuu3M2DIALXN6X5n27Z_7M44PztDSufwFr9kIe)  
 ## Front
 
-This part uses fully custom design to provide the best user experience. We tried to use Mobile-First approach in development, but because of problems with designs now we have two different layouts for some pages.
+This part uses fully custom design to provide the best user experience. We tried to use Mobile-First approach in development, because of design issues we now two different layouts for some pages. Anyway in most cases we have component based design.
 
 To separate external API from app data layer, we use BFF layer (backend for frontend). Here shines [SvelteKit](https://kit.svelte.dev/) and [CloudFlare pages](https://pages.cloudflare.com/). The main benefit of such stack is a built-in integration of BFF layer into app, which allows using strongly typed autogenerated interface between BFF and frontend. Because of that, it's easy to wrap any external API in BFF and decouple its shape from UI. 
 
-Also we use [KV](https://developers.cloudflare.com/kv/) to cache API responses on the edge to reduce amount of actual requests to backend.
+Also, we use [KV](https://developers.cloudflare.com/kv/) to cache API responses on the edge to reduce amount of actual requests to backend.
 
 For auth handling, we use [Lucia](https://lucia-auth.com/getting-started/sveltekit/), which stores auth data inside KV directly.
 
 For integration with strapi we have to build additional TypeScript models, which could not be avoided.
-## Admin Panel
+## Admin panel
 
-We didn't want to build custom admin panel for content. We have to provide some interface to manage users, their verifications etc., and we stick to [strapi](strapi.io) within those tasks. Strapi is not designed for handling lots of requests, because of that wehave caching layer at BFF layer (which is super performant). Strapi supports i18n for content types. We have to host Strapi as normal app in docker container, without CF Pages or other edge solutions.
+We didn't want to build custom admin panel for content managment. We have to provide some interface to manage users, their verifications etc., and we stick to [Strapi](strapi.io) within those tasks. Strapi is not designed for handling lots of requests, because of that we have caching layer at BFF layer (which is super performant). Strapi supports i18n for content types. We have to host Strapi as normal app in docker container, without CF Pages or other edge solutions.
+
 The main goal of using a system like Strapi is to avoid building an admin panel ourselves. In it, we can create data scheme with point and click, and then use it as data source.
-Danger: i18n realization in strapi v4 is done by plugin, which leads to problems with querying data and performance issues.
 
-For assets we integrated [CloudFlare R2](https://developers.cloudflare.com/r2/). It's a flexible and pretty cheap solution to store lots of images. Also we use strapi to process images, like generate AVIF versions and provide different resized versions.
+Danger: i18n realization in strapi v4 is done by plugin, which leads to problems with querying data and performance issues. Strapi already released v5, where those issues solved, but we postponed update for now.
 
-For 3rd party data we try to avoid using strapi as data layer.
+For asset storage we integrated [CloudFlare R2](https://developers.cloudflare.com/r2/). It's a flexible and pretty cheap solution to store lots of images. The egress trafik for R2 is free, thats why we use it instead of GoogleCloud or other S3 like storage.
+
+Also, we use strapi to pre-process images, like generate AVIF versions and provide different sized versions. AVIF outperforms other formats for big images.
+
+For 3rd party data we try to avoid using strapi as data layer, and make request to Data Gateway Service
 
 ## Data Gateway Service
-We have integrated with a few api providers, like [DSG](https://datasportsgroup.com/) and [SportMonks](sportmonks.com). But, unfortunately, they are not very reliable, thats why we shifted all data processing to [Temporal](https://temporal.io/) workflows. Actually fetching, merging, cleaning, extending, saving of any kind of data - is a workflow. Because of temporal we have a good observability of processes that we run, and its easy to recover if something goes wrong.
+This is an umbrella for group of workflows, managed by Temporal. We have integrated with a few api providers, like [DSG](https://datasportsgroup.com/) and [SportMonks](sportmonks.com). But, unfortunately, they are not very reliable, that's why we shifted all data processing to [Temporal](https://temporal.io/) workflows. 
+
+Actually fetching, merging, cleaning, extending, saving of any kind of data — is a workflow. Because of temporal we have a good observability of processes that we run, and It's easy to recover/retry/debug if something goes wrong.
+
 Main workflows that we have:
 - generate articles 
 - collect data from newsfeeds
