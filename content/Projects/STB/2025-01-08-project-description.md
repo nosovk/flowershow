@@ -98,6 +98,8 @@ The resulting data stored in `PostgreSQL`, we have our own data matching index b
 ### Infrastructure components
 We have a CI, that supports preview branches for each development branch (based on CloudFlare Pages). Most of the frontend parts lives on the CloudFlare Edge. 
 
-For Data Gateway Service we use Bare-metal server with Docker Swarm on it. As ingress controller we use [Traefik](https://traefik.io/). All services, like Strapi, Fastify, Temporal, PostgreSQL, Redis etc. stores their logs in [Loki](https://grafana.com/oss/loki/). We use [Grafana](https://grafana.com/grafana/) to observe logs and metrics. Also we use it to send allerts to Mattermost/Telegram.
+For Data Gateway Service we use Bare-metal server with Docker Swarm on it. As ingress controller we use [Traefik](https://traefik.io/). All services, like Strapi, Fastify, Temporal, PostgreSQL, Redis etc. stores their logs in [Loki](https://grafana.com/oss/loki/). We use [Grafana](https://grafana.com/grafana/) to observe logs and metrics stored in it. Also we make use of [AlertManager](https://prometheus.io/docs/alerting/latest/alertmanager/) to send alerts to Mattermost/Telegram.
 
-MetaBase works as a separate service connected to other services databases (direct access to PG and BigQuery)
+MetaBase works as a separate service connected to other services databases (direct access to PG and BigQuery).
+
+We make incremental backups of databases using [wal-g](https://github.com/wal-g/wal-g). All backups stored encrypted at CloudFlare R2.
