@@ -16,6 +16,7 @@ Future expansion will include other sports like MMA and more
 - **[Cloudflare Pages](https://pages.cloudflare.com/)** — Hosting and CDN
 - **[Cloudflare KV](https://developers.cloudflare.com/kv/)** — Cache layer for BFF
 - **[Strapi](https://strapi.io/)** — Admin panel and API for content
+- [Meilisearch](https://www.meilisearch.com/) - search engine
 - **[Temporal](https://temporal.io/)** — Workflow management
 - [Fastify](https://fastify.dev/) —  performant http server for [NodeJS](https://nodejs.org/)
 - [Redis](https://redis.io/) — Cache layer for Fastify\Strapi
@@ -32,8 +33,9 @@ Project split to 3 parts.
 - **Admin panel**: here we can work with content, tags etc. 
 - **Data Gateway Service**: this is a separate service that allows us to fetch data and make some preparation, validation steps, then put that data to DB.
 ## Schema  
-  
-[![](https://mermaid.ink/img/pako:eNp1U9-P2jAM_leiPIEEiAKFo5omjTFO034I1NMeBjxkjWmjtU2VpGOs5X-fk_boid380Dj2Z_uz3VQ0khxoQE-pPEcJU4Y8rQ85QXmfCshNb9-cxz4ZDt-SjZK5gZw3EF3-iBUrEsTKkm9SpqBxWHmGurjVZtN58GKNdcSiBAhnhpGTkhlhhajJp28N8FakRZP6EQxBgiJKgUQut6lDg_XFvtec_eMrIVPFSYFxlzao5rG-o79GClsFRUfx5kLw3jIcxszAmV2GGtQvEcGxw1oxkBVSsdSVLeJ9r5DaxBDuPvfvkCemjThdHBCRnfPWsBUsiwjbQmikAlIoGYHWwO867yKaO3njgqyWCc5TpKygJiGSBnU32FuPbUv6n_K4I-3K2wnUq92-txLxrgR1edlVBz6BiZJmoQpiprjIY6JxMEbXdsYbAP5u-7GqQmdzcyfWSNB6vb7Wfts4yeGsyVkY_NcSZh63T3V7VlWr_D9HjH9BiuvTxqWpv-LHVq0qqzUEHBWXgbwYEx3QDFTGBMcnUlnHgZoEMjjQAFXO1M8DPeRXxLHSyPCSRzQwqoQBVbKMExqcWKrxVhY4FVgLhhPPbtaC5TSo6G8aDOejhT_2Fr43XYz9hwd_MqAXGixGs_ls6Y0nY8_zFxN_ch3QP1JihvFo6U-W_mwxX3rTmT_xfJfuu3M2DIALXN6X5n27Z_7M44PztDSufwFr9kIe?type=png)](https://mermaid.live/edit#pako:eNp1U9-P2jAM_leiPIEEiAKFo5omjTFO034I1NMeBjxkjWmjtU2VpGOs5X-fk_boid380Dj2Z_uz3VQ0khxoQE-pPEcJU4Y8rQ85QXmfCshNb9-cxz4ZDt-SjZK5gZw3EF3-iBUrEsTKkm9SpqBxWHmGurjVZtN58GKNdcSiBAhnhpGTkhlhhajJp28N8FakRZP6EQxBgiJKgUQut6lDg_XFvtec_eMrIVPFSYFxlzao5rG-o79GClsFRUfx5kLw3jIcxszAmV2GGtQvEcGxw1oxkBVSsdSVLeJ9r5DaxBDuPvfvkCemjThdHBCRnfPWsBUsiwjbQmikAlIoGYHWwO867yKaO3njgqyWCc5TpKygJiGSBnU32FuPbUv6n_K4I-3K2wnUq92-txLxrgR1edlVBz6BiZJmoQpiprjIY6JxMEbXdsYbAP5u-7GqQmdzcyfWSNB6vb7Wfts4yeGsyVkY_NcSZh63T3V7VlWr_D9HjH9BiuvTxqWpv-LHVq0qqzUEHBWXgbwYEx3QDFTGBMcnUlnHgZoEMjjQAFXO1M8DPeRXxLHSyPCSRzQwqoQBVbKMExqcWKrxVhY4FVgLhhPPbtaC5TSo6G8aDOejhT_2Fr43XYz9hwd_MqAXGixGs_ls6Y0nY8_zFxN_ch3QP1JihvFo6U-W_mwxX3rTmT_xfJfuu3M2DIALXN6X5n27Z_7M44PztDSufwFr9kIe)  
+[![](https://mermaid.ink/img/pako:eNp1VF2P2jAQ_CuWn0ACRIDAEVWVSinXqr0WlNM9FHhw4yWxmsSR7RS4hP_ejZODE9z5AX_s7Ozs2KSggeRAPbqL5T6ImDLkcb5JCY7PsYDUtNb1vG2TbvcjWSiZGkh5DdH5n1CxLEKszPkiZgrqQDVeoDZvtlhcIripDsuABREQzgwjOyUTwjJRku9PNfBcpEGT8h4MQYEiiIEEltuUvsH6Yt2q5_b2jZSh4iTDvGOTVPJQX8mfo4SlgowwQ349fb0oPSMwZ10J7YbMwJ4duxrUPxHA9oKthoEkk4rFtnoWrluZ1CYEf_WjfYXcMW3E7miBiLwEz31XA8siourEN1IByZQMQGvgVwZcMup9kyRSDgdrcEkeQMRCA1NBdIP-YNHVKhGcx9iggpL42CKo927Dt1Q1-Q332Tc4GFApGtL4pW96w3egbW-WabZat2YiXOWgjq8tu4B3YJqyREHIFBdpSDS6bnRZ3eMCgH9afisK357ZuyXVIcHT0-ktbxtXSQp7TfbC4HuOmLlfPpbNXBTN4n2OEF9ajG9DG0tT_sSfqmpRVKtagJViGcgrV2mHJqASJjj-DYsqsKEmggQ21MMlZ-rvhm7SE-JYbqR_TAPqGZVDhyqZhxH1dizWuMszdAXmgqH1yfk0Yyn1CnqgXnfcm7h9Z-I6w0nfvbtzBx16pN6kNxqPpk5_0HccdzJwB6cOfZYSGfq9qTuYuqPJeOoMR-7AcS3dbxusFQAXeHkP9TfEfkpedHyxkUbG6T_gjmKT?type=png)](https://mermaid.live/edit#pako:eNp1VF2P2jAQ_CuWn0ACRIDAEVWVSinXqr0WlNM9FHhw4yWxmsSR7RS4hP_ejZODE9z5AX_s7Ozs2KSggeRAPbqL5T6ImDLkcb5JCY7PsYDUtNb1vG2TbvcjWSiZGkh5DdH5n1CxLEKszPkiZgrqQDVeoDZvtlhcIripDsuABREQzgwjOyUTwjJRku9PNfBcpEGT8h4MQYEiiIEEltuUvsH6Yt2q5_b2jZSh4iTDvGOTVPJQX8mfo4SlgowwQ349fb0oPSMwZ10J7YbMwJ4duxrUPxHA9oKthoEkk4rFtnoWrluZ1CYEf_WjfYXcMW3E7miBiLwEz31XA8siourEN1IByZQMQGvgVwZcMup9kyRSDgdrcEkeQMRCA1NBdIP-YNHVKhGcx9iggpL42CKo927Dt1Q1-Q332Tc4GFApGtL4pW96w3egbW-WabZat2YiXOWgjq8tu4B3YJqyREHIFBdpSDS6bnRZ3eMCgH9afisK357ZuyXVIcHT0-ktbxtXSQp7TfbC4HuOmLlfPpbNXBTN4n2OEF9ajG9DG0tT_sSfqmpRVKtagJViGcgrV2mHJqASJjj-DYsqsKEmggQ21MMlZ-rvhm7SE-JYbqR_TAPqGZVDhyqZhxH1dizWuMszdAXmgqH1yfk0Yyn1CnqgXnfcm7h9Z-I6w0nfvbtzBx16pN6kNxqPpk5_0HccdzJwB6cOfZYSGfq9qTuYuqPJeOoMR-7AcS3dbxusFQAXeHkP9TfEfkpedHyxkUbG6T_gjmKT)
+
+
 ## Front
 
 This part uses fully custom design to provide the best user experience. We tried to use mobile-first approach in development, because of design issues we now two different layouts for some pages. Anyway in most cases we have component based design.
@@ -103,3 +105,18 @@ For Data Gateway Service we use Bare-metal server with Docker Swarm on it. As in
 MetaBase works as a separate service connected to other services databases (direct access to PG and BigQuery).
 
 We make incremental backups of databases using [wal-g](https://github.com/wal-g/wal-g). All backups stored encrypted at CloudFlare R2.
+
+
+### Path to current solution
+
+In the beginning, we adopted a much simpler approach to product implementation because we underestimated several challenges. 
+Initially, the project was built using Strapi and [n8n](https://n8n.io/). [N8N](https://n8n.io/) is a custom visual workflow editor that allows users to visually modify data processing within workflows. 
+![[n8n-example.png]]
+At first, we used n8n to build article generation and other content flows. However, we eventually had to discontinue using n8n due to the growing complexity of the flows. As new requirements for generation speed emerged, we needed to add parallelism to the n8n workflows, making them difficult for non-developers to use and challenging to support overall.
+![[n8n-big-examp;e.png]]
+The positive aspect was that using n8n allowed us to quickly prototype different workflows and refine how they should function.
+Subsequently, we moved all workflows to Strapi. This transition helped manage the complex workflows effectively, but over time, new issues arose. As we continued developing, we realized our integrations were not particularly reliable. Additionally, we encountered slow data updates in Strapi. We kept adding new data sources, and eventually, the volume of modifications required in Strapi exceeded its capacity. 
+At this point, we shifted to using Temporal, which offers common patterns for steps, retries, and error handling. All workflows were moved to Temporal, including external integrations. To avoid issues with update speed, we created an additional PostgreSQL database to store all the data. After that we started serving part of the data directly from DGW. 
+![[temporal.png]]![[temporal-workflow-details.png]]
+In current architecture is much easier to handle data integrity tasks, by generation of a new system workflows.
+
