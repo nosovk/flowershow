@@ -87,8 +87,8 @@ The resulting data stored in `PostgreSQL`, we have our own data matching index b
 ### List of API integrations:
 - [DSG](https://datasportsgroup.com/)
 - [SportMonks](sportmonks.com)
-- [worldnewsapi](https://worldnewsapi.com/)
-- RSS.app
+- news api
+- RSS api
 - YouTube API
 - Bing Image API
 - Wikipedia
