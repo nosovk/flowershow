@@ -115,7 +115,7 @@ In the beginning, we adopted a much simpler approach to product implementation b
 Initially, the project was built using Strapi and [n8n](https://n8n.io/). [N8N](https://n8n.io/) is a custom visual workflow editor that allows users to visually modify data processing within workflows. 
 ![[n8n-example.png]]
 At first, we used n8n to build article generation and other content flows. However, we eventually had to discontinue using n8n due to the growing complexity of the flows. As new requirements for generation speed emerged, we needed to add parallelism to the n8n workflows, making them difficult for non-developers to use and challenging to support overall.
-![[n8n-big-examp;e.png]]
+![[n8n-big-example.png]]
 The positive aspect was that using n8n allowed us to quickly prototype different workflows and refine how they should function.
 Subsequently, we moved all workflows to Strapi. This transition helped manage the complex workflows effectively, but over time, new issues arose. As we continued developing, we realized our integrations were not particularly reliable. Additionally, we encountered slow data updates in Strapi. We kept adding new data sources, and eventually, the volume of modifications required in Strapi exceeded its capacity. 
 At this point, we shifted to using Temporal, which offers common patterns for steps, retries, and error handling. All workflows were moved to Temporal, including external integrations. To avoid issues with update speed, we created an additional PostgreSQL database to store all the data. After that we started serving part of the data directly from DGW. 
