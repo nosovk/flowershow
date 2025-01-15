@@ -96,6 +96,8 @@ The resulting data stored in `PostgreSQL`, we have our own data matching index b
 - OpenAI ChatGTP
 - Google Gemini
 - Anthropic Claude
+- Teleram
+- Google Forms
 
 ## Infrastructure components
 We have a CI, that supports preview branches for each development branch (based on CloudFlare Pages). Most of the frontend parts lives on the CloudFlare Edge. 
