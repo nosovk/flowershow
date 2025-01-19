@@ -32,6 +32,17 @@ Now I can manually withdraw any amount from user balance. It can cause negative 
 
 We should forbid actions, that cause negative balance. Even for admins.
 
+## **[ROP-44](https://nodeart.app/jira/browse/ROP-44): add top-up api
+We got a payment provider api from client: [https://documenter.getpostman.com/view/17969062/2sA2xiVWvG](https://documenter.getpostman.com/view/17969062/2sA2xiVWvG)
+Now we can implement online top-up for player balance. It seems that there is a 2 step flow inside
+api endpoint /check gives us a list of banks
+api endpoint /start accepts bank id and amount, producing redirect link to us.
+
+## **[ROP-47](https://nodeart.app/jira/browse/ROP-47): remove landing page, directly go to login page
+We have a landing at [https://app.slotpara.com/en](https://app.slotpara.com/en)  
+We got a request to delete it, and directly redirect user to login page: [https://app.slotpara.com/en/login](https://app.slotpara.com/en/login)  
+For authorized user we want to directly procceed to lobby:  [https://app.slotpara.com/en/play](https://app.slotpara.com/en/play)
+
 ## **[ROP-48](https://nodeart.app/jira/browse/ROP-48): Hide transaction history view for the player**
 
 It is necessary to comment out or remove the button for showing transactions for the user. Also remove the routes so that the user cannot directly access these routes.
@@ -127,7 +138,7 @@ We want to add a special role - `cashier assistant` and add a special table — 
 
 The request contains information about who created it, the amount, and the type of transaction (bonus, refund, or deposit). 
 
-These requests do not affect the balance and do not affect transactions. When a user with the `cashier` role logs into the system, they can go to the table with the list of requests. By selecting a request, the user with the `cashier` role can execute it. Executing a request means that a transaction will be created. At the same time, it is possible to record in the request which transaction was created based on it, and change the status of the request to completed. There should be no option to delete a completed request.
+These requests do not affect the balance and do not affect transactions. When a user with the `cashier` role logs into the system, they can go to the table with the list of requests. By selecting a request, the user with the `cashier` role can execute it. Executing a request means that a transaction will be created. At the same time, it is possible to record in the request which transaction was created based on it, and change the status of the request to complete. There should be no option to delete a completed request.
 
 ## ** [ROP-64](https://nodeart.app/jira/browse/ROP-64): Add junket report inside the junket profile**
 
@@ -141,6 +152,50 @@ It seems that admin panel users have problems with Difference in transaction his
 
 Important: we still put only positive values into database, it's just a visualization, no changes to data model should be applied.
 ![[ROP-67.png]]
+
+## **[ROP-69](https://nodeart.app/jira/browse/ROP-69): disable non Latin letters in username
+Time to time we got usernames with äöåç letters inside. Client asked to remove option to input them. Also, this will fix issues with search - because a and ä are different letters, its often causes problems when they use search. 
+
+## [ROP-70](https://nodeart.app/jira/browse/ROP-70): add phone number to client profile
+Client asked to add phone number field to profile. 
+
+I suggest making a separate storage for county code and phone number itself. It's much easier to operate with county codes, if we will be requested to make any further actions with those data. We can use https://www.npmjs.com/package/svelte-tel-input to receive countryCallingCode, nationalNumber and store them as client attributes. This field should have uniq constraint, adding two or more customers with one phone number should not be allowed.
+
+## **[ROP-27](https://nodeart.app/jira/browse/ROP-72): add Junket column
+We got a request to modify client list page, by adding Junket name, as a separate column.
+![[ROP-27.png]]
+Important: with a high probability it will cause performance impact (loading time will much higher), because of data model that we have. Consider adding some cache to avoid high loading time.
+
+## **[ROP-73](https://nodeart.app/jira/browse/ROP-73): add Junket-admin and Junket-manager roles**
+Add new role `Junket-Admin`, that is required to get into Junket section of admin panel.
+
+Add `Junket-Manager` role, that will have access to managing which Junket is attached to exact client.
+
+For `KYC` role we should FORBID option to changed Junket attribut for clients.
+
+## **[ROP-75](https://nodeart.app/jira/browse/ROP-75): Change Notifications place to bottom-right corner
+For now notification toast appears in standard, top right position. Client says that it closes functional buttons.
+
+Please move it to bottom right corner instead.
+![[ROP-75.png]]
+## **[ROP-76](https://nodeart.app/jira/browse/ROP-76): Change Action Names, Change Action Order (like Deposit, Bonus, Cashback etc)
+Client complains on UX of actions dropdown menu.
+They need to make lots of actions fast, and would like to sort actions by priority:
+1. Deposit  
+2. Bonus: Bonus In  
+3. Cashback Bonus: Cashback Bonus In (discount)  
+4. No Deposit Bonus: No Deposit Bonus In (compliment)  
+5. Withdraw  
+6. Bonus: Bonus Out  
+7. Cashback Bonus (minus): Cashback Bonus Out (discount)  
+8. No Deposit Bonus (minus): No Deposit Bonus Out (compliment)  
+9. Refund
+
+## **[ROP-77](https://nodeart.app/jira/browse/ROP-77): Clients filtration and order **
+Add additional sorting options to clients list: 
+- sort by Last Login Date
+- sort by other fields if no performance impact
+
 
 ## **[ROP-79](https://nodeart.app/jira/browse/ROP-79): add family and name columns to list of players
 In a clients list now we depend on username, we were asked to add family name and name columns to list layout
