@@ -11,8 +11,8 @@ Reasoning: customer want's to account different types of bonuses separately.
 Modify common stats report
 
 Filter section:
-- date from {2025-05-20} / date to {2025-05-25}
-- userid {eRdw2dttfH3f}
+- date from (2025-05-20) / date to (2025-05-25)
+- userid: eRdw2dttfH3f
 
 Example columns:
 
