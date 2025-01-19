@@ -1,3 +1,5 @@
+
+# ROP tickets:
 ## **[ROP-32](https://nodeart.app/jira/browse/ROP-32): Add new transaction types**
 
 We have a request to separate different types of bonuses in the admin panel. To do this, we want to add two additional types of transactions besides Bonus:
@@ -199,3 +201,34 @@ Add additional sorting options to clients list:
 
 ## **[ROP-79](https://nodeart.app/jira/browse/ROP-79): add family and name columns to list of players.**
 In a clients list now we depend on username, we were asked to add family name and name columns to list layout
+
+--------
+# RLS tickets
+
+## **[RLS-109](https://nodeart.app/jira/browse/RLS-109): increase hold timeout**
+Please increase hold timeout to 7 seconds (only for Viva)
+![[RLS-109.png]]
+
+## **[RLS-112](https://nodeart.app/jira/browse/RLS-112): create autoplay**
+There is a request to implement autoplay functionality. There is a built-in autoplay feature inside the game machine, but we cannot rely on it (unclear status, whether it's on or off, session completion handling, etc.). Therefore, we want to create our own autoplay entirely on the client side.
+
+When the autoplay button is pressed, the CLIENT (not the backend and not the server) should immediately place a new bet upon receiving the signal of a bet result. This way, bets will be automatically placed until either the player presses "stop autoplay" or closes the screen. When the browser is closed, bets will stop coming in and the machine will log out in the background (without playing the player's balance down to zero).
+![[RLS-112.png]]
+
+## **[RLS-119](https://nodeart.app/jira/browse/RLS-119): Add vertical mode**
+We got a request to add an option to play the games in portrait mode.
+
+In common, we can do that, by providing additional layouts, where we will force screen rotate. Also we need to add additional zoom-in functionality, that will scale vertical devices to fit the screen.
+
+Layout schemas:
+
+| Machine    | Device   | Zoom-in |     Layout | Scroll |
+| :--------- | :------- | :------ | ---------: | -----: |
+| horizontal | portrait | -       | horizontal |     no |
+| horizontal | album    | -       | horizontal |     no |
+| vertical   | portrait | no      |   vertical |      - |
+| vertical   | album    | no      | horizontal |    yes |
+| vertical   | portrait | yes     | horizontal |    yes |
+
+
+NOTE: Modals should have the same orientation as Game Screen
