@@ -27,12 +27,12 @@ The report should be available in both UID display mode and general mode.
 
 The accounting period in the casino runs from 6 am to 6 am. Therefore, it is necessary to add the ability to select time in addition to the day in the reports. So that users can filter 1 day from hour x to hour x.
 
-## **[ROP-43](https://nodeart.app/jira/browse/ROP-43): forbid transactions, that will cause negative balance from admin panel
+## **[ROP-43](https://nodeart.app/jira/browse/ROP-43): forbid transactions, that will cause negative balance from admin panel**
 Now I can manually withdraw any amount from user balance. It can cause negative balance in a player account. Negative balance used in a few reports now, they also should be updated.
 
 We should forbid actions, that cause negative balance. Even for admins.
 
-## **[ROP-44](https://nodeart.app/jira/browse/ROP-44): add top-up api
+## **[ROP-44](https://nodeart.app/jira/browse/ROP-44): add top-up api**
 We got a payment provider api from client: [https://documenter.getpostman.com/view/17969062/2sA2xiVWvG](https://documenter.getpostman.com/view/17969062/2sA2xiVWvG)
 Now we can implement online top-up for player balance. It seems that there is a 2 step flow inside
 api endpoint /check gives us a list of banks
@@ -71,7 +71,7 @@ Important: we want to keep existing transaction types, because altering them wil
 
 Important: the final balance cannot become negative in the end.
 
-## **[ROP-54](https://nodeart.app/jira/browse/ROP-54): Add confirmation when changing balance
+## **[ROP-54](https://nodeart.app/jira/browse/ROP-54): Add confirmation when changing balance**
 
 When admins have to create a transaction manually, they complain that there is no visual identification of the success of the operation, as a result, they press confirm several times, and it turns out that they create several transactions. Also, they require some confirmation step to double-check expected result.
 
@@ -116,7 +116,7 @@ Important: in the end, we will need to manage junkets, but for now, just account
 
 When choosing a junket, there is a problem with finding the name. I would like to add a dropdown list with the names of junkets. It can be loaded only when user interacts within the input, so as not to make unnecessary requests to get the entire list every time.
 
-## ** [ROP-61](https://nodeart.app/jira/browse/ROP-61): Report for junket on the client**
+## **[ROP-61](https://nodeart.app/jira/browse/ROP-61): Report for junket on the client**
 
 We want the junket to be able to log into their junket profile, like a casino client. To do this, we want to add the ability for users with the Junket role to log into the client part. For users with the Junket role, we want to add the ability to view a special report. In the report, there will be information on all players attached to this junket. I propose to simply display the button to show the report in the profile. Also, keep in mind that there may be more reports for junkets in the future. Important - the ROP client should make a request to the rop.src admin panel to get the report URL, no metabase data should be contained in rop.src.
 
@@ -132,15 +132,15 @@ It is not possible to find users by these usernames in the search (but they are 
 
 ## **[ROP-63](https://nodeart.app/jira/browse/ROP-63): Add functionality for balance change requests**
 
-Scenario: there are several operators who accept requests, they enter balance replenishment requests, but in the end, they are approved by the cashier. 
+Scenario: there are several operators who accept requests, they enter balance replenishment requests, but in the end, the cashier approves them. 
 
-We want to add a special role - `cashier assistant` and add a special table — cashier requests. A user with the `cashier assistant` role can create cash movements, but instead of applying them to the transaction table, they are placed in the balance change requests table. 
+We want to add a special role — `cashier assistant` and add a special table — cashier requests. A user with the `cashier assistant` role can create cash movements, but instead of applying them to the transaction table, they are placed in the balance change requests table. 
 
 The request contains information about who created it, the amount, and the type of transaction (bonus, refund, or deposit). 
 
 These requests do not affect the balance and do not affect transactions. When a user with the `cashier` role logs into the system, they can go to the table with the list of requests. By selecting a request, the user with the `cashier` role can execute it. Executing a request means that a transaction will be created. At the same time, it is possible to record in the request which transaction was created based on it, and change the status of the request to complete. There should be no option to delete a completed request.
 
-## ** [ROP-64](https://nodeart.app/jira/browse/ROP-64): Add junket report inside the junket profile**
+## **[ROP-64](https://nodeart.app/jira/browse/ROP-64): Add junket report inside the junket profile**
 
 We want to add the junket report functionality directly within the junket profile in client part. We don't want to allow to non casino employees to operate within admin panel. Because of that we will extend client part.
 
@@ -156,12 +156,12 @@ Important: we still put only positive values into database, it's just a visualiz
 ## **[ROP-69](https://nodeart.app/jira/browse/ROP-69): disable non Latin letters in username
 Time to time we got usernames with äöåç letters inside. Client asked to remove option to input them. Also, this will fix issues with search - because a and ä are different letters, its often causes problems when they use search. 
 
-## [ROP-70](https://nodeart.app/jira/browse/ROP-70): add phone number to client profile
+## **[ROP-70](https://nodeart.app/jira/browse/ROP-70): add phone number to client profile**
 Client asked to add phone number field to profile. 
 
-I suggest making a separate storage for county code and phone number itself. It's much easier to operate with county codes, if we will be requested to make any further actions with those data. We can use https://www.npmjs.com/package/svelte-tel-input to receive countryCallingCode, nationalNumber and store them as client attributes. This field should have uniq constraint, adding two or more customers with one phone number should not be allowed.
+I propose making a separate storage for county code and phone number itself. It's much easier to operate with county codes, if we will be requested to make any further actions with those data. We can use https://www.npmjs.com/package/svelte-tel-input to receive countryCallingCode, nationalNumber and store them as client attributes. This field should have uniq constraint, adding two or more customers with one phone number should not be allowed.
 
-## **[ROP-27](https://nodeart.app/jira/browse/ROP-72): add Junket column
+## **[ROP-72](https://nodeart.app/jira/browse/ROP-72): add Junket column
 We got a request to modify client list page, by adding Junket name, as a separate column.
 ![[ROP-27.png]]
 Important: with a high probability it will cause performance impact (loading time will much higher), because of data model that we have. Consider adding some cache to avoid high loading time.
@@ -173,12 +173,12 @@ Add `Junket-Manager` role, that will have access to managing which Junket is att
 
 For `KYC` role we should FORBID option to changed Junket attribut for clients.
 
-## **[ROP-75](https://nodeart.app/jira/browse/ROP-75): Change Notifications place to bottom-right corner
+## **[ROP-75](https://nodeart.app/jira/browse/ROP-75): Change Notifications place to bottom-right corner**
 For now notification toast appears in standard, top right position. Client says that it closes functional buttons.
 
 Please move it to bottom right corner instead.
 ![[ROP-75.png]]
-## **[ROP-76](https://nodeart.app/jira/browse/ROP-76): Change Action Names, Change Action Order (like Deposit, Bonus, Cashback etc)
+## **[ROP-76](https://nodeart.app/jira/browse/ROP-76): Change Action Names, Change Action Order (like Deposit, Bonus, Cashback etc)**
 Client complains on UX of actions dropdown menu.
 They need to make lots of actions fast, and would like to sort actions by priority:
 1. Deposit  
@@ -191,11 +191,11 @@ They need to make lots of actions fast, and would like to sort actions by priori
 8. No Deposit Bonus (minus): No Deposit Bonus Out (compliment)  
 9. Refund
 
-## **[ROP-77](https://nodeart.app/jira/browse/ROP-77): Clients filtration and order **
+## **[ROP-77](https://nodeart.app/jira/browse/ROP-77): Clients filtration and order**
 Add additional sorting options to clients list: 
 - sort by Last Login Date
 - sort by other fields if no performance impact
 
 
-## **[ROP-79](https://nodeart.app/jira/browse/ROP-79): add family and name columns to list of players
+## **[ROP-79](https://nodeart.app/jira/browse/ROP-79): add family and name columns to list of players.**
 In a clients list now we depend on username, we were asked to add family name and name columns to list layout
