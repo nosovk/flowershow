@@ -1,3 +1,5 @@
+# Viva 2025-01-16
+This document is an intermediate report on issues that was implemented in 2024 year upon Viva requests.
 
 # ROP tickets:
 ## **[ROP-32](https://nodeart.app/jira/browse/ROP-32): Add new transaction types**
@@ -36,14 +38,14 @@ We should forbid actions, that cause negative balance. Even for admins.
 
 ## **[ROP-44](https://nodeart.app/jira/browse/ROP-44): add top-up api**
 We got a payment provider api from client: [https://documenter.getpostman.com/view/17969062/2sA2xiVWvG](https://documenter.getpostman.com/view/17969062/2sA2xiVWvG)
-Now we can implement online top-up for player balance. It seems that there is a 2 step flow inside
-api endpoint /check gives us a list of banks
-api endpoint /start accepts bank id and amount, producing redirect link to us.
+Now we can implement online top-up for player balance. It seems that there is a 2-step flow inside
+- api endpoint /check gives us a list of banks
+- api endpoint /start accepts bank id and amount, producing redirect link to us.
 
-## **[ROP-47](https://nodeart.app/jira/browse/ROP-47): remove landing page, directly go to login page
+## **[ROP-47](https://nodeart.app/jira/browse/ROP-47): remove landing page, directly go to login page**
 We have a landing at [https://app.slotpara.com/en](https://app.slotpara.com/en)  
 We got a request to delete it, and directly redirect user to login page: [https://app.slotpara.com/en/login](https://app.slotpara.com/en/login)  
-For authorized user we want to directly procceed to lobby:  [https://app.slotpara.com/en/play](https://app.slotpara.com/en/play)
+For authorized user we want to directly procceed to lobby: [https://app.slotpara.com/en/play](https://app.slotpara.com/en/play)
 
 ## **[ROP-48](https://nodeart.app/jira/browse/ROP-48): Hide transaction history view for the player**
 
@@ -62,9 +64,9 @@ For the mobile version, the logout button currently disappears from the screen. 
 Add Active Users metrics to report. It should account: how many users have an actual money transaction in selected period. (like bet, win, deposit or withdrawal)
 
 
-## **[ROP-53](https://nodeart.app/jira/browse/ROP-53): Subtract money from bonuses**
+## **[ROP-53](https://nodeart.app/jira/browse/ROP-53): disallow subtract money from bonuses**
 
-Previously, we could enter negative transactions in the Bonus, No Deposit Bonus, Cashback Bonus transaction types. This was used to deduct the total bonuses issued to the user. But administrators say that it's better to avoid — on a keyboard (reasoning unknown, probably no minus (-) letter at Turkish layout?) . 
+Previously, we could enter negative transactions in the Bonus, No Deposit Bonus, Cashback Bonus transaction types. This was used to deduct the total bonuses issued to the user. But administrators say that it's better to avoid - on a keyboard (reasoning unknown, probably no minus (-) letter at Turkish layout?) . 
 Solution: Disable option to input negative numbers into inputs. Then add new transaction options to dropdown: Bonus (minus), No Deposit Bonus (minus), Cashback Bonus (minus). Those new options would be recorded in the balance as negative transactions within the corresponding types, but for the cashier, this will still be the input of a positive number. 
 
 Also, we have to add separated columns to reports, to account plus and minus transactions separately.
@@ -149,13 +151,13 @@ We want to add the junket report functionality directly within the junket profil
 ## **[ROP-66](https://nodeart.app/jira/browse/ROP-66): additional info upon transaction in confirm dialog**:
 We have added a modal screen at [ROP-54], but we should extend it with transaction name (not only amount like now).
 
-## **[ROP-67](https://nodeart.app/jira/browse/ROP-67): add column that shows direction of transaction
+## **[ROP-67](https://nodeart.app/jira/browse/ROP-67): add column that shows direction of transaction**
 It seems that admin panel users have problems with Difference in transaction history. I suggest to add additional column with +-, or just add +- to balance cell.
 
 Important: we still put only positive values into database, it's just a visualization, no changes to data model should be applied.
 ![[ROP-67.png]]
 
-## **[ROP-69](https://nodeart.app/jira/browse/ROP-69): disable non Latin letters in username
+## **[ROP-69](https://nodeart.app/jira/browse/ROP-69): disable non Latin letters in username**
 Time to time we got usernames with äöåç letters inside. Client asked to remove option to input them. Also, this will fix issues with search - because a and ä are different letters, its often causes problems when they use search. 
 
 ## **[ROP-70](https://nodeart.app/jira/browse/ROP-70): add phone number to client profile**
@@ -163,7 +165,7 @@ Client asked to add phone number field to profile.
 
 I propose making a separate storage for county code and phone number itself. It's much easier to operate with county codes, if we will be requested to make any further actions with those data. We can use https://www.npmjs.com/package/svelte-tel-input to receive countryCallingCode, nationalNumber and store them as client attributes. This field should have uniq constraint, adding two or more customers with one phone number should not be allowed.
 
-## **[ROP-72](https://nodeart.app/jira/browse/ROP-72): add Junket column
+## **[ROP-72](https://nodeart.app/jira/browse/ROP-72): add Junket column**
 We got a request to modify client list page, by adding Junket name, as a separate column.
 ![[ROP-27.png]]
 Important: with a high probability it will cause performance impact (loading time will much higher), because of data model that we have. Consider adding some cache to avoid high loading time.
@@ -218,7 +220,7 @@ When the autoplay button is pressed, the CLIENT (not the backend and not the ser
 ## **[RLS-119](https://nodeart.app/jira/browse/RLS-119): Add vertical mode**
 We got a request to add an option to play the games in portrait mode.
 
-In common, we can do that, by providing additional layouts, where we will force screen rotate. Also we need to add additional zoom-in functionality, that will scale vertical devices to fit the screen.
+In common, we can do that, by providing additional layouts, where we will force screen rotate. Also, we need to add additional zoom-in functionality, that will scale vertical devices to fit the screen.
 
 Layout schemas:
 
