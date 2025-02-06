@@ -59,10 +59,10 @@ GROUP BY
 ```
 Result will look like:
 ![[metric-analytics-user-profile-snapshot.png]]
-This kind of data structure could be used within any entity, but be aware that instead of views, there are other ways to materialize snapshots, that could be cheaper on big amounts of data.
+This kind of data structure could be used within any entity, but be aware that instead of views, there are other ways to materialize snapshots, that could be cheaper on big amounts of data. Because EAV model itself is a bad practice in terms of performance and type-checking, but in case of working with analytics data - its very easy to adopt, and optimize performance within different materialization strategies. 
 
 ### Transactions data
-Transactions data usually a very big dataset, that's why we should try to make every row in it self-containing. Like embedding previous and new state, along side with diff to each row.
+Transactions data usually a very big dataset, that's why we should try to make every row in it self-containing. Like embedding previous and new state, alongside with diff to each row in dataset.
 
 Table: Transactions
 - id: uuid (transaction ID)
