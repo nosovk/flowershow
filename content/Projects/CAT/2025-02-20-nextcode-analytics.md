@@ -18,33 +18,33 @@
 Not needed, backend feature
 ## Requirement / Feature Description 
 
-We expect to have a table, where we have list of all signup\login\validation\deposit requests to our API (both success and error ones).
+We expect to have a table, where we have list of all signup\login\validation\verification\deposit requests to our API (both success and error ones).
 
 For example, table like that: 
 
 | Field             | Type      | Required | Description                                                        |
 | ----------------- | --------- | -------- | ------------------------------------------------------------------ |
 | `timestamp`       | TIMESTAMP | &check;  | Time when event occurred                                           |
-| `user_agent`      | STRING    | &cross;  | Browser UserAgent header from request                              |
-| `ip`              | STRING    | &cross;  | IP from request                                                    |
-| `geo`             | STRING    | &cross;  | geo from Cloudflare headers (MaxMind DB)                           |
+| `user_agent`      | STRING    | &check;  | Browser UserAgent header from request                              |
+| `ip`              | STRING    | &check;  | IP from request                                                    |
+| `geo`             | STRING    | &check;  | geo from Cloudflare headers (MaxMind DB)                           |
 | `as_country_code` | STRING    | &cross;  | country code from IP to ASN api  (optional)                        |
 | `as_description`  | STRING    | &cross;  | description of AS from IP to ASN api (optional)                    |
 | `as_number`       | STRING    | &cross;  | AS number of IP from IP to ASN api (optional)                      |
-| `domain`          | STRING    | &cross;  | Which domain accepted request (required for mirrors)               |
+| `domain`          | STRING    | &check;  | Which domain accepted request (required for mirrors)               |
 | `path`            | STRING    | &cross;  | URL path (optional, for GraphQL not very useful)                   |
-| `query`           | STRING    | &cross;  | URL query params (optional, for GraphQL)                           |
-| `action`          | STRING    | &cross;  | GraphQL action (login, signup, restore password, validate)         |
-| `fp`              | STRING    | &cross;  | user fingerprint, if it was present                                |
-| `referrer`        | STRING    | &cross;  | http referrer header                                               |
-| `email`           | STRING    | &cross;  | email used for registration                                        |
-| `country`         | STRING    | &cross;  | country used for registration                                      |
-| `currency`        | STRING    | &cross;  | currency used for registration                                     |
-| `phone`           | STRING    | &cross;  | phone used for registration                                        |
-| `status`          | STRING    | &cross;  | status of registration (test/multi acc/success/error)              |
-| `aff_data`        | STRING    | &cross;  | "affiliate_data"  value (aff id, promo id, click id)               |
-| `additional_data` | STRING    | &cross;  | additional fata from request body (which have no separate columns) |
-| `resp`            | STRING    | &cross;  | api response as text                                               |
+| `query`           | STRING    | &check;  | URL query params                           |
+| `action`          | STRING    | &check;  | GraphQL action (login, signup, restore password, validate, verification)         |
+| `fp`              | STRING    | &check;  | user fingerprint, if it was present                                |
+| `referrer`        | STRING    | &check;  | http referrer header                                               |
+| `email`           | STRING    | &check;  | email used for registration                                        |
+| `country`         | STRING    | &check;  | country used for registration                                      |
+| `currency`        | STRING    | &check;  | currency used for registration                                     |
+| `phone`           | STRING    | &check;  | phone used for registration                                        |
+| `status`          | STRING    | &check;  | status of registration (test/multi acc/success/error)              |
+| `aff_data`        | STRING    | &check;  | "affiliate_data"  value (aff id, promo id, click id)               |
+| `additional_data` | STRING    | &check;  | additional fata from request body (which have no separate columns) |
+| `resp`            | STRING    | &check;  | api response as text                                               |
 | `duration`        | INTEGER   | &check;  | how many nanoseconds we were waiting for response                  |
 
 > Expected Functionality: (How should it work from a business / technical perspective?) 
@@ -106,9 +106,9 @@ Yes, we need to integrate with Google Big Query as with data warehouse solution 
 # Additional notes:
 
 There are two functions are currently missing on a new platform:
-- there is not intermediate verification requests (like to verify email without submiting the whole form). Backend filed validation should be also logged, if it will be introduced in future.
-- there are no clear identification of errors, during the tests we got "Unknown error", instead of Rate limit error (and actual limit seems to be a bit too big, like more then 30 registartions were done with one Fingerprint, before hitting errors)
+- there is not intermediate verification requests (like to verify email without submitting the whole form). Backend filed validation should be also logged, if it will be introduced in future.
+- there are no clear identification of errors, during the tests we got "Unknown error", instead of Rate limit error (and actual limit seems to be a bit too big, like more then 30 registrations were done with one Fingerprint, before hitting errors)
 
 ## Deposit logging
 
-Also we would like to have the same functionality regarding deposit attemts. The shape of the data should be discussed.
+Also we would like to have the same functionality regarding deposit attempts. The shape of the data should be discussed.
