@@ -88,6 +88,30 @@ mutation PlayerLogin(
 
 В примере выше `affiliateData` содержит данные из localStrorage браузера.
 
+recoveryPassword
+```graphql
+mutation PasswordSendRecoveryTokenByEmailMutation(
+  $bmsPartnerId: Int!
+  $locale: Locale!
+  $input: PasswordSendRecoveryTokenByEmailInput!
+) {
+  passwordSendRecoveryTokenByEmail(
+    bmsPartnerId: $bmsPartnerId
+    input: $input
+    locale: $locale
+  ) {
+    recordId
+    status
+    problems {
+      message
+      problemCode
+      traceId
+      __typename
+    }
+    __typename
+  }
+}
+```
 ## Сценарии, которые не покрываются
 
 ### Поэтапная валидация
