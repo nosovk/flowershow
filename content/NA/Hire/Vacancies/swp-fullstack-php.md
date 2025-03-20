@@ -28,6 +28,15 @@ git, clickup, php, nodejs
 ## Технические навыки:
 PHP, JS, SQL
 
+### Понимание:
+- event queues
+- NoSQL
+ - Microservices
+- Containerization (Docker, K8S)
+- Security development, e.g. Owasp top 10
+- cloud providers experience (e.g. AWS)
+- experience with payment integrations
+- B2 English
 Английский: intermediate 
 
 (команда интернациональная, итальянцы, поляки, украинцы — необходимо уметь вести коммуникацию на английском)
