@@ -1,6 +1,6 @@
 ## Goal
 We want to develop an Android firmware modification that uses a FIDO key (like a YubiKey) plugged into the phone's USB port to decrypt the phone's storage during boot. After boot, the USB port should revert to charging-only mode, and the FIDO key can be removed. Rebooting requires the key again.
-
+[[TOC]]
 ## Milestones
 для разработки прошивки Android с FIDO-ключом для расшифровки:
 
