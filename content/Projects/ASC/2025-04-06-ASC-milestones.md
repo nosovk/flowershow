@@ -1,6 +1,5 @@
 ## Goal
 We want to develop an Android firmware modification that uses a FIDO key (like a YubiKey) plugged into the phone's USB port to decrypt the phone's storage during boot. After boot, the USB port should revert to charging-only mode, and the FIDO key can be removed. Rebooting requires the key again.
-[[TOC]]
 ## Milestones
 для разработки прошивки Android с FIDO-ключом для расшифровки:
 
@@ -22,7 +21,7 @@ We want to develop an Android firmware modification that uses a FIDO key (like a
     - Интеграция библиотеки для работы с FIDO протоколом (U2F).
     - Разработка сервиса, запускаемого на этапе инициализации, который может обнаружить подключенный FIDO ключ и выполнить считывание ключа.
 - **Результат:** сервис способный определить подключенный FIDO ключ и получить от него ключ шифрования (хотя бы просто в виде логов в консоли).
-### Milestone 2: Реализация процесса расшифровки диска
+###  2: Реализация процесса расшифровки диска
 - **Цель:** реализовать механизм расшифровки устройства с помошью FIDO ключа.
 - **Задачи:**
     - Анализ существующего механизма шифрования Android (FDE - Full Disk Encryption на базе dm-crypt (deprecated) или FBE - File-Based Encryption на базе dm-default-key).
