@@ -13,7 +13,7 @@ For full feature list see https://flowershow.app/#features
 
 ## [👉 See Flowershow in action on Flowershow.app](https://flowershow.app/)
 
-![obsidian-vs-flowershow](https://flowershow.app/images/flowershow.png)
+![image](https://github.com/user-attachments/assets/aa5a6948-dc0e-4925-8154-1a30a02947fa)
 
 ## Docs
 
@@ -37,10 +37,6 @@ With Vercel:
 ## Forum
 
 https://github.com/flowershow/flowershow/discussions
-
-## Chat
-
-Come find us on Discord: https://discord.gg/cPxejPzpwt
 
 ## Contributing
 
