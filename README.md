@@ -1,10 +1,10 @@
 # 🌷 Flowershow template
 
-> Publish your Obsidian notes (or any markdown), beautifully. For free, no coding.
+> 💐 Publish beautiful books, wikis, websites and PKMs from markdown. For free, no coding.
 
-Flowershow is an open-source tool for easily converting your markdown files into an elegant website. It's built on a standard, modern web stack – React, Next.js, and Tailwind and shipped with a basic default theme to get you started with just a few clicks.
+Flowershow is an open-source tool and cloud service to quickly and easily turn your markdown into an elegant website, wiki, docs etc.
 
-- **Crafted for Obsidian**, Flowershow works with your Obsidian vault out of the box. No need to modify the syntax or change the file layout. If you're not an Obsidian fan, Flowershow can be used with any CommonMark or GFM files.
+- **Markdown ... extended**: supports all standard Markdown plus many extensions and is fully compatible with e.g. Obsidian out of the box with no need to modify the syntax or change the file layout. Flowershow can be used with any CommonMark or GFM files.
 - **Elegant and functional** default theme with basic front page and navbar.
 - **Easy to tweak and extend** with custom page layouts and custom React components, that can be used within your markdown.
 - **Backed by a team of data geeks**, who love Markdown, and are passionate about sharing knowledge and ideas with others.
