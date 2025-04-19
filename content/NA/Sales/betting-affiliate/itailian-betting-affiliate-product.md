@@ -43,3 +43,4 @@ Add option to subscribe on high coefficients (to clarify)
 - launch stage
 - find bugs
 - launch prod
+
