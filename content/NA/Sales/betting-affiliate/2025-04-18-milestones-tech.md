@@ -34,7 +34,7 @@ Goal of this stage:
 Goal of this stage:
 - Build, test, and deploy a functional Minimum Viable Product (MVP) that includes the core user stories identified in the planning stage.
 
-#### checkpoints
+#### Checkpoints
 - Set up development, staging, and production environments.
 - Establish CI/CD pipelines.
 - Develop frontend and backend components based on designs and user stories.
