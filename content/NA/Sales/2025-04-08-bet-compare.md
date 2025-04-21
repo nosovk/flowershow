@@ -20,9 +20,9 @@ Payment terms:
 
 Pre-payment: $750 before the start of work
 
-Then pay month by month or after end of Discovery phase depends what will be first.
+Then pay month by month or after end of Discovery phase depends on what will be first.
 
-Let us know what you think about this approach. We believe it will help ensure a smooth and well-planned development process
+Let us know what you think about this approach. We believe it will help ensure a smooth and well-planned development process.
 
 ## Docs
 [[2025-04-18-milestones-tech]]
