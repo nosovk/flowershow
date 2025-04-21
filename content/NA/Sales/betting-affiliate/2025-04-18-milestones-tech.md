@@ -61,7 +61,7 @@ Goal of this stage:
 Goal of this stage:
 Enhance the product by implementing remaining user stories, incorporating user feedback, fixing bugs, and improving performance based on analytics and monitoring.
 **Checkpoint**
-- - Gather and analyze user feedback and usage analytics (e.g., from MetaBase dashboards).
+- Gather and analyze user feedback and usage analytics (e.g., from MetaBase dashboards).
 - Prioritize and refine the backlog with new features, improvements, and bug fixes.
 - Develop, test, and release new features/enhancements in iterative cycles (sprints).
 - Optimize application performance and scalability based on monitoring.
