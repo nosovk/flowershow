@@ -45,4 +45,4 @@ Add option to subscribe on high coefficients (to clarify)
 - launch prod
 
 ## Docs
-[[milestones-tech]]
+[[2025-04-18-milestones-tech]]
