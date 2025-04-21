@@ -17,6 +17,9 @@ Goal of this stage:
 - Sitemap and route definitions.
 - Low-fidelity wireframes/mockups.
 - Initial technical feasibility report.
+
+**Pricing**
+Initial offering for first Milestone: [[2025-04-08-bet-compare]]
 ### 2. Design & Prototyping Stage
 Goal of this stage:
 - Create a complete visual identity
@@ -132,6 +135,3 @@ As infrastructure layer we want to use Docker+Loki+Grafana as observability tool
 
 #### Org
 For development process we stick to Atlassian products. We use Jira, Bitbucket, Confluence, Bamboo for the development process. Also we use MatterMost as internal messenger for real-time communication.
-
-### Costs
-Initial offering for first Milestone: [[2025-04-08-bet-compare]]
