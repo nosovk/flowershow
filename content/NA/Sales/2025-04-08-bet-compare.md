@@ -2,7 +2,7 @@ Hi,
 
 Thank you for the [document](https://docs.google.com/document/d/17FrCT2UoXOE4-0aF62tKV4fXBkuYR0H45zTlFoRFilo/edit?usp=sharing) — we’ve reviewed it. Unfortunately, it doesn’t provide enough information for us to prepare a realistic estimation of the whole project.
 
-For example, we still need answers to several key questions, like screen count, functionality for authorized users, newseller integration ets. These are just a part of the details required for proper planning and estimation.
+For example, we still need answers to several key questions, like screen count, functionality for authorized users, newseller integration etc. These are just a part of the details required for proper planning and estimation.
 
 To move forward, we’d like to propose the following approach:
 a Discovery Phase.
