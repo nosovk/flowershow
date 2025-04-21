@@ -132,3 +132,6 @@ As infrastructure layer we want to use Docker+Loki+Grafana as observability tool
 
 #### Org
 For development process we stick to Atlassian products. We use Jira, Bitbucket, Confluence, Bamboo for the development process. Also we use MatterMost as internal messenger for real-time communication.
+
+### Costs
+Initial offering for first Milestone: [[2025-04-08-bet-compare]]
