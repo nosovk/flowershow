@@ -23,3 +23,6 @@ Pre-payment: $750 before the start of work
 Rest of amount to be paid after completion of the discovery phase
 
 Let us know what you think about this approach. We believe it will help ensure a smooth and well-planned development process
+
+## Docs
+[[2025-04-18-milestones-tech]]
