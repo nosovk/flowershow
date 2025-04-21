@@ -28,6 +28,8 @@ Goal of this stage:
 - Create a comprehensive UI design system/kit (components, patterns, styles).
 - Design high-fidelity mockups for all pages and states based on wireframes.
 - Build a clickable prototype simulating key user flows.
+
+> We will make scope prioritization and evaluation after that step.
 ### 3. MVP Development & Launch Stage
 Goal of this stage:
 - Build, test, and deploy a functional Minimum Viable Product (MVP) that includes the core user stories identified in the planning stage.
