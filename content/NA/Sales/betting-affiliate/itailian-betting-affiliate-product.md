@@ -44,3 +44,5 @@ Add option to subscribe on high coefficients (to clarify)
 - find bugs
 - launch prod
 
+## Docs
+[[milestones-tech]]
