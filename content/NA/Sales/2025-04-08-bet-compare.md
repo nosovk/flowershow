@@ -20,7 +20,7 @@ Payment terms:
 
 Pre-payment: $750 before the start of work
 
-Rest of amount to be paid after completion of the discovery phase
+Then pay month by month or after end of Discovery phase depends what will be first.
 
 Let us know what you think about this approach. We believe it will help ensure a smooth and well-planned development process
 
