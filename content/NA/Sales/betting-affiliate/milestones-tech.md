@@ -126,4 +126,4 @@ This is an umbrella for group of workflows, managed by Temporal.
 Actually fetching, merging, cleaning, extending, saving of any kind of data — is a workflow. Because of temporal we have a good observability of processes that we run, and It's easy to recover/retry/debug if something goes wrong.
 
 #### Infra
-As infrastructure layer we want to use Docker+Loki+Grafan as observability tool chain for Admin Panel and Data Gateway service.
+As infrastructure layer we want to use Docker+Loki+Grafana as observability tool chain for Admin Panel and Data Gateway service.
