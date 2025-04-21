@@ -107,7 +107,7 @@ To separate external API from app data layer, we use BFF layer (Backend For Fron
 
 Also, we want to use [KV](https://developers.cloudflare.com/kv/) to cache API responses on the edge, to reduce the amount of actual requests to backend.
 
-## Admin panel
+#### Admin panel
 
 We didn't want to build custom admin panel for content management. But we have to provide some interface to manage content. We suggest to stick with [Strapi](strapi.io) within those tasks. 
 Strapi is not designed for handling lots of requests, because of that we have caching layer at BFF layer (which is super performant). Strapi supports i18n for content types. We will host Strapi as normal app in docker container, without CF Pages or other edge solutions.
@@ -120,7 +120,7 @@ Also, we use strapi to pre-process images, like generate AVIF versions and provi
 
 For 3rd party data we try to avoid using strapi as data layer, and make request to Data Gateway Service
 
-## Data Gateway Service
+#### Data Gateway Service
 This is an umbrella for group of workflows, managed by Temporal.
 
 Actually fetching, merging, cleaning, extending, saving of any kind of data — is a workflow. Because of temporal we have a good observability of processes that we run, and It's easy to recover/retry/debug if something goes wrong.
