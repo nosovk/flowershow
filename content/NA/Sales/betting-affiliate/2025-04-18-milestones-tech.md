@@ -19,7 +19,7 @@ Goal of this stage:
 - Initial technical feasibility report.
 
 **Pricing**
-Initial offering for first Milestone: [[2025-04-08-bet-compare]]
+- Initial offering for first Milestone: [[2025-04-08-bet-compare]]
 ### 2. Design & Prototyping Stage
 Goal of this stage:
 - Create a complete visual identity
