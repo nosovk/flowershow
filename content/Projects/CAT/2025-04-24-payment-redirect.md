@@ -1,0 +1,10 @@
+Goal: описать как можно реализовать редирект в обход ограничений браузера
+
+Проблема: в браузере есть защита от неправомерных действий пользователя, которая реализуется при помощи специального свойства у событий - является ли действие результатом userinput или иницированно со стороны js. Из-за этого механизма защиты, если мы получаем данные для редиректа с задержкой, мы не можем открыть новую табу или сменить адрес страницы, потому что срабатывает механизм защиты.
+
+Как выглядит текущий флоу:
+[![](https://mermaid.ink/img/pako:eNp9Uktv2zAM_iuETi3mBHFq164OAYptKHpoUaC3whfFZhKhkejp0dQN8t9L23WwDdh8kUV-D1LkUdTUoJDC46-ItsYfWm2dMpVVMZCNZo2ussDf_YbDOFutvt0-3Uu4028IBqFVnUEb-OS0H6EMAAbORoqEW_8KG3KgDEWGKttAHZ1ju-53bZjNVjBxONug62nmT8xUwDP2Mjsij3ZSvoieOdq2MVyOrEcKCPTGUSYlk3jYoUPQHhTsyW5B1UGTTcAQhzlpIQOPNdnmHx0N5tHtEzgMUoG44EY7rMP_fC2-B_ABW9govfcJrLFWXPNYxUHpoPkM2uDfPZ_fJbiud6OWi7R4gKDWjBWJMOiM0g2P8tiTK8F9sI6Q_Nso91qJyp4Y18_1ubO1kMFFTISjuN0JuVF7z7fYNipMS3COtsoKeRTvQqZFOl_k1-UiLfMiv1kUZSI6IbNsni3LtLwui-XyKs-vTon4IGKFxbws8kHhZbiPpvxWgdzDuHrDBk7WP4fM2Xnr-pa-Kh1W4ns_aS4kzfLTJ6jV5C0?type=png)](https://mermaid.live/edit#pako:eNp9Uktv2zAM_iuETi3mBHFq164OAYptKHpoUaC3whfFZhKhkejp0dQN8t9L23WwDdh8kUV-D1LkUdTUoJDC46-ItsYfWm2dMpVVMZCNZo2ussDf_YbDOFutvt0-3Uu4028IBqFVnUEb-OS0H6EMAAbORoqEW_8KG3KgDEWGKttAHZ1ju-53bZjNVjBxONug62nmT8xUwDP2Mjsij3ZSvoieOdq2MVyOrEcKCPTGUSYlk3jYoUPQHhTsyW5B1UGTTcAQhzlpIQOPNdnmHx0N5tHtEzgMUoG44EY7rMP_fC2-B_ABW9govfcJrLFWXPNYxUHpoPkM2uDfPZ_fJbiud6OWi7R4gKDWjBWJMOiM0g2P8tiTK8F9sI6Q_Nso91qJyp4Y18_1ubO1kMFFTISjuN0JuVF7z7fYNipMS3COtsoKeRTvQqZFOl_k1-UiLfMiv1kUZSI6IbNsni3LtLwui-XyKs-vTon4IGKFxbws8kHhZbiPpvxWgdzDuHrDBk7WP4fM2Xnr-pa-Kh1W4ns_aS4kzfLTJ6jV5C0)
+
+В текущем флоу есть проблема, в том, что на шаге 6 мы делаем JS редирект\открытие новой вкладки. Если проходит больше 4 секунд после клика, то браузер считает что открытие вкладки не связанно с userinput и запрещает.
+
+Мы хотим изменить поведение сервера, чтобы на шаге 5 возвращался http 3xx редирерект на урл. То есть мы на шаге 4 открываем новую вкладку, внутри которой урл запроса на бекенд, который может длиться долго, и закончится редиректом на конечную платежку.
