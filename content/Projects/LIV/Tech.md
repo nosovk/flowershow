@@ -1,29 +1,33 @@
 
 ## Modules
-### Mobile
+### Mobile App
 Mobile part: build with flutter.
 
 Integrated SDKs:
-- Firebase Auth
+- [Firebase Auth](https://firebase.google.com/docs/auth)
 Push
-- OneSignal
-- Firebase Cloud Messaging
+- [OneSignal](https://onesignal.com/)
+- [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging)
 - VoIP pushes for IOS
 Analytics:
-- Apphud
-- Firebase Analytics
-- Amplitude
-- AppsFlyeer
+- [AppHud](https://apphud.com/)
+- [Firebase Analytics](https://firebase.google.com/docs/analytics)
+- [Amplitude](https://amplitude.com/)
+- [AppsFlyeer](https://www.appsflyer.com/)
 Video:
-- Agora
-- Twilio
+- [Agora](https://www.agora.io/)
+- [Twilio](https://www.twilio.com/)
 
+### Web version
+Web version of app, build with [SvelteKit](https://svelte.dev/docs/kit/introduction) and Tailwind. It uses the same auth provider, the same [GraphQL WebSocket API](https://hasura.io/docs/2.0/subscriptions/overview/), and fully interoperable with mobile app. Web version provides similar experience with calls, chats, notifications etc. 
 ### Backend
-As a core and API gateway we use [hasura](https://hasura.io/) as a solution to make WebSocket subscriptions and provide [GraphQL](https://graphql.org/) API to Client. As an DB we use PostgreSQL.
-For methods that require logic that exceeds fetching data we use [Hasura Actions](https://hasura.io/docs/latest/actions/overview/) implemented in NodeJS with [Fastify](https://fastify.dev/).
+As a core and API gateway we use [Hasura](https://hasura.io/) as a solution to make WebSocket subscriptions and provide [GraphQL](https://graphql.org/) API to Client. As an DB we use PostgreSQL.
+
+For methods that require logic that exceeds fetching data we use [Hasura Actions](https://hasura.io/docs/latest/actions/overview/) implemented in [NodeJS](https://nodejs.org/en) with [Fastify](https://fastify.dev/).
+
+API build to serve both mobile and web client, some methods (like attribution) have different parameters, depending on a platform, but for all functional methods contracts are shared between platforms.
 ### Streamer portal
 Web panel, which is used to show information that is not related to usual user activity, like streamer balance, rules for streamers etc. It's build within [SvelteKit](https://kit.svelte.dev/).
-
 ### Admin Panel
 Web panel, where moderator can manage user balances, manage streamers and users. Also, KYC and photo moderation made here.
 ![[OLO-panel-userlist.png]]
@@ -41,6 +45,12 @@ We are pretty strongly depend on Firebase Services.
 - Twilio – we implemented it as fallback provider, in cases when Agora is unavailable.
 Video part is modular, and easily could be extended with other provider.
 
+## Email provider
+- SendGrid — we use it to manage subscription statuses, and send marketing\event based messages.
+## Analytics
+We have external analytics, like — [AppHud](https://apphud.com/), [Firebase Analytics](https://firebase.google.com/docs/analytics), [Amplitude](https://amplitude.com/),[AppsFlyeer](https://www.appsflyer.com/).
+
+But we also maintain internal reports based on server side data in [MetaBase](https://www.metabase.com/).
 ## Functional domains
 - balance
 - ads
@@ -99,7 +109,7 @@ This is domain used to support admin panel. Here we have methods for unrestricte
 ### notification
 We have in-app notification and push notifications.
 ![[OLO-notifications.png]]
-Some kinds of notifications delivered only like in-app, but mostly we use fallback strategy. We send in-app, if user not online, or we don't get ACK from phone — then we send push message. Also for call notifications at apple we use special voip notifications.
+Some kinds of notifications delivered only like in-app, but mostly we use fallback strategy. We send in-app, if user not online, or we don't get ACK from phone — then we send push message. Also for call notifications at apple we use special voip notifications. For some messages we also send email notifications, like a list of missed calls.
 
 ### panel
 Domain used for working with segmentation of users to cohorts, groups etc. Cohorts used for labeling users with tags, that used for improved feed generation in gallery and other places.
