@@ -18,6 +18,7 @@ Video:
 - [Agora](https://www.agora.io/)
 - [Twilio](https://www.twilio.com/)
 
+Mobile app has feature flags to disable some part of functionalityy across different platforms on request.
 ### Web version
 Web version of app, build with [SvelteKit](https://svelte.dev/docs/kit/introduction) and Tailwind. It uses the same auth provider, the same [GraphQL WebSocket API](https://hasura.io/docs/2.0/subscriptions/overview/), and fully interoperable with mobile app. Web version provides similar experience with calls, chats, notifications etc. 
 ### Backend
@@ -39,6 +40,9 @@ We are pretty strongly depend on Firebase Services.
 - Firebase Auth: we use it to provide multi-platform authorization, with Google, Facebook, Apple ID, phone number.  Also, it provides us with JWTs that used to control access permissions over all subsystems. It couldn't be easily substituted, because it provides is UIDs etc.
 - FireBase Storage: used to store all static assets, to offload network consuming requests from API server. The nice part is that it supports permission rules based on JWT's from Auth provider. For example, I can see only my own photos etc. It could be substituted to something else, but permission schema can be less strict at other providers.
 - FireBase hosting: used for storing admin panel, promo website etc., Could be easily substituted.
+#### CloudFlare
+- CDN: we use CloudFlare CDN to hide our origin server ip adresses, and to setup additional WAF protection.
+- Pages: we use CloudFlare pages to host clients web app, we use it to worj with BFF layer of our app.
 
 ## Video Providers
 - Agora – currently we mostly use them, because their video quality surpasses other competitors
