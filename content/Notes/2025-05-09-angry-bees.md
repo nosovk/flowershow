@@ -73,3 +73,7 @@
  • Пройденные уровни
  • Время
  • Победитель (да/нет)
+
+#### code reference
+- https://github.com/JdomiDev/AngryBirdsRemakeUnity
+- https://github.com/dgkanatsios/AngryBirdsStyleGame
