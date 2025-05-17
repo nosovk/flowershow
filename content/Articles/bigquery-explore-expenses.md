@@ -4,7 +4,7 @@
 
 Problem: if you use BQ, certainly, one day you will have a bill, that will be to big just to ignore it. And reasonable action is to find out an answer on a question... WTF? Why so much?
 
-Actually Google stores info about all executed queries, they just named this info as "Jobs". There are a special datasets filled with data about BQ usage, for our case the most promising one is `INFORMATION_SCHEMA.JOBS_BY_PROJECT`
+Actually Google stores info about all executed queries, they just named this info as "Jobs". There are a special dataset filled with data about BQ usage, for our case the most promising one is `INFORMATION_SCHEMA.JOBS_BY_PROJECT`
 
 You can check docs on it by visiting that link:
 https://cloud.google.com/bigquery/docs/information-schema-jobs
