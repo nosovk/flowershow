@@ -50,7 +50,7 @@ Goal: интегировать новое платежное направлен�
 все новые параметры опциональны.
 
 - для метода ha меняем возвращаемый url на новый
-сейчас мы используем [/api/v1/integration/{provider}/process/](https://github.com/apayments/apayments.src/blob/main/src/routes/api/v1/integration/%5Bprovider%5D/process/%2Bserver.ts)
+сейчас мы используем [/api/v1/integration/%provider%/process/](https://github.com/apayments/apayments.src/blob/main/src/routes/api/v1/integration/%5Bprovider%5D/process/%2Bserver.ts)
 вместо этого предлагаю добавить /api/v1/integraion/ha/process, который был бы уже формой оплаты
 
 - apay payment form
