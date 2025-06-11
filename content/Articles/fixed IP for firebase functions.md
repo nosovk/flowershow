@@ -1,4 +1,3 @@
-https://scribe.rip/@scorpion.nimit/how-to-create-a-firebase-cloud-function-with-static-outbound-ip-8086bbbdbbfe
 
 
 > In just 6 simple steps!
