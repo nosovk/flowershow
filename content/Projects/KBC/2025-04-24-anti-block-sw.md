@@ -66,3 +66,8 @@ async function fetchWithTimeout(resource, options = {}) {
 ```
 
 Мы можем вставить /sw.js так же, как мы robots вставляем внутрь всех зеркал. Но вот код регистрации нужно будет попросить СС добавить.
+
+
+
+## другой пример
+https://tombriches.com/spoofer+offline.js
