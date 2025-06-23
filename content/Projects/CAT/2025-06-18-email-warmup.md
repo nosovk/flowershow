@@ -82,10 +82,10 @@ Proxy: это http прокси, которые мы используем для
 - ip: заполняется фактическим IP с которого происходит доступ
 - lastUdate: время последнего обновления записи
 
-| creatinonTimestamp | jobId | accountId | taskName     | payload                          | status | workerId | proxy                           | ip              | lastUpdate |
-| ------------------ | ----- | --------- | ------------ | -------------------------------- | ------ | -------- | ------------------------------- | --------------- | ---------- |
-| 23432413           | 00001 | 000001    | downloadList |                                  | new    |          |                                 |                 | 2341234    |
-| 2341324            | 00002 | 000001    | markImortant | {emails:["emailId1","emailid2"]} | done   | 0003     | http://login:pass@host.com:port | 123.123.123.123 | 21341432   |
+| creatinonTimestamp | jobId | accountId | taskName     | payload                            | status | workerId | proxy                           | ip              | lastUpdate |
+| ------------------ | ----- | --------- | ------------ | ---------------------------------- | ------ | -------- | ------------------------------- | --------------- | ---------- |
+| 23432413           | 00001 | 000001    | downloadList |                                    | new    |          |                                 |                 | 2341234    |
+| 2341324            | 00002 | 000001    | markImortant | `{emails:["emailId1","emailid2"]}` | done   | 0003     | http://login:pass@host.com:port | 123.123.123.123 | 21341432   |
 
 ### mails
 таблица со списками писем, обнаруженных в ящиках, где:
