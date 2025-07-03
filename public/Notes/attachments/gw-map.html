@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Візуалізація Маршрутів Goodwine (Фінальний план - 21 рейс)</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        .leaflet-control-layers-overlays label { 
+            font-size: 14px; 
+        }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script>
+    // 1. Ініціалізація карти
+    const map = L.map('map').setView([50.0, 15.0], 5);
+
+    // 2. Додавання базового шару карти
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // 3. Дані про 21 маршрут
+    const routesData = [
+        // --- Гіганти ---
+        {
+            id: 1, name: "Рейс №1: Гігант - JGC 157 Jumilla",
+            points: [ { lat: 38.4763532, lng: -1.3221865, popup: "<b>Контрагент:</b> JGC 157 Jumilla<br><b>Замовлення:</b> 157" } ]
+        },
+        {
+            id: 2, name: "Рейс №2: Гігант - Fentimans",
+            points: [ { lat: 53.18640970000001, lng: -2.4260614, popup: "<b>Контрагент:</b> Fentimans Ltd.<br><b>Замовлення:</b> 112" } ]
+        },
+        {
+            id: 3, name: "Рейс №3: Гігант - Sant'Orsola 1",
+            points: [ { lat: 44.6893225, lng: 8.2062156, popup: "<b>Контрагент:</b> Sant'Orsola<br><b>Замовлення:</b> 70.1" } ]
+        },
+        {
+            id: 4, name: "Рейс №4: Гігант - Sant'Orsola 2",
+            points: [ { lat: 44.6893225, lng: 8.2062156, popup: "<b>Контрагент:</b> Sant'Orsola<br><b>Замовлення:</b> 70.3" } ]
+        },
+        {
+            id: 5, name: "Рейс №5: Гігант - Cesari",
+            points: [ { lat: 45.5489641, lng: 10.884922, popup: "<b>Контрагент:</b> Cesari<br><b>Замовлення:</b> 72.9" } ]
+        },
+        {
+            id: 6, name: "Рейс №6: Гігант - GRANDS CHAIS",
+            points: [ { lat: 44.546869, lng: -0.426346, popup: "<b>Контрагент:</b> Baron d'Arigniac (GRANDS CHAIS)<br><b>Замовлення:</b> 126 L" } ]
+        },
+        // --- Збірні рейси ---
+        {
+            id: 7, name: "Рейс №7: Заморозка - Іспанія",
+            points: [
+                { lat: 36.32000920000001, lng: -6.087847, popup: "<b>Контрагент:</b> Petaca Chico<br><b>Замовлення:</b> 21" },
+                { lat: 36.6139443, lng: -6.2028428, popup: "<b>Контрагент:</b> MoySeafood<br><b>Замовлення:</b> 23" },
+                { lat: 42.3890189, lng: -8.703980699999999, popup: "<b>Контрагент:</b> FRIOANTARTIC<br><b>Замовлення:</b> 32" }
+            ]
+        },
+        {
+            id: 8, name: "Рейс №8: Заморозка - Збірний Європа (ОБ'ЄДНАНИЙ)",
+            points: [
+                { lat: 57.59169139999999, lng: 9.9845926, popup: "<b>Контрагент:</b> Werner Larsson<br><b>Замовлення:</b> 20" },
+                { lat: 51.4327208, lng: 5.444506, popup: "<b>Контрагент:</b> ANNA Dutch<br><b>Замовлення:</b> 38" },
+                { lat: 52.13413000000001, lng: 8.15704, popup: "<b>Контрагент:</b> Gelato Classico<br><b>Замовлення:</b> 42" },
+                { lat: 54.6335673, lng: 25.2546816, popup: "<b>Контрагент:</b> VEGGo<br><b>Замовлення:</b> 3" }
+            ]
+        },
+        {
+            id: 9, name: "Рейс №9: Фрукти/Овочі - Збірний (ОБ'ЄДНАНИЙ)",
+            points: [
+                { lat: 39.5907504, lng: -0.3031029, popup: "<b>Контрагент:</b> Ruselia<br><b>Замовлення:</b> 10" },
+                { lat: 52.0146173, lng: 4.6390968, popup: "<b>Контрагент:</b> Roveg<br><b>Замовлення:</b> 314" },
+                { lat: 51.8567079, lng: 4.560758799999999, popup: "<b>Контрагент:</b> HISPALCO S.A.<br><b>Замовлення:</b> 103" },
+                { lat: 51.84335890000001, lng: 4.678901, popup: "<b>Контрагент:</b> Staay-Export B.V.<br><b>Замовлення:</b> 169" }
+            ]
+        },
+        {
+            id: 10, name: "Рейс №10: Охолодження - Італія",
+            points: [
+                { lat: 41.08821, lng: 14.0967144, popup: "<b>Контрагент:</b> Campania Felix<br><b>Замовлення:</b> 335" },
+                { lat: 45.7500928, lng: 8.5613792, popup: "<b>Контрагент:</b> Luigi Guffanti 1876 s.r.l.<br><b>Замовлення:</b> 365" },
+                { lat: 45.6966669, lng: 11.4868818, popup: "<b>Контрагент:</b> FiorDiMaso<br><b>Замовлення:</b> 106" },
+                { lat: 45.8012767, lng: 13.2081437, popup: "<b>Контрагент:</b> FRIULPESCA<br><b>Замовлення:</b> 268" }
+            ]
+        },
+        {
+            id: 11, name: "Рейс №11: Іспанія/Португалія (Збірний 1)",
+            points: [
+                { lat: 39.080829, lng: -9.112397999999999, popup: "<b>Контрагент:</b> Casa Santos Lima<br><b>Замовлення:</b> 58" },
+                { lat: 41.1304499, lng: -8.5978275, popup: "<b>Контрагент:</b> Taylor's<br><b>Замовлення:</b> 41" },
+                { lat: 41.1366116, lng: -8.6156144, popup: "<b>Контрагент:</b> Sogrape<br><b>Замовлення:</b> 116" },
+                { lat: 41.5170156, lng: -5.4131439, popup: "<b>Контрагент:</b> Finca Sobreno (ARAEX)<br><b>Замовлення:</b> 21" }
+            ]
+        },
+        {
+            id: 12, name: "Рейс №12: Іспанія (Збірний 2 - Ріоха)",
+            points: [
+                { lat: 42.5845487, lng: -2.8484312, popup: "<b>Контрагент:</b> Lopez de Heredia<br><b>Замовлення:</b> 18" },
+                { lat: 42.5725661, lng: -2.5098914, popup: "<b>Контрагент:</b> Albizu Bodega SL<br><b>Замовлення:</b> 2" },
+                { lat: 42.5113727, lng: -2.6173539, popup: "<b>Контрагент:</b> Marques de Riscal<br><b>Замовлення:</b> 51" },
+                { lat: 42.4730044, lng: -2.4076645, popup: "<b>Контрагент:</b> Olarra<br><b>Замовлення:</b> 77" }
+            ]
+        },
+        {
+            id: 13, name: "Рейс №13: Іспанія (Збірний 3 - Центр)",
+            points: [
+                { lat: 38.7340294, lng: -3.0115714, popup: "<b>Контрагент:</b> Naia (Terraselecta)<br><b>Замовлення:</b> 40" },
+                { lat: 38.4026566, lng: -1.0451043, popup: "<b>Контрагент:</b> Volver<br><b>Замовлення:</b> 34" },
+                { lat: 38.4763532, lng: -1.3221865, popup: "<b>Контрагент:</b> Orowines (Gil Family)<br><b>Замовлення:</b> 28" },
+                { lat: 42.08609939999999, lng: -1.8019113, popup: "<b>Контрагент:</b> Chivite (Perelada)<br><b>Замовлення:</b> 24" }
+            ]
+        },
+        {
+            id: 14, name: "Рейс №14: Іспанія (Збірний 4 - Каталонія)",
+            points: [
+                { lat: 41.31503, lng: 1.60021, popup: "<b>Контрагент:</b> Cavas Lavernoya<br><b>Замовлення:</b> 39" },
+                { lat: 41.3732681, lng: 1.6672371, popup: "<b>Контрагент:</b> Loxarel<br><b>Замовлення:</b> 16" },
+                { lat: 41.431975, lng: 1.6915301, popup: "<b>Контрагент:</b> SADEVE (Naveran)<br><b>Замовлення:</b> 20" },
+                { lat: 41.4262222, lng: 1.7838976, popup: "<b>Контрагент:</b> Codorniu<br><b>Замовлення:</b> 48" },
+                { lat: 41.4256877, lng: 1.7866935, popup: "<b>Контрагент:</b> Recaredo<br><b>Замовлення:</b> 9" },
+                { lat: 41.4100872, lng: 1.2251588, popup: "<b>Контрагент:</b> Costador<br><b>Замовлення:</b> 10" }
+            ]
+        },
+        {
+            id: 15, name: "Рейс №15: Франція (Збірний)",
+            points: [
+                { lat: 45.4497261, lng: -0.4749825, popup: "<b>Контрагент:</b> A.E.Dor (Maison Ansac)<br><b>Замовлення:</b> 28" },
+                { lat: 44.910084, lng: -0.6352439999999999, popup: "<b>Контрагент:</b> Castel Freres SAS<br><b>Замовлення:</b> 25" },
+                { lat: 45.9480481, lng: -0.523951, popup: "<b>Контрагент:</b> Chabasse Cognac.<br><b>Замовлення:</b> 39" },
+                { lat: 47.7760713, lng: 3.7551482, popup: "<b>Контрагент:</b> Pattes Loup<br><b>Замовлення:</b> 8" },
+                { lat: 47.3106544, lng: 2.7909747, popup: "<b>Контрагент:</b> Lucien Crochet.<br><b>Замовлення:</b> 35" },
+                { lat: 46.173044, lng: 4.651416, popup: "<b>Контрагент:</b> Descombes (K2G)<br><b>Замовлення:</b> 5 via PL" },
+                { lat: 47.0015519, lng: 4.782435899999999, popup: "<b>Контрагент:</b> Joseph Voillot<br><b>Замовлення:</b> 6 via PL" },
+                { lat: 48.072541, lng: 4.4784465, popup: "<b>Контрагент:</b> Clandestin<br><b>Замовлення:</b> 4" },
+                { lat: 46.9363372, lng: 5.7009645, popup: "<b>Контрагент:</b> De La Borde<br><b>Замовлення:</b> 3" }
+            ]
+        },
+        {
+            id: 16, name: "Рейс №16: Велика Британія (Збірний)",
+            points: [
+                { lat: 50.8989398, lng: -3.3479743, popup: "<b>Контрагент:</b> Willie's Cacao<br><b>Замовлення:</b> 13" },
+                { lat: 51.1872439, lng: -2.4758542, popup: "<b>Контрагент:</b> Minor Figures<br><b>Замовлення:</b> 25" },
+                { lat: 53.0908651, lng: -1.5720044, popup: "<b>Контрагент:</b> Willow Direct<br><b>Замовлення:</b> 18" },
+                { lat: 53.0061826, lng: -1.7126578, popup: "<b>Контрагент:</b> Artisan Biscuits LTD<br><b>Замовлення:</b> 40" },
+                { lat: 52.7491912, lng: -1.4554944, popup: "<b>Контрагент:</b> Organix<br><b>Замовлення:</b> 12" },
+                { lat: 55.8295596, lng: -3.9937337, popup: "<b>Контрагент:</b> BrewDog PLC<br><b>Замовлення:</b> 47" },
+                { lat: 52.12936300000001, lng: 1.428255, popup: "<b>Контрагент:</b> Stokes Sauces Ltd<br><b>Замовлення:</b> 47" }
+            ]
+        },
+        {
+            id: 17, name: "Рейс №17: Німеччина, Бенілюкс, Данія (Збірний 1)",
+            points: [
+                { lat: 51.21355029999999, lng: 3.1920229, popup: "<b>Контрагент:</b> Halve Maan<br><b>Замовлення:</b> 21" },
+                { lat: 50.9240456, lng: 3.1967138, popup: "<b>Контрагент:</b> Ander Cacao<br><b>Замовлення:</b> 1" },
+                { lat: 49.9790935, lng: 6.9519325, popup: "<b>Контрагент:</b> Loosen<br><b>Замовлення:</b> 44" },
+                { lat: 48.81564650000001, lng: 9.3687008, popup: "<b>Контрагент:</b> Beutelsbacher<br><b>Замовлення:</b> 30" },
+                { lat: 51.474867, lng: 12.0073368, popup: "<b>Контрагент:</b> Underberg<br><b>Замовлення:</b> 6" },
+                { lat: 55.7851661, lng: 11.4704527, popup: "<b>Контрагент:</b> Stelton AS<br><b>Замовлення:</b> 29" },
+                { lat: 55.7532254, lng: 12.2936524, popup: "<b>Контрагент:</b> Eva Solo<br><b>Замовлення:</b> 35" }
+            ]
+        },
+        {
+            id: 18, name: "Рейс №18: Італія (Збірний 1)",
+            points: [
+                { lat: 44.8208971, lng: 8.228114, popup: "<b>Контрагент:</b> Broglia<br><b>Замовлення:</b> 34" },
+                { lat: 44.710947, lng: 8.245102000000001, popup: "<b>Контрагент:</b> Santero<br><b>Замовлення:</b> 54" },
+                { lat: 44.6891592, lng: 8.0869439, popup: "<b>Контрагент:</b> Pelissero<br><b>Замовлення:</b> 42" }
+            ]
+        },
+        {
+            id: 19, name: "Рейс №19: Італія (Збірний 2)",
+            points: [
+                { lat: 45.5483274, lng: 9.0562665, popup: "<b>Контрагент:</b> Bussy<br><b>Замовлення:</b> 6" },
+                { lat: 45.2280893, lng: 8.234155099999999, popup: "<b>Контрагент:</b> Principato di Lucedio Srl<br><b>Замовлення:</b> 43" },
+                { lat: 44.6368399, lng: 7.9541194, popup: "<b>Контрагент:</b> Ratti<br><b>Замовлення:</b> 21" },
+                { lat: 43.8784028, lng: 11.0485248, popup: "<b>Контрагент:</b> F.Lli Lombardi<br><b>Замовлення:</b> 53" },
+                { lat: 43.4650202, lng: 11.269341, popup: "<b>Контрагент:</b> Castellare di Castellina<br><b>Замовлення:</b> 38" },
+                { lat: 43.6700046, lng: 11.3544346, popup: "<b>Контрагент:</b> Frantoio Pruneti Srl<br><b>Замовлення:</b> 20" },
+                { lat: 43.0551134, lng: 11.4891562, popup: "<b>Контрагент:</b> Stella di Campalto<br><b>Замовлення:</b> 11" },
+                { lat: 44.0316935, lng: 12.5357461, popup: "<b>Контрагент:</b> Galvanina<br><b>Замовлення:</b> 8" },
+                { lat: 45.54362039999999, lng: 12.1048989, popup: "<b>Контрагент:</b> Crich<br><b>Замовлення:</b> 34" },
+                { lat: 46.0701738, lng: 13.3847309, popup: "<b>Контрагент:</b> Dorigo<br><b>Замовлення:</b> 32" }
+            ]
+        },
+        {
+            id: 20, name: "Рейс №20: Німеччина, Австрія (Збірний 2)",
+            points: [
+                { lat: 49.6047565, lng: 9.720778100000002, popup: "<b>Контрагент:</b> Naturata AG<br><b>Замовлення:</b> 70" },
+                { lat: 49.6047565, lng: 9.720778100000002, popup: "<b>Контрагент:</b> Holle baby food AG<br><b>Замовлення:</b> 57" },
+                { lat: 47.9715182, lng: 11.7743272, popup: "<b>Контрагент:</b> Ayinger<br><b>Замовлення:</b> 12" },
+                { lat: 51.408458, lng: 12.1634133, popup: "<b>Контрагент:</b> Reber<br><b>Замовлення:</b> 34" },
+                { lat: 48.89053, lng: 12.6131542, popup: "<b>Контрагент:</b> Okovital<br><b>Замовлення:</b> 26" },
+                { lat: 48.3570921, lng: 13.0104901, popup: "<b>Контрагент:</b> Bio-Zentrale Naturprodukte GmbH<br><b>Замовлення:</b> 52" },
+                { lat: 51.2480217, lng: 13.2882847, popup: "<b>Контрагент:</b> BioPlanete<br><b>Замовлення:</b> 22" },
+                { lat: 46.9916795, lng: 15.9084398, popup: "<b>Контрагент:</b> Zotter<br><b>Замовлення:</b> 62" },
+                { lat: 47.7084279, lng: 16.8922531, popup: "<b>Контрагент:</b> Meinklang<br><b>Замовлення:</b> 6" }
+            ]
+        },
+        {
+            id: 21, name: "Рейс №21: Італія (Збірний 3 - Залишки)",
+            points: [
+                { lat: 45.623523, lng: 10.031492, popup: "<b>Контрагент:</b> Berlucchi<br><b>Замовлення:</b> 52" },
+                { lat: 45.5978709, lng: 9.995465000000001, popup: "<b>Контрагент:</b> Ca del Bosco<br><b>Замовлення:</b> 42" }
+            ]
+        }
+    ];
+
+    // 4. Створення кольорів для маршрутів
+    const colors = [
+        '#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4',
+        '#46f0f0', '#f032e6', '#bcf60c', '#fabebe', '#008080', '#e6beff',
+        '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', 
+        '#000075', '#000000', '#FF0000', '#0000FF', '#008000'
+    ];
+
+    // 5. Створення шарів
+    const overlayMaps = {};
+    routesData.forEach((route, index) => {
+        const layerGroup = L.layerGroup();
+        const latlngs = [];
+        route.points.forEach(point => {
+            L.marker([point.lat, point.lng])
+                .bindPopup(point.popup)
+                .addTo(layerGroup);
+            latlngs.push([point.lat, point.lng]);
+        });
+        if (latlngs.length > 1) {
+            L.polyline(latlngs, { 
+                color: colors[index % colors.length],
+                weight: 3 
+            }).addTo(layerGroup);
+        }
+        overlayMaps[route.name] = layerGroup;
+    });
+
+    // 6. Додавання контролю шарів на карту
+    L.control.layers(null, overlayMaps, { collapsed: false }).addTo(map);
+
+    // Вмикаємо перші кілька рейсів за замовчуванням
+    routesData.slice(0, 4).forEach(route => {
+        if (overlayMaps[route.name]) {
+            map.addLayer(overlayMaps[route.name]);
+        }
+    });
+
+</script>
+
+</body>
+</html>
