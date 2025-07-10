@@ -44,3 +44,73 @@ https://api.rlslot.com/api/v1/documentation/#/
 
 #### массовые действия
 один из базовых сценариев использования - временно выключить все аппараты, после чего включить все аппараты. Для реализации этого сценария нам необходима возможность выбрать список аппаратов (чекбоксы) или выбрать сразу все аппараты, для того чтобы одномоментно применить к ним команду (в к примеру перевести их в заблокированное состояние)
+
+
+## примеры запросов
+
+#### List
+```bash
+curl --request GET \
+--url 'https://api.rlslot.com/api/v1/manage/machines?key=d859ded8-e8d5-454b-9902-6f521a21c8de' \
+  --header 'accept: application/json' \
+  --header 'content-type: application/json'
+```
+
+#### Calibrate
+```bash
+curl -X 'POST' \  'https://api.rlslot.com/api/v1/manage/machines/FF00000000000002/command?key=d859ded8-e8d5-454b-9902-6f521a21c8de' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "command": "calibrate "
+}'
+```
+
+#### Payout
+```bash
+curl -X 'POST' \
+  'https://api.rlslot.com/api/v1/manage/machines/FF00000000000002/command?key=d859ded8-e8d5-454b-9902-6f521a21c8de' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "command": "payout"
+}'
+
+```
+#### reboot
+```bash
+curl -X 'POST' \
+  'https://api.rlslot.com/api/v1/manage/machines/FF00000000000002/command?key=d859ded8-e8d5-454b-9902-6f521a21c8de' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "command": "reboot"
+}'
+
+```
+
+#### machine-disable
+```bash
+curl -X 'POST' \
+  'https://api.rlslot.com/api/v1/manage/machines/FF00000000000002/command?key=d859ded8-e8d5-454b-9902-6f521a21c8de' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "command": "machine-disable"
+}'
+
+```
+
+#### machine-enable
+```bash
+curl -X 'POST' \
+  'https://api.rlslot.com/api/v1/manage/machines/FF00000000000002/command?key=d859ded8-e8d5-454b-9902-6f521a21c8de' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "command": "machine-enable"
+}'
+
+```
+
+#### 
