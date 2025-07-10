@@ -17,3 +17,4 @@ ip used for tests: https://ipinfo.io/176.96.226.245
 | martin.casino   |           |                                                                                                                               | cloudflare + awsglobalaccelerator |
 | martin.casino   | pragmatic | demogamesfree.mrqvytrsjd.net                                                                                                  | Amazon CloudFront                 |
 | martin.casino   | belatra   | cdn1-all.bltr-static.com                                                                                                      | HETZNER-AS                        |
+| casibra.com     | pragmatic | demogamesfree.mrqvytrsjd.net                                                                                                  | Amazon CloudFront                 |
