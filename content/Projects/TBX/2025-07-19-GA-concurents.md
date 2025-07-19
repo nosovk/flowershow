@@ -101,9 +101,10 @@ https://drama-comedy.kiev.ua/afisha/syn/
 нет ифремйма тоже, просто переход на сайт целиком
 
 ## Marco
-![[Pasted image 20250719234551.png]]
-	![[Pasted image 20250719234430.png]]
+![[./attachments/Pasted image 20250719234551.png]]
+	![[./attachments/Pasted image 20250719234430.png]]
 	Валюта теряется по пути
 причину пока не нашел.
 
 Так же мне кажется что фильтр неверно работает, фикс: https://gitlab.ticketcrm.com/ticketcrm/frontend/crm/-/commit/7a5eda3cb6809a427b33df770bb68a777bed9af6
+слил ее в прод
