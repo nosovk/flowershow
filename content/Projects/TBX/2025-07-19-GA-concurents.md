@@ -108,3 +108,15 @@ https://drama-comedy.kiev.ua/afisha/syn/
 
 Так же мне кажется что фильтр неверно работает, фикс: https://gitlab.ticketcrm.com/ticketcrm/frontend/crm/-/commit/7a5eda3cb6809a427b33df770bb68a777bed9af6
 слил ее в прод
+
+
+## BQ
+MarcoBQ: statbet-project.analytics_329000250
+
+TBX BQ: statbet-project.analytics_390206424
+
+Коллекция в BQ: https://nodeart.app/mb/collection/272-marco
+
+Датасет в BQ: https://nodeart.app/mb/browse/databases/84-marco
+
+[Пример публичного отчета](https://nodeart.app/mb/public/question/6a756444-1848-45ec-ba41-eb2891a3ee0b?from=2025-07-18&to=2025-07-20)
