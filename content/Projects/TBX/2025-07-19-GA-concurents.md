@@ -1,16 +1,26 @@
 https://karabas.com/ - @NosovK 
+
 https://www.ticketmaster.com/ - @NosovK 
+
 https://concert.ua/ - @innce 
+
 https://kontramarka.ua/en - @innce
 
 ## Karabas.com
 ```"UA-19898265-1", {allowLinker: true, cookieDomain: "auto", name: "gtm5"})```
+
 2083744259.1752952378
+
 ```ga("create", "UA-19898265-22", {allowLinker: true, cookieDomain: "auto", name: "gtm16"})```
+
 ```ga("gtm16.linker:autoLink", ["frontmanager.com.ua"], false, false)```
+
 client id: 2083744259.1752952378
+
 ```gtm.init_consent```
+
 ```function: "__ogt_cross_domain", priority: 27, vtp_rules: ["list", "frontmanager\.com\.ua", "karabas\.com", "kerabas\.pp\.ua"], tag_id: 15}```
+
 ```__ogt_referral_exclusion", priority: 17, vtp_includeConditions: ["list", "karabas\.com", "paymaster\.ua", "liqpay\.com", "wayforpay\.com"], tag_id: 17}```
 
 tracked ids:
@@ -80,7 +90,7 @@ gtag('set', 'linker', {
 
     getGa4SessionData();
 ```
-Похоже этот скрипт просто сохраняет в отдельную куку все gaid, которые сможет найти на сайте
+Похоже этот скрипт просто сохраняет в отдельную куку все gaid, которые сможет найти на сайте. То есть по факту не решает нашу проблему
 
 ## Novosad
 https://www.novosad.company/events/
