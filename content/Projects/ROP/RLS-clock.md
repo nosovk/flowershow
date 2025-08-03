@@ -6,8 +6,8 @@
 ### Пример реализации:
 У Evolution в рулетке сверху поверх видео транслируется время в студии.
 
-![[Pasted image 20250803172230.png]]
-![[Pasted image 20250803172452.png]]
+![Evolution-Clock-Example-1](./attachments/Evolution-Clock-Example-1.png)
+![Evolution-Clock-Example-2](./attachments/Evolution-Clock-Example-2.png)
 https://7bitcasino.com/games/evolution/blackjack-vip-44?fullscreen=game
 
 Показывается мое локальное время на устройстве # время в студии. Время в студии обновляется раз в 30 секунд поверх видео.
