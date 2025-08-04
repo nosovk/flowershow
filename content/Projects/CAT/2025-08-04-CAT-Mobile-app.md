@@ -1,10 +1,10 @@
 # Goal: 
 иметь возможность предоставить пользователям apk, который бы позволял открывать продукт в странах с гео блокировкой + блокировками зеркал.
 
-### UserFlow
+## UserFlow
 [![](https://mermaid.ink/img/pako:eNp1VE1v2zAM_SuETh2aFI3bJLYPAQJ3G3woZiDZZciFtdVYiC15kpysK_rfR8kfSNPOJ1Pke3yPFPTKclVwFjPDf7dc5vxB4F5jvZPYWiXb-onrnQT6MLdKQwZoIKvwZThuUFuRiwalha1LbjXmB67XWfqxYOMKNhbp4GNy3TQuvZaFVqJw4Sc1WepqUmm5lliB79KVZTBdra5hG4NquIRKyAOchC1hz63jwNrA1Wa7_g4oC_i5ffzS4bYwna4czOCRg2jgGgwnD2UPGqtWK8ioihMaO3qrAJvD2J5oNjEU6iQrhcVFyoOFNBar6jJ17czGUGErqS0Oxt1AHJBMxiTGGCjQouvqxnBV8KPISbF8Vr0Vd-xbkRs0B3imhaWZR515XU07Ru_EcNSjVQIZlQu0vOhGl2ZnxE6Jk9lodRQFH0fgxn0h2JUJKayjghN_Ogp-6kpyzd3Z-U4Tt9EEjZDqHc0Ukn6X-VmyXzOl6IKW1MXxn8RwHZMO6RV4g91dTR_81pPWWFVTWLzr1M8frXVrf4f4ljymD_-XPvD98B7G6NLHmOhFnbGeUYyj8zVNa8pPxmpKdRpzO8kmbK9FwWKrWz5hRFSjC9mrzzNb8prvWEy_BerDju3kG2FI_S-l6gGmVbsvWfyMlaGobejGDA_BeKpJFNeJaqVl8d1sGXgWFr-yPxQHN9H9MgrC23kwD4LZcsJeWLyY31AYLuZ30Xx2H4TR24T99W1vb8L7RRiF0WwRzcJwOZtPmHtwNi8yH0TxQtCL89g9T_6VGqR99Zle2ds_Erd8TA?type=png)](https://mermaid.live/edit#pako:eNp1VE1v2zAM_SuETh2aFI3bJLYPAQJ3G3woZiDZZciFtdVYiC15kpysK_rfR8kfSNPOJ1Pke3yPFPTKclVwFjPDf7dc5vxB4F5jvZPYWiXb-onrnQT6MLdKQwZoIKvwZThuUFuRiwalha1LbjXmB67XWfqxYOMKNhbp4GNy3TQuvZaFVqJw4Sc1WepqUmm5lliB79KVZTBdra5hG4NquIRKyAOchC1hz63jwNrA1Wa7_g4oC_i5ffzS4bYwna4czOCRg2jgGgwnD2UPGqtWK8ioihMaO3qrAJvD2J5oNjEU6iQrhcVFyoOFNBar6jJ17czGUGErqS0Oxt1AHJBMxiTGGCjQouvqxnBV8KPISbF8Vr0Vd-xbkRs0B3imhaWZR515XU07Ru_EcNSjVQIZlQu0vOhGl2ZnxE6Jk9lodRQFH0fgxn0h2JUJKayjghN_Ogp-6kpyzd3Z-U4Tt9EEjZDqHc0Ukn6X-VmyXzOl6IKW1MXxn8RwHZMO6RV4g91dTR_81pPWWFVTWLzr1M8frXVrf4f4ljymD_-XPvD98B7G6NLHmOhFnbGeUYyj8zVNa8pPxmpKdRpzO8kmbK9FwWKrWz5hRFSjC9mrzzNb8prvWEy_BerDju3kG2FI_S-l6gGmVbsvWfyMlaGobejGDA_BeKpJFNeJaqVl8d1sGXgWFr-yPxQHN9H9MgrC23kwD4LZcsJeWLyY31AYLuZ30Xx2H4TR24T99W1vb8L7RRiF0WwRzcJwOZtPmHtwNi8yH0TxQtCL89g9T_6VGqR99Zle2ds_Erd8TA)
-## Участники процесса
-### Tracker API
+# Участники процесса
+## Tracker API
 Бекенд размещенный на CloudFlare workers. Трекеров у нас может быть большое количество, на разных доменах и в разных роутах. Поэтому необходима реализация в виде отдельного worker скрипта.
 
 Сценарии использования:
@@ -27,13 +27,13 @@
 tracker-api=https://some-api-url.com/path
 bq-settings=standart bq env
 ```
-### Static
+## Static
 Это R2 хранилище для публикации статичных ассетов. Мы хотим внутри публиковать APK. R2 мы выбираем по причине того, что APK больше 10 мегабайт, а значит публиковать его через pages или workers нельзя. При этом R2 имеет бесплатный ergress трафик, то есть нам просто еще и дешево размещать тут большие файлы. Так же мы можем подкрепить static под разные домены. 
 
 Так же мы можем напрямую в R2 публиковать артефакты сборки в виде APK.
-### Internal API
+## Internal API
 Внутренне апи приложения. Это апи поддерживает несколько методов.
-#### product-manifest.json
+### product-manifest.json
 Это даже не апи метод, а фактически просто статичный json, внутри которого у нас лежит что-то вроде:
 ```json
 {
@@ -42,7 +42,7 @@ bq-settings=standart bq env
 }
 ```
 Мы можем положить по одному такому манифесту на каждый продукт, к примеру `cat-manifest.json`, `daddy-manifest.json`
-#### /api/click
+### /api/click
 АПИ метод который мы вызываем при старте приложения.
 Payload:
 ```json
@@ -111,7 +111,7 @@ casino.daddy.app: ["https://daddy.casino","https://daddy-mirror.com"],
 }
 ```
 В конфиге для каждого зеркала мы указываем какой урл открывать в 0ю попытку, 1ю, 2ю и т.д.
-#### /api/track
+### /api/track
 Апи метод, в который треккер будет отстукивать пользователей, проходящих через него.
 payload:
 ```json
@@ -139,7 +139,7 @@ apk: "https://static.casino.com/android.apk"
 
 У нас уже возникали с этим проблемы на apay, и решением было отказаться от KV в сторону [Durable Object](https://developers.cloudflare.com/durable-objects/). [Пример реализации](https://github.com/apayments/apayments.src/blob/main/durable-object-kv/src/index.ts). DO хорош тем, что он consistant в любой момент времени, но при этом у него нет механизма expire встроенного, как в KV. Поэтому при использовании DO необходимо самим реализовать expire.
 
-### Casino
+## Casino
 Это сайт нашего казино. Со стороны казино необходимо сделать одну доработку — для авторизированных пользователей передавать ид пользователя.
 ```javascript
 function passData(uid: string) {
@@ -150,53 +150,53 @@ Android.sendData(JSON.stringify({uid}))
 Такого метода как `Android.sendData` нет в браузере, мы будем инджектить его из кода приложения. Если SG согласны, было бы хорошо расширить метод некоторыми дополнительными данными:
 `Android.sendData(JSON.stringify({uid, email, tags}))`, в этом случаем мы не будем зависеть от интеграции customer.io и fundist, т.к. теги будут попадать к нам напрямую от браузера пользователя.
 
-#### блокировка не мобильных пользователей
+### блокировка не мобильных пользователей
 Для блокировки не мобиьных пользователей мы будеми использовать block правило следующего вида:
 ```
 (all(http.request.headers["origin"][*] ne "https://catcasino.com"))
 ```
 Для веб клиента невозможно будет указать origin не совпадающий с hostname проекта, в то время как для мобильного клиента - вполне себе возможно.
-### CustomerIO
+## CustomerIO
 Это платформа по интеграции user journey automation в продукт. Мы хотим использовать ее для отправки пушей на устройства пользователей. Для корректной сегментации нам необходимо в мобильное приложение интегрировать SDK. [Customer IO Android SDK](https://docs.customer.io/integrations/sdk/android/tracking/identify/). Для корректной работы с пушами нам необходимо выполнить два условия.
-####  Идентификация пользователя
+###  Идентификация пользователя
 ```dart
 CustomerIO.instance.identify(userId: uid, traits: {
   "email": user.email,
 });
 ```
 Минимально необходимый для нас параметр это userID (он же fundist id). Остальные параметры не обязательны.
-#### Отправка FCMID
+### Отправка FCMID
 Необходимо привязывать FCMID (если он есть) к FirebaseMessagingService предоставляемому со стороны customer.io
 [docs](https://docs.customer.io/integrations/sdk/flutter/push-notifications/push-setup/)
 
-### Android App
+## Android App
 
 Собственно говоря, сама андроид аппка. Flutter приложение, с интегрированными сдк и вебвью для открытия сайта казино.
 
 Приложение должно поддерживать несколько специальных сценариев.
 
-#### Обновление версии
+### Обновление версии
 Если при старте приложения в манифесте будет обнаружена версия новее текущей версии приложения - необходимо показать экрана с предложением обновиться и кнопкой скачать (которая будет вести на новое апк)
-#### Ротация служебных доменов
+### Ротация служебных доменов
 В приложение должно быть встроен список служебных доменов (к примеру env переменная со списком через запятую). При старте приложения необходимо проверять наличие манифеста в формате /имяПродукта-manifest.json и ссылку для показа человеку через апи. Если при старте приложения не выходит получить ответ ни от одного из служебных доменов - необходимо показать экран о недоступности интернета. Домены предлагается перебирать последовательно.
-#### Retry for target domain
+### Retry for target domain
 Если урл который нами получен в payload не выходит открыть (статус код отличны от 200), то мы повторить запрос на /api/click с параметром retry=1 и так далее, в зависимости от номера попытки.
-#### свайп движения
+### свайп движения
 Мы хотим иметь два специальных движения свайпом
 - свайп сверху вниз - должен запускать рефреш страницы
 - свайп справа налево (назад) - должен вызывать действие back в history браузера
-#### специальный заголовок
+### специальный заголовок
 Для того, чтобы нас не блокировал сайт (специальные зеркала под моб устройства не должны открываться из веба), нам необходимо использовать специальный признак по которому нас будет отключать WAF на уровне зеркала. 
 Увы при замене useragent ломается гугл авторизация, поэтому мы вынуждены идти другим образом. При добавлении специального заголовка ломается CORS на API продукта.
 
 Поэтому, для того чтобы идентифицировать себя я предлагаю использовать заголовок origin. В нем мы будем указывать основной домен продукта, хотя открывать будем фактически зеркало. Повторить такое поведение в браузере нельзя, поэтому обычных посетителей домена будет блокировать.
-#### список SDK
+### список SDK
 В приложение необходимо интегрировать несколько SDK:
 - appsflyer sdk - сдк для аналитики
 - firebase messaging sdk - необходим для отправки пушей
 - customer.io sdk - необходим для интеграции с кастомером
 
-#### flavors
+### flavors
 Нам необходимо сделать пачку однотипных приложений:
 - daddy
 - kent
