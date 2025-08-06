@@ -24,6 +24,6 @@ S интеграция
 ### Пример UTM-catcher
 ```html
 <script>
-sessionStorage.setItem("kbc-params",window.location.search)
+sessionStorage.setItem("kbc-search-params",window.location.search)
 </script>
 ```
