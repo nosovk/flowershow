@@ -42,7 +42,7 @@ bq-settings=standart bq env
 }
 ```
 Мы можем положить по одному такому манифесту на каждый продукт, к примеру `cat-manifest.json`, `daddy-manifest.json`
-### Mobile-Client: /api/click
+### Mobile-Client: /api/open
 АПИ метод который мы вызываем при старте приложения.
 Payload:
 ```json
