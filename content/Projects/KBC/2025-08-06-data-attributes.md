@@ -21,7 +21,7 @@ S интеграция
 Подход с кастомными дата селекторами был удобен в angular и svelte, т.к. в обоих фреймворках есть нативные инструменты для работы с ними, не факт что такой подход будет удобен в реакте.
 
 
-### Пример UTM-catcher
+### ~~Пример UTM-catcher~~
 ```html
 <script>
 sessionStorage.setItem("kbc-search-params",window.location.search)
