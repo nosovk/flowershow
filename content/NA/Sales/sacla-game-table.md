@@ -52,3 +52,6 @@ We collect video stream from local appliances, and republish it as HLS stream to
 
 ### Local part
 Inside the local venue we need to capture stream and cards data. Then data should be passed to Server part and ReStream appliance.
+
+### Launch
+On a launch step we need to align online casinos\aggregation connection within people available in place
