@@ -7,7 +7,7 @@
 - build online part
 - launch
 
-### Offline part
+## Offline part
 Studio:
 1. **Physical location** (based on the number of tables, the need for future expansion, VIP tables, climate, geographical location, etc.)
 2. **Personnel** (control over the selection of location, control over the implementation of construction, quality control of equipment, selection of line and management personnel, staff training) 
@@ -21,7 +21,7 @@ For example, when using top-of-the-line cameras for a table, the cost of equippi
 
 The final cost can only be provided after clarifying all the requirements for the equipment (quality of cameras, lenses, microphones, streaming, server room, etc.).
 
-### Check on legals part
+## Check on legals part
 Sakla is illegal on the Philippines. There is no local card club license, that allows to play this game.
 
 Also, Dealers need to be [certified by local authority](https://www.pagcor.ph/regulatory/pdf/Casino/Implementing-Rules-and-Guidelines-for-the-Video-Streaming-Player-Liaison-Program.pdf), 
@@ -38,7 +38,7 @@ But they have only
 
 No Sakla certification available from PAGCOR, it means that tables should be placed outside the Philippines.
 
-### Build online part (software)
+## Build online part (software)
 The software consists of three parts
 - server part
 - local part
