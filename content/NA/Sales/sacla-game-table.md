@@ -1,7 +1,7 @@
 # Goal: provide steps to build Sacla live tables
 
 
-## Steps
+# Steps
 - check on offline part
 - check on legals part
 - build online part
