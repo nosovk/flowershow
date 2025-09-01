@@ -1,0 +1,16 @@
+original doc: [sacla-game-table](./sacla-game-table)
+
+
+### Software cost estimation.
+We assume that:
+- we will have one camera for one table.
+- we will use HID compatible card reader device
+- locally there will be PC capable for local video processing
+- we will make delay between game events (like 4–5 seconds) to avoid fraud behavior.
+- we integrate with casinos using seamless wallet protocol.
+- we provide only game engine (balance management etc. out of scope)
+
+[![](https://mermaid.ink/img/pako:eNplVEmP2jAU_iuWT1SCURa25FCJQovmMBokRj106MEkD4hIbGQ7bSnhv8_zEraJBLKd971vsZ0TzUQONKVbyQ478jZbcYKPqtd-ga1LmEhgbn0GrHw3fyB_k17vazNlB11LID-LHAQRG7JlFTRkyqoO_kCyLx64zCQA91hSCV5o4XqQZrkTfy2QFHwjGlNzpZu0mEleFdwjMsG1FGVJtNFHFGhd8K1qHGLBOJSdWxg5mCWvBXj-4HKO3JPF8w2pbeG43h4o5t9Ytneldvhu0MSMsLHXt5DiDyZyY6pNwAExG29dY7aVi-9z69saDLWslQbZcXMU0654X9OyAK7Rh9fAlLLchK1FrYk44HZg6ITxnKxB39FdMlmU7Iip9Xq2xwvbozVTe2necSOCwwuvVdFivKW5PQiu3Wd9tvIHQL42Np1Av5ea6VrdI-9FPePZcckqUKoQvCGvk0PReW0NXqVddrg175bNYyA3QflWNrAuqRXSrVnJeAYEdNbcRPWwO5gOkaDqUjsZlzxpFy9VkdNUyxq6FC9DxcyUnkzJiuodVLCiKQ5zJvcruuJnxOBJ_SVE1cKkqLc7mm5YqXBWH3KmYVYwdHUtQTKQU1FzTdMoGNseND3RfzQNh09hFCWjOBgNxkEcxvj2SNP-6CkZDAdREIVhEkSD8fDcpf8tbfA0GiZJPA76ozgM-3GCCFZrsTzyrGWE3NzeF_flsB-QVtp3-8brPX8AHppoLg?type=png)](https://mermaid.live/edit#pako:eNplVEmP2jAU_iuWT1SCURa25FCJQovmMBokRj106MEkD4hIbGQ7bSnhv8_zEraJBLKd971vsZ0TzUQONKVbyQ478jZbcYKPqtd-ga1LmEhgbn0GrHw3fyB_k17vazNlB11LID-LHAQRG7JlFTRkyqoO_kCyLx64zCQA91hSCV5o4XqQZrkTfy2QFHwjGlNzpZu0mEleFdwjMsG1FGVJtNFHFGhd8K1qHGLBOJSdWxg5mCWvBXj-4HKO3JPF8w2pbeG43h4o5t9Ytneldvhu0MSMsLHXt5DiDyZyY6pNwAExG29dY7aVi-9z69saDLWslQbZcXMU0654X9OyAK7Rh9fAlLLchK1FrYk44HZg6ITxnKxB39FdMlmU7Iip9Xq2xwvbozVTe2necSOCwwuvVdFivKW5PQiu3Wd9tvIHQL42Np1Av5ea6VrdI-9FPePZcckqUKoQvCGvk0PReW0NXqVddrg175bNYyA3QflWNrAuqRXSrVnJeAYEdNbcRPWwO5gOkaDqUjsZlzxpFy9VkdNUyxq6FC9DxcyUnkzJiuodVLCiKQ5zJvcruuJnxOBJ_SVE1cKkqLc7mm5YqXBWH3KmYVYwdHUtQTKQU1FzTdMoGNseND3RfzQNh09hFCWjOBgNxkEcxvj2SNP-6CkZDAdREIVhEkSD8fDcpf8tbfA0GiZJPA76ozgM-3GCCFZrsTzyrGWE3NzeF_flsB-QVtp3-8brPX8AHppoLg)
+Also, you need to be aware, that amount of users watching video will affect pricing for CDN. It could be that you will want to disable demo games.
+
+We assume that development could take from 150k to 300k, more detailed costs could be determined when we agree on table setup and make discovery phase.
