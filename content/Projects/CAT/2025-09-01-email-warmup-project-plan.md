@@ -1,5 +1,5 @@
  [Original email-warmup doc](./2025-06-18-email-warmup)
-# Mail warmup project plan
+## Mail warmup project plan
 ### 1. Rails
 На этом этапе мы должны заложить основу решения (api contracts generation, lints, cicd).
 Со стороны бекенда это:
