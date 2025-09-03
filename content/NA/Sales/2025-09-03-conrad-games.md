@@ -1,4 +1,4 @@
-input: [original document + comments](https://docs.google.com/document/d/1CL8HP6pbhwBqqFoo2r1-EI_2Dhnfbv6v/edit)
+input: [original document + comments](https://docs.google.com/document/d/1CL8HP6pbhwBqqFoo2r1-EI_2Dhnfbv6v/edit), [firelink gameplay](https://drive.google.com/drive/folders/1WU3rbPHpcL9V45cgxF7Tb6tnHDqDNUj1)
 
 ### Goal: clarify what should be done
 
