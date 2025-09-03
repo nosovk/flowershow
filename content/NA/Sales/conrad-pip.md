@@ -34,7 +34,7 @@ We have found an old device "Alien", that is believed to have the same version o
 ### Connect "Alien" to existing system
 The first step is to prove that we can successfully work with the touchscreen. We will connect the "Alien" device to our appliance to demonstrate that we can control its touch screen.
 ### Test touch on Conrads device
-Once the "Alien" device has been verified, we will test the functionality on the actual target devices. We will sell one RLS device, which Conrad will set up in one of his machines in America. We will then connect to the RLS stage to prove that the system works (we can use fake money for testing purposes).
+Once the "Alien" device has been verified, we will test the functionality on the actual target devices. We will sell one our remote control device, which Conrad will set up in one of his machines in America. We will then connect to the stage env to prove that the system works (we can use fake money for testing purposes). Conrad should be able to play his slot machine online, using touch screen.
 
 If this step is successful, we can move forward. Upon completion of this milestone, we need to agree on pricing. The following steps will be performed in parallel.
 ### Create software appliance
