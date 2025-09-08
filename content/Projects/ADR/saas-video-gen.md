@@ -1,7 +1,5 @@
 ## input
 [doc](https://docs.google.com/document/d/1wBTdy9cJ-ndc98fhRGp_Hf-hbrtReLXosmn429bsRqM/edit?tab=t.0#heading=h.tixnkkotx3sa)
-токен: ``
-
 
 ## Вопросы
 - метод baseUrl/internal-api/auth/check-token не обнаружен (404)
