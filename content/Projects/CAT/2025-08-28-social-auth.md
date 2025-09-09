@@ -19,7 +19,7 @@ PUT `https://kometa.casino/api/v1/auth/socialLink?lang=en`
 ```
 
 В ответ получаю редирект:
-GET `https://accounts.google.com/o/oauth2/auth?redirect_uri=https%3A%2F%2Farkada.myshadowcasino.com%2Fapi%2Fv1%2Fauth%2Fsocial%2Foauth_cb%2Fgp&client_id=363438536936-2nlu376j4knbco961v3h4jdvuic18d0r.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/userinfo.email&response_type=code&state=eyJsYW5nIjoiZW4ifQ==`
+GET https://accounts.google.com/o/oauth2/auth?redirect_uri=https%3A%2F%2Farkada.myshadowcasino.com%2Fapi%2Fv1%2Fauth%2Fsocial%2Foauth_cb%2Fgp&client_id=363438536936-2nlu376j4knbco961v3h4jdvuic18d0r.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/userinfo.email&response_type=code&state=eyJsYW5nIjoiZW4ifQ==
 
 Важно: редирект содержит в себе
 redirect_uri: `https://arkada.myshadowcasino.com/api/v1/auth/social/oauth_cb/gp`
@@ -28,15 +28,15 @@ redirect_uri: `https://arkada.myshadowcasino.com/api/v1/auth/social/oauth_cb/gp`
 
 4. По этому урл человек должен залогиниться в гугле, и человека перебрасывает на
 
-GET 302 редирект `https://arkada.myshadowcasino.com/api/v1/auth/social/oauth_cb/gp?state=eyJsYW5nIjoiZW4ifQ%3D%3D&code=4%2F0AVMBsJiiVYHIsi8e3zJ2jkZUSKLPmuBEeI0V3wYsti4Q_xseQM1t909VQzPoI7Fy-UZK9Q&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent`
+GET 302 редирект https://arkada.myshadowcasino.com/api/v1/auth/social/oauth_cb/gp?state=eyJsYW5nIjoiZW4ifQ%3D%3D&code=4%2F0AVMBsJiiVYHIsi8e3zJ2jkZUSKLPmuBEeI0V3wYsti4Q_xseQM1t909VQzPoI7Fy-UZK9Q&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent
 
 5. этот урл редиректит далее на редиректор уже:
 
-GET 302 `https://land.move2arkada.com/api/v1/auth/social/oauth_cb/gp?code=4%2F0AVMBsJiiVYHIsi8e3zJ2jkZUSKLPmuBEeI0V3wYsti4Q_xseQM1t909VQzPoI7Fy-UZK9Q&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent&stag=eyJsYW5nIjoiZW4ifQ%3D%3D`
+GET 302 https://land.move2arkada.com/api/v1/auth/social/oauth_cb/gp?code=4%2F0AVMBsJiiVYHIsi8e3zJ2jkZUSKLPmuBEeI0V3wYsti4Q_xseQM1t909VQzPoI7Fy-UZK9Q&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent&stag=eyJsYW5nIjoiZW4ifQ%3D%3D
 
 6. редиректор уже отправляет человека на корректное зеркало
 GET 302   
-`https://arkadacasino560.com/api/v1/auth/social/oauth_cb/gp?authuser=0&code=4%2F0AVMBsJiiVYHIsi8e3zJ2jkZUSKLPmuBEeI0V3wYsti4Q_xseQM1t909VQzPoI7Fy-UZK9Q&prompt=consent&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&stag=eyJsYW5nIjoiZW4ifQ%3D%3D`
+https://arkadacasino560.com/api/v1/auth/social/oauth_cb/gp?authuser=0&code=4%2F0AVMBsJiiVYHIsi8e3zJ2jkZUSKLPmuBEeI0V3wYsti4Q_xseQM1t909VQzPoI7Fy-UZK9Q&prompt=consent&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&stag=eyJsYW5nIjoiZW4ifQ%3D%3D
 
 7. Где происходит редирект вида:
 GET 302
