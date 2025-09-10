@@ -3,8 +3,11 @@
 
 ### Part of affected domains:
 https://gamacasino477.com
+
 https://gamacasino437.com/
+
 https://194.landing-to-arkada.com/
+
 https://daddycasino80.com/
 
 
