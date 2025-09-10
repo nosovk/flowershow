@@ -1,13 +1,18 @@
+### Artifacts:
+[recording of event](https://app.bluedothq.com/preview/68bf1cc101cb4bf7126f060d)
 
-Recoding 
-https://app.bluedothq.com/preview/68bf1cc101cb4bf7126f060d
-=====
-Part of affected domains:
+### Part of affected domains:
 https://gamacasino477.com
 https://gamacasino437.com/
+https://194.landing-to-arkada.com/
+https://daddycasino80.com/
 
 
-Here is a timeline:
+### How it was seen from user side:
+https://grid-cyberlane.com/sd29a9426
+
+
+## Timeline:
 
 **CET**
 
@@ -30,13 +35,11 @@ Here is a timeline:
 
 **Summary of Impact:**
 
-- **Kent / Arkada / Motor / Daddy:** Partial unavailability of mirrors/landing pages from 20:00 to 20:20-20:30. Total downtime was about 30 minutes.
+- **Kent / Arkada / Motor / Daddy:** 
+	- Partial unavailability of mirrors/landing pages from 20:00 to 20:20-20:30. Total downtime was about 30 minutes.
     
 - **Gama:**
-    
     - Complete unavailability of mirrors/landing pages from 19:51 to 20:18 (about 30 minutes).
-        
     - Partial unavailability of Gama mirrors from 20:18 to 20:42 (24 minutes).
-        
 
 **Total downtime for Gama** was 1 hour (19:51 - 20:53).
