@@ -12,9 +12,8 @@ https://daddycasino80.com/
 
 
 ### How it was seen from user side:
-https://grid-cyberlane.com/sd29a9426
-
-
+![user error](https://i.imgur.com/YN6uJnt.jpg)
+[big error screen](https://i.imgur.com/UCxzebP.jpg)
 ## Timeline (UTC timezone):
 
 **CET**
