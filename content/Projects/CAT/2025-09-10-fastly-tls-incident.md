@@ -15,23 +15,23 @@ https://daddycasino80.com/
 https://grid-cyberlane.com/sd29a9426
 
 
-## Timeline:
+## Timeline (UTC timezone):
 
 **CET**
 
-- **19:51:** An alert was received regarding Gama mirrors (start of the incident).
+- **17:51:** An alert was received regarding Gama mirrors (start of the incident).
     
-- **19:56:** A request was sent to this chat.
+- **17:56:** A request was sent to this chat.
     
-- **20:02:** The team was engaged. In the Fastly admin panel, we noticed that certificates for over 200 hosts, not just for Gama, had disappeared. This included landing pages for all products. We began manually applying the certificates.
+- **18:02:** The team was engaged. In the Fastly admin panel, we noticed that certificates for over 200 hosts, not just for Gama, had disappeared. This included landing pages for all products. We began manually applying the certificates.
     
-- **20:18:** All certificates were automatically restored (the reason is currently unknown). We began checking availability: Arkada and Motor were confirmed as operational. Gama's availability was still in question, with partial access.
+- **18:18:** All certificates were automatically restored (the reason is currently unknown). We began checking availability: Arkada and Motor were confirmed as operational. Gama's availability was still in question, with partial access.
     
-- **20:41:** We received confirmation from QA that Daddy and Kent were also working.
+- **18:41:** We received confirmation from QA that Daddy and Kent were also working.
     
-- **20:42:** Gama mirrors became operational, and monitoring stabilized.
+- **18:42:** Gama mirrors became operational, and monitoring stabilized.
     
-- **20:53:** We received confirmation from QA that Gama was also working again (end of the incident).
+- **18:53:** We received confirmation from QA that Gama was also working again (end of the incident).
     
 
 ---
@@ -46,3 +46,11 @@ https://grid-cyberlane.com/sd29a9426
     - Partial unavailability of Gama mirrors from 20:18 to 20:42 (24 minutes).
 
 **Total downtime for Gama** was 1 hour (19:51 - 20:53).
+
+
+### Certificates
+[https://manage.fastly.com/network/subscriptions/jUrWWbmWvSbUwlNsJ91OkA](https://manage.fastly.com/network/subscriptions/jUrWWbmWvSbUwlNsJ91OkA)
+[https://manage.fastly.com/network/subscriptions/uxfq0bWPmZOpOuPAexaGsA](https://manage.fastly.com/network/subscriptions/uxfq0bWPmZOpOuPAexaGsA)
+[https://manage.fastly.com/network/subscriptions/K7On5drFSNRvPhUzcaapYg](https://manage.fastly.com/network/subscriptions/K7On5drFSNRvPhUzcaapYg)
+
+The time of issuing is after incident start
