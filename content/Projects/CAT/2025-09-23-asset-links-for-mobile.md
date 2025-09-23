@@ -3,13 +3,13 @@
 Мы сделали мобильные приложения, которые, в том числе должны перехватывать попытку открыть сайт казино на телефоне, и открывать только мобильное приложение (уже с открытым path внутри). Сценарий перехвата ссылки необходим для того, чтобы работала авторизация по активационной ссылке в мобильном приложении. То есть человек ставит мобильное приложение, человек регистрируется в мобильном приложении, в почту приходит ссылка на активацию, при открытии ссылки на активацию человека пересылает в мобильное приложение, внутри которого будет открыта ссылка на активацию (которая сразу его и залогинит)
 
 ### Мобильные APK
-shadowroute.co/kent
-shadowroute.co/cat
-shadowroute.co/arkada
-shadowroute.co/daddy
-shadowroute.co/kometa
-shadowroute.co/gamma
-shadowroute.co/r7
+- https://shadowroute.co/kent
+- https://shadowroute.co/cat
+- https://shadowroute.co/arkada
+- https://shadowroute.co/daddy
+- https://shadowroute.co/kometa
+- https://shadowroute.co/gamma
+- https://shadowroute.co/r7
 
 По ссылкам можно скачать актуальную версию apk для установки.
 
