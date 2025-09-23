@@ -17,13 +17,19 @@ shadowroute.co/r7
 
 Примеры путей к файлам:
 
-arkada https://arkada.casino/.well-known/assetlinks.json https://b7qmw.app/.well-known/assetlinks.json
-cat https://catcasino.com/.well-known/assetlinks.json https://cf9du.app/.well-known/assetlinks.json
-daddy https://daddy.casino/.well-known/assetlinks.json https://h2lmv.app/.well-known/assetlinks.json
-gama https://gama.casino/.well-known/assetlinks.json https://n4xet.app/.well-known/assetlinks.json
-kent https://kent.casino/.well-known/assetlinks.json https://yw7pz.app/.well-known/assetlinks.json
-kometa https://kometa.casino/.well-known/assetlinks.json https://xq8rk.app/.well-known/assetlinks.json
-r7 https://r7.casino/.well-known/assetlinks.json https://vz0ul.app/.well-known/assetlinks.json
+- **arkada** https://arkada.casino/.well-known/assetlinks.json https://b7qmw.app/.well-known/assetlinks.json
+
+- **cat** https://catcasino.com/.well-known/assetlinks.json https://cf9du.app/.well-known/assetlinks.json
+
+- **daddy** https://daddy.casino/.well-known/assetlinks.json https://h2lmv.app/.well-known/assetlinks.json
+
+- **gama** https://gama.casino/.well-known/assetlinks.json https://n4xet.app/.well-known/assetlinks.json
+
+- **kent** https://kent.casino/.well-known/assetlinks.json https://yw7pz.app/.well-known/assetlinks.json
+
+- **kometa** https://kometa.casino/.well-known/assetlinks.json https://xq8rk.app/.well-known/assetlinks.json
+
+- **r7** https://r7.casino/.well-known/assetlinks.json https://vz0ul.app/.well-known/assetlinks.json
 
 На сайтах, которые лежат на CloudFlare эти файлы уже лежат, но в связи с переездом на fastly, все места где у нас зеркала обслуживаются на faslty не имеют необходимых файлов, поэтому мы просим положить их как статику, и тогда мы отключим подмену файлов со стороны CF
 
