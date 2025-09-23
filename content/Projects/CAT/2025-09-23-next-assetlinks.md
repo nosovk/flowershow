@@ -14,7 +14,7 @@
 
 - **wagibet:** https://wagibet.com/.well-known/assetlinks.json, https://wg8bt.app/.well-known/assetlinks.json
 
-- **motor:** https://casibra.com/.well-known/assetlinks.json, https://motor.app/.well-known/assetlinks.json
+- **motor:** https://casibra.com/.well-known/assetlinks.json, https://x3pld.app/.well-known/assetlinks.json
 
 На сайтах, которые лежат на CloudFlare эти файлы уже лежат, но в связи с переездом на fastly, все места где у нас зеркала обслуживаются на faslty или через free CF, не имеют необходимых файлов, поэтому мы просим положить их как статику, и тогда мы отключим подмену файлов со стороны CF.
 
