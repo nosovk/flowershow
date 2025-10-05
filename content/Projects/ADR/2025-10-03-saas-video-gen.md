@@ -52,6 +52,7 @@
 Иметь возможность запустить перегенерацию задания в случае, если результат мне не понравился (без повторной загрузки данных).
 
 ## Макеты приложения
+[balsamiq original](https://nodeart.app/wiki/display/~nosov/vgen-saas)
 ![vgen-auth.png](./attachments/vgen-auth.png)
 ![[vgen-dashboard.png]]
 ![vgen-task.png](./attachments/vgen-task.png)
