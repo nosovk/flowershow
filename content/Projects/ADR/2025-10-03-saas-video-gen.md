@@ -57,7 +57,8 @@
 ## Макеты приложения
 [balsamiq original](https://nodeart.app/wiki/display/~nosov/vgen-saas)
 ![vgen-auth.png](./attachments/vgen-auth.png)
-![[vgen-dashboard.png]]
+![vgen-dashboard.png](./attachments/vgen-dashboard.png)
+
 ![vgen-task.png](./attachments/vgen-task.png)
 ![vgen-tokens.png](./attachments/vgen-tokens.png)
 ![vgen-usage.png](./attachments/vgen-usage.png)
