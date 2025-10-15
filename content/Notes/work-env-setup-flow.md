@@ -9,6 +9,7 @@ Gsuite groups позволяют делать групповые ящики, к�
 - cloudflare-service@work-domain.com
 - fly-service@work-domain.com
 - ovh-service@work-domain.com
+- github-service@work-domain.com
 - mailgun-service@work-domain.com
 - имяСервиса-service@work-domain.com
 никакие сервисы на личные ящики людей мы не регистрируем никогда.
