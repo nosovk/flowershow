@@ -184,5 +184,5 @@ Minimal:
 total: 43060 usd
 
 
-> :: Danger ::
+> :: Info ::
 > Provided numbers is estimation, it's not an obligation. The real numbers could differ depending on design and other inputs during the process.
