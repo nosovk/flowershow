@@ -156,15 +156,33 @@ Involvement:
 - Project Manager
 - QA Engineer
 
-| role\spint | 1   | 2   | 3   | 4   | 5   | rate |
-| ---------- | --- | --- | --- | --- | --- | ---- |
-| Designer   | x   | x\2 |     |     |     | 32   |
-| Project    | x   | x   | x   | x   | x   | 18   |
-| TeamLead   | x/8 | x/8 | x/8 | x/8 | x/8 | 50   |
-| Frontend   |     | x   | x   | x   | x   | 35   |
-| Backend    | x   | x   | x   | x   | x   | 40   |
-| DevOps     | x   |     |     |     | x\2 | 50   |
-| QA         |     |     | x   | x   | x   | 15   |
+
+## Estimation
+Normal:
+
+| role\spint | 1   | 2   | 3   | 4   | 5   | hours | rate | total |
+| ---------- | --- | --- | --- | --- | --- | ----- | ---- | ----- |
+| Designer   | 80  | 40  |     |     |     | 120   | 30   | 3600  |
+| Project    | 80  | 80  | 80  | 80  | 80  | 400   | 23   | 9200  |
+| TeamLead   | 20  | 20  | 20  | 20  | 20  | 100   | 50   | 5000  |
+| Frontend   |     | 80  | 80  | 80  | 80  | 320   | 35   | 11200 |
+| Backend    | 80  | 80  | 80  | 80  | 80  | 400   | 40   | 16000 |
+| DevOps     | 80  | 10  | 10  | 10  | 20  | 130   | 50   | 6500  |
+| QA         |     |     | 40  | 80  | 80  | 240   | 15   | 3000  |
+total: 62140 usd
+
+Minimal:
+
+| role\spint | 1   | 2   | 3   | 4   | 5   | hours | rate | total |
+| ---------- | --- | --- | --- | --- | --- | ----- | ---- | ----- |
+| Designer   | 80  | 40  |     |     |     | 120   | 30   | 3600  |
+| TeamLead   | 20  | 20  | 20  | 20  | 20  | 100   | 50   | 5000  |
+| Frontend   |     | 80  | 80  | 80  | 80  | 320   | 28   | 8960  |
+| Backend    | 80  | 80  | 80  | 80  | 80  | 400   | 40   | 16000 |
+| DevOps     | 80  | 10  | 10  | 10  | 20  | 130   | 50   | 6500  |
+| QA         |     |     | 40  | 80  | 80  | 200   | 15   | 3000  |
+total: 43060 usd
+
 
 > :: Danger ::
-> Provided numbers is estimation, it's not an obligations. The real numbers could differ depending on design and other inputs during the process.
+> Provided numbers is estimation, it's not an obligation. The real numbers could differ depending on design and other inputs during the process.
