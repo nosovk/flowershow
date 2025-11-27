@@ -111,7 +111,7 @@ The design should be done in Figma. The design should avoid using any raster ima
 
 The project should be completed in 2.5 months. Work should be done in 2-week sprints.
 
-1. Sprint 1: Design and Rails
+#### 1. Sprint 1: Design and Rails
 We need to create and agree on the design. Also, in this step, we have to rent a server and set up the rails for the new project (CI/CD, static checks, etc.). We also need to make Swagger files for all APIs.
 On the backend side, we need to write the Game Server during this step.
 
@@ -121,7 +121,7 @@ Involvement:
 - Project Manager
 - DevOps Engineer
 
-2. Sprint 2: Game Server
+#### 2. Sprint 2: Game Server
 We need to implement the Game API Server. It should be able to handle all game logic with mocked data. Also, we start implementing the frontend part of the game.
 
 Involvement:
@@ -129,7 +129,7 @@ Involvement:
 - Backend Developer
 - Project Manager
 
-3. Sprint 3: Work on Server
+#### 3. Sprint 3: Work on Server
 We need to implement the Data Feed Server and Bet Engine Server. We also continue working on the frontend.
 
 Involvement:
@@ -138,7 +138,7 @@ Involvement:
 - Project Manager
 - QA Engineer
 
-4. Sprint 4: Work on Server
+#### 4. Sprint 4: Work on Server
 Continue server implementation and frontend development.
 
 Involvement:
@@ -147,7 +147,7 @@ Involvement:
 - Project Manager
 - QA Engineer
 
-5. Sprint 5: Stabilization
+#### 5. Sprint 5: Stabilization
 Stabilize the game and fix bugs.
 
 Involvement:
