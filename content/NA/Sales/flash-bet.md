@@ -39,7 +39,7 @@ The casino platform. For testing purposes, we will create game launcher which im
 ### Game Server (RGS API)
 This is the entry point for the Casino. It should implement the base RGS contract ([example here](https://realliveslots.com/docs/api#initialize-a-session)). After game session initialization, it stores user data in the DB. Also, this server sends postbacks to the casino to alter the user balance.
 
-> ::: danger
+> ::: warning
 > The sessions from the casino should have a long time limit (like a few days) to work with bets. Default timeout is 1 day.
 
 ### Game IFrame
