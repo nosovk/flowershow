@@ -172,7 +172,7 @@ Optimal:
 | QA         |     |     | 40  | 80  | 80  | 240   | 15   | 3000  |
 total: 62140 usd
 
-Budget:
+Budget optimized:
 
 | role\spint | 1   | 2   | 3   | 4   | 5   | hours | rate | total |
 | ---------- | --- | --- | --- | --- | --- | ----- | ---- | ----- |
