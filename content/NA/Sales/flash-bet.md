@@ -170,7 +170,7 @@ Optimal:
 | Backend    | 80  | 80  | 80  | 80  | 80  | 400   | 40   | 16000 |
 | DevOps     | 80  | 10  | 10  | 10  | 20  | 130   | 50   | 6500  |
 | QA         |     |     | 40  | 80  | 80  | 240   | 15   | 3000  |
-total: 62140 usd
+total: 54500 usd
 
 Budget optimized:
 
