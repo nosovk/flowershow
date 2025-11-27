@@ -155,3 +155,12 @@ Involvement:
 - Backend Developer
 - Project Manager
 - QA Engineer
+
+| role\spint | 1   | 2   | 3   | 4   | 5   | rate |
+| ---------- | --- | --- | --- | --- | --- | ---- |
+| Designer   | x   |     |     |     |     | 32   |
+| Project    | x   | x   | x   | x   | x   | 18   |
+| Frontend   |     | x   | x   | x   | x   | 35   |
+| Backend    | x   | x   | x   | x   | x   | 35   |
+| DevOps     | x   |     |     |     |     | 50   |
+| QA         |     |     | x   | x   | x   | 15   |
