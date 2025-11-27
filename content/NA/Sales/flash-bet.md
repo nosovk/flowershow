@@ -34,7 +34,7 @@ participant BE as BetEngine
 ### Components
 
 ### Platform
-The casino platform. For testing purposes, we will create a small game launcher which implements an API and allows creating a session with a defined currency and amount.
+The casino platform. For testing purposes, we will create game launcher which implements an API and allows creating a session with a defined currency and amount.
 
 ### Game Server (RGS API)
 This is the entry point for the Casino. It should implement the base RGS contract ([example here](https://realliveslots.com/docs/api#initialize-a-session)). After game session initialization, it stores user data in the DB. Also, this server sends postbacks to the casino to alter the user balance.
