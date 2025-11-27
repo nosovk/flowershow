@@ -38,9 +38,9 @@ The casino platform. For testing purposes, we will create game launcher which im
 
 ### Game Server (RGS API)
 This is the entry point for the Casino. It should implement the base RGS contract ([example here](https://realliveslots.com/docs/api#initialize-a-session)). After game session initialization, it stores user data in the DB. Also, this server sends postbacks to the casino to alter the user balance.
-::: danger
-The sessions from the casino should have a long time limit (like a few days) to work with bets. Default timeout is 1 day.
-:::
+
+> ::: danger
+> The sessions from the casino should have a long time limit (like a few days) to work with bets. Default timeout is 1 day.
 
 ### Game IFrame
 This is the Game UI. It can be accessed via a public URL with the `sessionId` in the URL. The `sessionId` acts as our token to make requests to the Game API.
@@ -58,9 +58,9 @@ The Game API for the user interface in the IFrame; it is publicly available. Thi
 
 ### Data Feed
 This is actually another service that depends on the exact provider. 
-::: info
-For now, we will use a mock data feed with no real data.
-:::
+> ::: info
+> For now, we will use a mock data feed with no real data.
+
 We can have different data feed services based on the supplier, but we need to provide one API protocol to the Game API, like:
 - `/data/leagues`
 - `/data/leagues/{id}`
@@ -70,9 +70,9 @@ It means that we will need to rewrite this module for every data feed that we wa
 
 ### Bet Engine
 This is a wrapper server that implements integration with the Betting provider.
-::: info
-For now, we will mock the betting engine.
-:::
+
+>::: info
+> For now, we will mock the betting engine.
 
 It provides an API for the Game API with one method:
 - `/api/bet`: Takes `userId`, bet amount, and slip.
