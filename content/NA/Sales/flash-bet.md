@@ -158,9 +158,13 @@ Involvement:
 
 | role\spint | 1   | 2   | 3   | 4   | 5   | rate |
 | ---------- | --- | --- | --- | --- | --- | ---- |
-| Designer   | x   |     |     |     |     | 32   |
+| Designer   | x   | x\2 |     |     |     | 32   |
 | Project    | x   | x   | x   | x   | x   | 18   |
+| TeamLead   | x/8 | x/8 | x/8 | x/8 | x/8 | 50   |
 | Frontend   |     | x   | x   | x   | x   | 35   |
-| Backend    | x   | x   | x   | x   | x   | 35   |
-| DevOps     | x   |     |     |     |     | 50   |
+| Backend    | x   | x   | x   | x   | x   | 40   |
+| DevOps     | x   |     |     |     | x\2 | 50   |
 | QA         |     |     | x   | x   | x   | 15   |
+
+> :: Danger ::
+> Provided numbers is estimation, it's not an obligations. The real numbers could differ depending on design and other inputs during the process.
