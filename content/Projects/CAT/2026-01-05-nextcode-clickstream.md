@@ -2,9 +2,9 @@ Goal: получить более надежные данные веб анал�
 
 # Реализация
 в каждом проекте добавлен скрипт '/event-stream/script/weba.min.js', к примеру
-- https://wagibet.com/event-stream/script/weba.min.js
-- https://motor.casino/event-stream/script/weba.min.js
-- https://atom.casino/event-stream/script/weba.min.js
+- https://wagibet.asia/event-stream/script/weba.min.js
+- https://motorcasino563.com/event-stream/script/weba.min.js
+- https://atom-casino.com/event-stream/script/weba.min.js
 
 
 скрипт размещен всегда по относительному пути внутри продукта. Скрипт есть на всех зеркалах всех продуктов.
