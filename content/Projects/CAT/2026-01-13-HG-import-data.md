@@ -3,7 +3,7 @@
 Мы хотим в нем добавить новый источник данных для фетчинга. Называется HG.
 
 Документация по апи методу:
-![712020d95759a9120b466097afda31e0fea4d1_Transaction_Filter_API_for.pdf](./attachments/712020d95759a9120b466097afda31e0fea4d1_Transaction_Filter_API_for.pdf)
+[712020d95759a9120b466097afda31e0fea4d1_Transaction_Filter_API_for.pdf](./attachments/712020d95759a9120b466097afda31e0fea4d1_Transaction_Filter_API_for.pdf)
 
 Доступ осуществляется по Bearer токену, для его получения необходимо выполнить запрос вида:
 
