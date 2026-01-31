@@ -1,7 +1,3 @@
----
-date created: 2026-01-31 20:39
----
-
 Input:
 [google doc](https://docs.google.com/document/d/1YxAUGhKupB0KIeHFoDC8LOJl-r3iiXU14PRsQfsYc_A/edit)
 
@@ -180,6 +176,8 @@ Input:
 | ------------- | --------- | -------------------- |
 | серые кролики | 892434593 | withdrawal_requested |
 | серые кролики | 643765284 | withdrawal_completed |
+
+
 
 todo: дописать примеры очтетов которые еще нужны
 
