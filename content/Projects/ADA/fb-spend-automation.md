@@ -1,3 +1,7 @@
+---
+date created: 2026-01-31 20:39
+---
+
 Input:
 [google doc](https://docs.google.com/document/d/1YxAUGhKupB0KIeHFoDC8LOJl-r3iiXU14PRsQfsYc_A/edit)
 
@@ -162,13 +166,13 @@ Input:
 
 ### spend (с фильтром за период - last 7 days)
 
-| buyer | bmid      | spend | currency |
-| ----- | --------- | ----- | -------- |
-| Вася  | 892434593 | 1000  | cad      |
-| Петя  | 198320993 | 1000  | usd      |
-| Петя  | 892434593 | 10  | usd      |
- (Петя в этом случае успел поюзать БА до Васи)
- 
+| buyer                                         | bmid      | spend | currency |
+| --------------------------------------------- | --------- | ----- | -------- |
+| Вася                                          | 892434593 | 1000  | cad      |
+| Петя                                          | 198320993 | 1000  | usd      |
+| Петя                                          | 892434593 | 10    | usd      |
+| (Петя в этом случае успел поюзать БА до Васи) |           |       |          |
+
 ### inquires status
 
 | agency        | bmid      | status               |
@@ -176,6 +180,6 @@ Input:
 | серые кролики | 892434593 | withdrawal_requested |
 | серые кролики | 643765284 | withdrawal_completed |
 
-
 ## Technical decisions
+
 поскольку апи fb может лежать, аккаунтов может быть много и т.п. - реализацию сбора данных предлагается реализовать в виде workflows на [temporal](https://temporal.io)
