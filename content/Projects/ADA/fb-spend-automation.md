@@ -4,7 +4,7 @@ date updated: 2026-01-31 19:57
 ---
 
 Input:
-[google doc](https://docs.google.com/document/d/1YxAUGhKupB0KIeHFoDC8LOJl-r3iiXU14PRsQfsYc_A/edit?tab=t.cwgrzl17r6ld)
+[google doc](https://docs.google.com/document/d/1YxAUGhKupB0KIeHFoDC8LOJl-r3iiXU14PRsQfsYc_A/edit)
 
 ## goal:
 
