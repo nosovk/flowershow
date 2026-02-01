@@ -1,7 +1,3 @@
----
-date created: 2026-02-01 11:51
----
-
 # fb-spend-automation MVP
 
 Input:
