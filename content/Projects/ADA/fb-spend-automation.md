@@ -187,8 +187,8 @@ Input:
 
 | date             | bm        | api key | proxy              | url                  | payload | responce status | responce body | error description |
 | ---------------- | --------- | ------- | ------------------ | -------------------- | ------- | --------------- | ------------- | ----------------- |
-| 2026.01.31 12:12 | 892434593 | xxx     | `xx:xx@ff.com:233` | https://fb.com/api | {...}     | 200             | {...}           |                   |
-| 2026.01.31 12:11 | 892434593 | xxx     | `xx:xx@ff.com:233` | https://fb.com/api | {...}     | 504             | {...}           | proxy timout      |
+| 2026.01.31 12:12 | 892434593 | xxx     | `xx:xx@ff.com:233` | https://fb.com/api | ...     | 200             | ...           |                   |
+| 2026.01.31 12:11 | 892434593 | xxx     | `xx:xx@ff.com:233` | https://fb.com/api | ...     | 504             | ...           | proxy timout      |
 
 todo: дописать примеры отчетов которые еще нужны
 
