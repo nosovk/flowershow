@@ -3,23 +3,36 @@
 When using a prompt to perform text generation, some of the parameters / data
 will only be available during the execution. To access them, parameters can be
 used in prompts using double curly braces(e.g. `{{parameterName}}`).
+In case parameter value type is a JSON object, its serialized structure can be
+restricted to optimize token usage by specifying properties in square brackets
+like so: `{{parameterName[property1,property2]}}`. All unknown properties will
+be ignored and all empty properties will be omitted.
 
 For example, assuming we have the following parameters available:
 - `name` - `John Doe`
 - `language` - `German`
 - `country` - `UK`
 - `city` - `London`
+- `people` - `[{"name":"Jake","surname":"Smith","age": 20},{"name":"Joe","surname":"Jones","age":30}]`
 
 and the following prompt is used:
 
 ```
 Generate some text in {{language}} language about time {{name}} spent in {{country}} speaking {{language}} about {{topic}}.
+People he talked with:
+{{people[name,age]}}
+Full info on people:
+{{people}}
 ```
 
 the final message that will be passed to LLM will be:
 
 ```
 Generate some text in German language about time John Doe spent in UK speaking German about {{topic}}.
+People he talked with:
+[{"name":"Jake","age": 20},{"name":"Joe","age":30}]
+Full info on people:
+[{"name":"Jake","surname":"Smith","age": 20},{"name":"Joe","surname":"Jones","age":30}]
 ```
 
 Take note that parameter can be used multiple times in prompt and vice versa - even if parameter is available, it is not required to use it in the prompt. If you use parameter that is not in the list of available parameters, it will be ignored and left as is.
