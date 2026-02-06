@@ -75,3 +75,7 @@ Input:
   "userId": "3222323",
 }
 ```
+
+
+## Bridge
+Необходимо сделать бриджа для получения данных userid из приложения внутри webview ([пример](https://obs.nodeart.app/Projects/CAT/2025-08-04-CAT-Mobile-app#casino)).
