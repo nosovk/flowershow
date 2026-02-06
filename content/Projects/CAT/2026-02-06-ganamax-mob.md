@@ -48,7 +48,7 @@ Input:
 }
 ```
 ### /api/attribution
-Этот метод мы вызываем при получении данных об аттрибуции со стороны appsflyer.
+Этот метод мы вызываем при получении данных об атрибуции со стороны appsflyer.
 ```json
 {  
   "custom_data": {  // appsflyer data, json field
@@ -67,7 +67,7 @@ Input:
 }
 ```
 ### /api/auth
-Этот метод вызывается при авторизации человека внутри вебвью.
+Этот метод вызывается при авторизации человека внутри веб вью.
 ```json
 {  
   "deviceId": "MTcwMzI1MDM0NTIzOC1lbl9VUy0xMDgwLjAtMjIzNi4wLTIzMTU2Mw==", //custom device id, ubiq for each instalation  
