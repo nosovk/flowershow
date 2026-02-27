@@ -72,7 +72,8 @@ Input:
 {  
   "deviceId": "MTcwMzI1MDM0NTIzOC1lbl9VUy0xMDgwLjAtMjIzNi4wLTIzMTU2Mw==", //custom device id, ubiq for each instalation  
   "fcmid": "e_fAofeISYSkAaPtWODypM:APA91bHHqT9bVz09sZ3PgIehsJBAqATdc2UOBISGX_YSm8iHyOsdqxz6nQvbv4zHqqofX1dUa3FqPNwH6oB1TZdonGpcsiBh_lMRrcND0cwiSe7R5gkntKfT-LUah5RW4su2vJ2inO1L", // firebase messaging token  
-  "userId": "3222323",
+  "userid": "3222323",
+  "brand": "ganamax"
 }
 ```
 
