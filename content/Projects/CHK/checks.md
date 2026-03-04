@@ -81,12 +81,14 @@
 
 ## People
 
-| role (rate) / month     | 1   | 2   | 3   | total |
-| ----------------------- | --- | --- | --- | ----- |
-| fullstack (45 usd/hour) | 160 | 160 | 160 | 21600 |
-| lead (55 usd/hour)      | 40  | 40  | 40  | 6600  |
-| project (25 usd/hour)   | 80  | 80  | 80  | 6000  |
-| qa (20 usd/hour)        |     |     | 160 | 3200  |
-| devops (60 usd/hour)    | 40  | 20  | 20  | 4800  |
-Расчетный эстимейт: 42200  
+| role (rate) / month     | 1 month | 2 month | 3 month | total     |
+| ----------------------- | ------- | ------- | ------- | --------- |
+| fullstack (45 usd/hour) | 160h    | 160h    | 160h    | 21600 usd |
+| lead (55 usd/hour)      | 40h     | 40h     | 40h     | 6600 usd  |
+| project (25 usd/hour)   | 80h     | 80h     | 80h     | 6000 usd  |
+| qa (20 usd/hour)        |         |         | 160h    | 3200 usd  |
+| devops (60 usd/hour)    | 40h     | 20h     | 20h     | 4800 usd  |
+Расчетный эстимейт: 42200 usd
 Важно: эстимейт не есть коммитмент.
+
+
