@@ -1,6 +1,5 @@
 ## input
 - [doc](https://docs.google.com/document/d/1hHL-t2zQyVmxclZ6SWISr47cMxDKkz4aRguynS_1qRA/edit?usp=sharing)
-- [doc in html](./tz-site-checks/index.html)
 - [figma](https://www.figma.com/design/a719IsFeut2zEFpu40dlCQ/Benefitsar)
 - [call](https://app.bluedothq.com/preview/6983697de4422e663fa5cdef)
 ## Goal
