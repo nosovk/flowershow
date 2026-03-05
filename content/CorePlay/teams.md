@@ -41,6 +41,7 @@
 - 2 BE 
 	- Oliynyk Yuriy @tanos (Architect)
 	- Yanchuk Ihor @rick
+	- Vacancy
 - 2 FE
 	- Rohozhyn Ihor @drumeo
 - 2 QA
