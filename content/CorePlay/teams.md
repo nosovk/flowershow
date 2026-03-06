@@ -1,7 +1,7 @@
 ### Crypto team:
 - 2 BE 
 	- Dmytro Khmelyk @mads
-	- Rudenko Kyrylo ???
+	- Rudenko Kyrylo @kevin
 - 2 FE
 	- Leichenko Oleksii @anonymous 2m,
 	- Nazar Dubovyk @stark
@@ -41,7 +41,7 @@
 - 2 BE 
 	- Oliynyk Yuriy @tanos (Architect)
 	- Yanchuk Ihor @rick
-	- Vacancy
+	-  @nagrniy
 - 2 FE
 	- Rohozhyn Ihor @drumeo
 - 2 QA
