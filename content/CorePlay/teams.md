@@ -4,7 +4,7 @@
 	- Rudenko Kyrylo @kevin
 - 2 FE
 	- Leichenko Oleksii @anonymous 2m,
-	- Nazar Dubovyk @stark
+	- Nazar Dubovyk @stark (ротировать с . @anonymous)
 	- Andrii Pozniakov @grinch
 - 2 QA
 	- Solopii Ihor @panda
@@ -41,7 +41,7 @@
 - 2 BE 
 	- Oliynyk Yuriy @tanos (Architect)
 	- Yanchuk Ihor @rick
-	-  @nagrniy
+	- Олександр Нагорний @nagrniy
 - 2 FE
 	- Rohozhyn Ihor @drumeo
 - 2 QA
